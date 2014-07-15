@@ -1,0 +1,13 @@
+name: Maxwell Ciotti
+markdown: redcarpet
+highlighter: true
+description: "A central hub of Maxwell Ciotti's journal, portfolio, and lab"
+url: "www.mdc.io"
+permalink: /posts/:title
+github: mdciotti
+twitter: mdciotti
+email: max@mdc.io
+role: "Student designer & web developer"
+collections:
+- projects
+- labs

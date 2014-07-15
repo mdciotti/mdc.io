@@ -1,0 +1,126 @@
+MAXWELL CIOTTI
+==============
+
+43 Stone Creek Pl, Spring, TX 78732
+(512) 364-0226
+max@mdc.io
+
+Updated 3 July 2014
+
+PROFILE
+-------
+
+Determined and pragmatic student concentrated on continual improvement. Devoted to assisting individuals through any means possible. Effective at finding solutions to problems and discovering and optimizing inefficient systems. Knowledgeable in contributing to a team effort with effective communication. Highly experienced with computer hardware and software, especially in creating documents, spreadsheets, and slideshows. Prepared to learn new tools to complete tasks more effectively or reliably. Focused on consistent quality work and accuracy. Meticulous about organization and fine details. Pleased to complete tedious or time-consuming tasks.
+
+EDUCATION
+---------
+
++ Lonestar College
+  2014
+
++ Florida Institute of Technology
+  2013–2014
+  B.S., Aerospace Engineering
+  Coursework in engineering, mathematics, and space sciences
+  Involvement in AIAA, Student Rocket Society, ACM, IEEE AESS
+
+SKILLS & ABILITIES
+------------------
+
+### Computer Software
+
+Extensive experience with:
+
++ creating interactive websites and website designs
++ document processing such as Microsoft Word and LaTeX
++ slideshow programs such as Microsoft PowerPoint
++ spreadsheet programs such as Microsoft Excel
+
+Intermediate experience with:
+
++ CAD software such as AutoDesk Inventor and Creo Parametric
++ computational software such as MATLAB and Mathematica
++ graphics software such as Adobe Photoshop, Adobe Illustrator
+
+### Computer Programming
+
++ Experience with UNIX-like terminals and compiling software
++ Experience with version control systems such as Git
+
+Known programming languages, in order of experience:
+
++ JavaScript, CSS, HTML, C++, PHP, Ruby, C, Fortran, Lua, Make, Bash
+
+### Electronics
+
++ Familiar with computer components and building computers
++ Familiar with breadboard prototyping, FPGAs, and electronic circuit design
++ Experience with soldering
+
+### Graphic Design
+
++ Matured sense of design in graphic arts
++ Experience with GUI and UX design
+
+### Machine Shop
+
++ Experience with machining and woodworking
++ Experience with prototyping and 3D printing
+
+EXPERIENCE
+----------
+
++ Florida Institute of Technology ERC
+  Jan 2014–May 2014
+  Application developer
+  + Created and maintained a system to log EPA inspections for the Florida Institute of Technology
+  + Developed a REST API and server-side utilities for managing and viewing reports
+  + Developed a cross-platform touch-friendly logging application
+  + Office tech support
+
++ Austin First Mortgage
+  Summer 2012
+  Contractor, website development
+  + Created internal utilities to streamline loan processing involving financial calculations
+  + Developed the public website so that users can easily access loan information
+
++ VeritasU
+  Summer 2012
+  Intern, software application design and development
+  + Collaborated with a small startup to create an online learning management system
+  + Created a logo and designs for various pages within the application
+
+ADDENDUM
+========
+
+SELF-MOTIVATED PROGRAMMING & DESIGN EXPERIENCE
+----------------------------------------------
+
+Complete list at www.mdc.io/portfolio
+
++ dino.do
+  Aug 2013–
+  Minimalist productivity utility
+  Languages: Ruby, JavaScript, HTML, CSS
+  + Familiarization with managing user accounts
+  + Familiarization with storing user data securely in a database
+
++ Universe Simulator
+  Aug 2013–
+  Web application, capable of simulating a two-dimensional universe with realistic gravity, including various orbits and n-body choreographies
+  Languages: JavaScript/CoffeeScript, HTML, CSS
+  + Familiarization with various approaches to n-body problems
+
++ QuickHAC
+  Dec 2012–
+  www.quickhac.com
+  Chrome extension, automatically checks student grades periodically and provides students with a more accessible and aesthetically pleasing interface to view their academic progress
+  Languages: Ruby, HTML, CSS, JavaScript, TypeScript, JSON
+  + Lead designer
+  + Implemented the client-side logic and functionality
+
++ Chaotic Attractor
+  Oct 2011–Nov 2011
+  Web experiment, generates strange attractors
+  Languages: JavaScript, HTML, CSS
+  + Familiarization with the WebGL 3D graphics framework

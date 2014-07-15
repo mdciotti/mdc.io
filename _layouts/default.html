@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	
+	{% include head.html %}
+
+	<body class="light">
+
+		<div class="container">
+			<header>
+				<h1 class="title"><a href="/">Maxwell<b>Ciotti</b></a></h1>
+				<div id="logo"><img src="/img/logo.png"></div>
+				<nav>
+					<ul>
+						<li class="selected"><a href="/journal">journal</a></li>
+						<li><a href="/portfolio">portfolio</a></li>
+						<li><a href="/lab">lab</a></li>
+					</ul>
+			</header>
+
+			{{ content }}
+
+			{% include footer.html %}
+		</div>
+
+	</body>
+</html>

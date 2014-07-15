@@ -1,0 +1,149 @@
+
+html { min-height: 100%; }
+body {
+	margin: 0;
+	font-family: "Libre Baskerville", "Constantia", serif;
+	font-weight: 400;
+	min-height: 100%;
+	line-height: 1;
+}
+
+* { /* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Begin Theming */
+body.light {
+	color: #222222;
+	background-color: #eeeeee;
+}
+body.light #intro {
+	border-color: #222222;
+}
+body.light #intro::before {
+	border-color: #222222;
+}
+body.light #intro nav ul li a {
+	border-color: #222222;
+}
+body.light #intro nav ul li a:hover,
+body.light #intro ul.social-links li a:hover {
+	/*border-color: #eeeeee;*/
+	/*background-color: #222222;*/
+	/*color: #eeeeee;*/
+}
+
+body.dark {
+	color: #eeeeee;
+	background-color: #222222;
+}
+body.dark #intro,
+body.dark #intro::before,
+body.dark #intro nav ul li a {
+	border-color: #eeeeee;
+}
+body.dark #intro nav ul li a:hover,
+body.dark #intro ul.social-links li a:hover {
+	/*border-color: #222222;*/
+	/*background-color: #eeeeee;*/
+	/*color: #222222;*/
+}
+
+/* Generic Styles */
+
+h1, h2 {
+	font-family: 'Josefin Slab', 'Roboto Slab', 'Museo', 'Helvetica Neue', sans-serif;
+}
+
+a.button {
+	border: 1px solid #222222;
+	padding: 0.5em 1em;
+	border-radius: 2em;
+	color: #222222;
+	text-decoration: none;
+	outline: none;
+}
+a.button:hover, a.button:focus {
+	border-width: 3px;
+	margin: -2px;
+}
+
+/* Default layout styles */
+
+.container {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+header {
+	border-bottom: thin solid #222222;
+	margin-bottom: 2em;
+	display: flex;
+	align-items: flex-end;
+}
+
+header #logo {
+	flex: 1 1 4em;
+	display: block;
+}
+header #logo img {
+	width: 4em;
+	margin: 1em 0;
+}
+header h1 {
+	flex: 1 1 auto;
+	margin: 0.5em 0;
+	font-weight: 100;
+}
+header h1 b {
+	font-weight: bold;
+}
+header h1 a {
+	text-decoration: none;
+	color: #222222;
+}
+header nav {
+	flex: 1 1 auto;
+}
+header nav ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+header nav ul li {
+	flex: 1 1 auto;
+}
+header nav ul li a {
+	display: block;
+	color: #222222;
+	text-decoration: none;
+	font-size: 1.25em;
+	padding: 1em 0;
+	border-bottom: thick solid transparent;
+	text-align: center;
+	outline: none;
+}
+header nav ul li.selected a {
+	border-color: #222222;
+	font-weight: bold;
+}
+header nav ul li:hover a, header nav ul li a:focus {
+	border-color: #222222;
+}
+
+article h2 {
+	font-size: 2em;
+}
+
+article p {
+	line-height: 1.5;
+	font-size: 1.2em;
+}
+article p.meta {
+	font-size: 1em;
+	font-style: italic;
+	color: #888888;
+}

@@ -1,0 +1,26 @@
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="{{ site.description }}">
+		<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}/">
+
+		<!-- syntax highlighting CSS -->
+		<link rel="stylesheet" href="/css/syntax.css">
+
+		<!-- Custom fonts -->
+		<link href="//fonts.googleapis.com/css?family=Josefin+Slab:100,700|Libre+Baskerville:400,700,400italic" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/fonts/rondo/style.css" type="text/css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/intro.css">
+
+		<!-- Custom JS -->
+		<script type="text/javascript" src="/js/main.js"></script>
+
+		<!-- favicon -->
+		<link href="/img/logo.png" rel="icon" type="image/png">
+
+	</head>

@@ -1,0 +1,32 @@
+# MAX CIOTTI #
+
+## KNOWLEDGE ##
+
+* HTML5
+* CSS3
+* JavaScript
+* Canvas
+* WebGL
+* CoffeeScript
+* LESS
+* SCSS + SASS
+* Compass
+* Ruby
+* Node.js
+* AJAX
+* JSON + XML + YAML
+* Haml
+* C
+* Lua
+* PHP
+* Bison + Flex
+
+## SKILLS ##
+
+* AutoDesk Inventor
+* PowerPoint Mastery
+* Spreadsheets
+* Linux
+* Google Docs
+* Git
+* 

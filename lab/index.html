@@ -1,0 +1,23 @@
+---
+layout: default
+title: Lab | Maxwell Ciotti
+---
+
+<h1>Lab Experiments</h1>
+<p class="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+<section class="lab-list">
+	<ul class="grid">
+	{% for experiment in site.experiments %}
+		<li class="grid-item">
+			<a href="{{ experiment.location }}">
+				<!-- <time datetime="{{ experiment.date | date_to_xmlschema }}">{{ experiment.date | date_to_string }}</time> -->
+				<div class="grid-item-preview"><img src="{{ experiment.preview_img_src }}"></div>
+				<div class="grid-item-caption">
+					<h2 class="grid-item-title">{{ experiment.title }}</h2>
+					<p class="grid-item-description">{{ experiment.description }}</p>
+				</div>
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+</section>

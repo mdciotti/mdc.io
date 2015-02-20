@@ -1,0 +1,23 @@
+---
+layout: default
+title: Portfolio | Maxwell Ciotti
+---
+
+<h1>Portfolio: Projects &amp; Designs</h1>
+<p class="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+<section class="portfolio">
+	<ul class="grid">
+	{% for project in site.projects %}
+		<li class="grid-item">
+			<a href="{{ project.location }}">
+				<!-- <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date_to_string }}</time> -->
+				<div class="grid-item-preview"><img src="{{ project.preview_img_src }}"></div>
+				<div class="grid-item-caption">
+					<h2 class="grid-item-title">{{ project.title }}</h2>
+					<p class="grid-item-description">{{ project.description }}</p>
+				</div>
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+</section>

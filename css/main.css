@@ -17,7 +17,7 @@ body {
 /* Begin Theming */
 body.light {
 	color: #222222;
-	background-color: #eeeeee;
+	background-color: #d9d9d9;
 }
 body.light #intro {
 	border-color: #222222;
@@ -30,24 +30,24 @@ body.light #intro nav ul li a {
 }
 body.light #intro nav ul li a:hover,
 body.light #intro ul.social-links li a:hover {
-	/*border-color: #eeeeee;*/
+	/*border-color: #d9d9d9;*/
 	/*background-color: #222222;*/
-	/*color: #eeeeee;*/
+	/*color: #d9d9d9;*/
 }
 
 body.dark {
-	color: #eeeeee;
+	color: #d9d9d9;
 	background-color: #222222;
 }
 body.dark #intro,
 body.dark #intro::before,
 body.dark #intro nav ul li a {
-	border-color: #eeeeee;
+	border-color: #d9d9d9;
 }
 body.dark #intro nav ul li a:hover,
 body.dark #intro ul.social-links li a:hover {
 	/*border-color: #222222;*/
-	/*background-color: #eeeeee;*/
+	/*background-color: #d9d9d9;*/
 	/*color: #222222;*/
 }
 
@@ -76,47 +76,58 @@ a.button:hover, a.button:focus {
 	max-width: 640px;
 	margin: 0 auto;
 }
-
-header {
-	border-bottom: thin solid #222222;
+.container p.subtitle {
+	font-size: 1.2em;
+	line-height: 1.5;
+	color: #444444;
+	font-style: italic;
+}
+/* BEGIN HEADER STYLING */
+body > header {
+	background-color: #f0f0f0;
+	/*border-bottom: thin solid #222222;*/
 	margin-bottom: 2em;
+}
+
+body > header .container {
+	min-height: 10em;
 	display: flex;
 	align-items: flex-end;
 }
 
-header #logo {
+body > header #logo {
 	flex: 1 1 4em;
 	display: block;
 }
-header #logo img {
+body > header #logo img {
 	width: 4em;
 	margin: 1em 0;
 }
-header h1 {
+body > header h1 {
 	flex: 1 1 auto;
-	margin: 0.5em 0;
+	margin: 0.75em 0;
 	font-weight: 100;
 }
-header h1 b {
+body > header h1 b {
 	font-weight: bold;
 }
-header h1 a {
+body > header h1 a {
 	text-decoration: none;
 	color: #222222;
 }
-header nav {
+body > header nav {
 	flex: 1 1 auto;
 }
-header nav ul {
+body > header nav ul {
 	display: flex;
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
-header nav ul li {
+body > header nav ul li {
 	flex: 1 1 auto;
 }
-header nav ul li a {
+body > header nav ul li a {
 	display: block;
 	color: #222222;
 	text-decoration: none;
@@ -126,24 +137,209 @@ header nav ul li a {
 	text-align: center;
 	outline: none;
 }
-header nav ul li.selected a {
+body > header nav ul li.selected a {
 	border-color: #222222;
 	font-weight: bold;
 }
-header nav ul li:hover a, header nav ul li a:focus {
+body > header nav ul li:hover a, header nav ul li a:focus {
 	border-color: #222222;
 }
+/* END HEADER STYLING */
+/* BEGIN JOURNAL STYLING */
+.journal-list ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.journal-list ul li a {
+	display: block;
+	padding: 1em 1em;
+	color: inherit;
+	text-decoration: none;
+	border-bottom: thin solid #CCCCCC;
+}
+.journal-list ul li a:hover {
+	background-color: #eeeeee;
+}
+.journal-list ul li a:hover .post-title {
+	text-decoration: underline;
+	/*border-bottom: thin solid #222222;*/
+}
+.journal-list ul li a time {
+	float: right;
+	color: #888888;
+}
 
+.post h1 {
+	font-size: 3em;
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+.post p.subtitle {
+	line-height: 1.5;
+	/*font-size: 1.2em;*/
+	color: #888888;
+}
+.post time {
+	font-size: 1em;
+	/*font-style: italic;*/
+	color: #888888;
+	text-align: center;
+	display: flex;
+	width: 60%;	
+	margin: 2em auto;
+}
+.post time::before {
+	border-bottom: thin solid #CCCCCC;
+	content: '';
+	width: 5em;
+	flex: 1 0 auto;
+	margin: 0.5em 1em 0.5em 0;
+}
+.post time::after {
+	border-bottom: thin solid #CCCCCC;
+	content: '';
+	width: 5em;
+	flex: 1 0 auto;
+	margin: 0.5em 0 0.5em 1em;
+}
+.post hr {
+	border: none;
+	border-bottom: thin solid #CCCCCC;
+}
+
+article {
+	font-size: 1.2em;
+	line-height: 1.5;
+}
 article h2 {
-	font-size: 2em;
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+article h2 + p,
+article h2 + table,
+article h2 + pre,
+article h2 + blockquote,
+article h2 + ul,
+article h2 + ol {
+	margin-top: 0;
+}
+article h3 {
+	font-size: 1em;
+	margin-bottom: 0;
 }
 
 article p {
 	line-height: 1.5;
-	font-size: 1.2em;
 }
-article p.meta {
-	font-size: 1em;
+
+article ul, article ol {
+	/*line-height: 1.5;*/
+}
+
+article blockquote {
+	/*line-height: 1.5;*/
 	font-style: italic;
+	background-color: #eeeeee;
+	border-left: thick solid #888888;
+	padding: 0.75em 2em 0.75em 2em;
+	color: #444444;
+	margin: 0;
+}
+
+article code {
+	border: thin solid #888888;
+	padding: 0.1em 0.3em;
+	background-color: #eeeeee;
+	color: #444444;
+	font-family: 'Monaco', 'Consolas', monospace;
+	font-size: 0.8em;
+}
+
+article pre {
+	border: thin solid #888888;
+	padding: 1em;
+	background-color: #eeeeee;
+	color: #444444;
+	font-family: 'Monaco', 'Consolas', monospace;
+	/*font-size: ;*/
+	/*line-height: 1.2;*/
+	overflow: auto;
+	max-height: 50em;
+}
+article pre code {
+	font-family: inherit;
+	padding: 0;
+	border: none;
+
+}
+article table {
+	border-top: thin solid #888888;
+	border-bottom: thin solid #888888;
+	border-collapse: collapse;
+	/*line-height: 1.2;*/
+	width: 100%;
+	overflow: auto;
+}
+article table td {
+	border-bottom: thin solid #CCCCCC;
+	padding: 0.5em 1em;
+}
+article table th {
+	border-bottom: medium double #888888;
+	padding: 0.5em 1em;
+	/*font-weight: 700;*/
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 0.8em;
+}
+article table tr:last-child td {
+	border-bottom: none;
+}
+
+article a {
+	color: #AA0000;
+}
+article a:hover, article a:focus {
+	color: #FF0000;
+}
+article a:active {
+	color: #880000;
+}
+article a:visited {
 	color: #888888;
+}
+/* END JOURNAL STYLING */
+/* BEGIN GRID ITEM STYLING */
+ul.grid {
+	list-style-type: none;
+	padding: 0;
+}
+ul.grid li.grid-item {
+	display: block;
+	width: 50%;
+	float: left;
+	/*margin: 1em;*/
+}
+ul.grid li.grid-item a {
+	display: block;
+	background-color: #eeeeee;
+	color: inherit;
+	text-decoration: none;
+}
+ul.grid li.grid-item a .grid-item-caption {
+	padding: 1em;
+}
+ul.grid li.grid-item a h2.grid-item-title {
+	margin: 0;
+	line-height: 1.2;
+}
+ul.grid li.grid-item a p.grid-item-description {
+	margin: 0;
+	line-height: 1.2;
+}
+/* END GRID ITEM STYLING */
+
+footer {
+
 }

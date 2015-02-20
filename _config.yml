@@ -1,5 +1,8 @@
 name: Maxwell Ciotti
-markdown: redcarpet
+markdown: kramdown
+kramdown:
+  input: GFM
+
 highlighter: true
 description: "A central hub of Maxwell Ciotti's journal, portfolio, and lab"
 url: "www.mdc.io"
@@ -10,4 +13,4 @@ email: max@mdc.io
 role: "Student designer & web developer"
 collections:
 - projects
-- labs
+- experiments

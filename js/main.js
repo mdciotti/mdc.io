@@ -32,7 +32,7 @@ function parseHexColor(hexStr) {
 	return [r, g, b];
 }
 function toRGBstr(c) {
-	return "rgb(" + Math.floor(c[0]) + "," + Math.floor(c[1]) + "," + Math.floor(c[2]) + ")";
+	return "rgb(" + c.map(Math.floor).join(",") + ")";
 }
 
 var Flower = function (opts) {

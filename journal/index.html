@@ -3,12 +3,16 @@ layout: default
 title: Journal | Maxwell Ciotti
 ---
 
+<h1>Archive</h1>
+<p class="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
 <section class="journal-list">
 	<ul>
-	{% for post in site.posts %}
+	{% for entry in site.posts %}
 		<li>
-			<time datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date_to_string }}</time>
-			<a href="{{ post.url }}">{{ post.title }}</a>
+			<a href="{{ entry.url }}">
+				<time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date_to_string }}</time>
+				<span class="entry-title">{{ entry.title }}</span>
+			</a>
 		</li>
 	{% endfor %}
 	</ul>

@@ -5,7 +5,7 @@ MAXWELL CIOTTI
 (512) 364-0226
 max@mdc.io
 
-Updated 3 July 2014
+Updated 11 September 2014
 
 PROFILE
 -------
@@ -15,7 +15,7 @@ Determined and pragmatic student concentrated on continual improvement. Devoted 
 EDUCATION
 ---------
 
-+ Lonestar College
++ Lone Star College
   2014
 
 + Florida Institute of Technology
@@ -69,6 +69,10 @@ Known programming languages, in order of experience:
 
 EXPERIENCE
 ----------
+
++ H-E-B
+  Aug 2014-
+  Customer Service Partner
 
 + Florida Institute of Technology ERC
   Jan 2014–May 2014

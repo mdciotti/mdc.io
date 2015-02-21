@@ -1,9 +1,9 @@
 ---
-title:  "Tesseract"
+title:  "Tesselate"
 description: "basic tile map editor for sprite-based games"
 date:   2014-10-16 12:00:00
-preview_img_src: "/img/tesseract.png"
-location: "http://www.mdc.io/tesseract/"
+preview_img_src: "/img/tesselate.png"
+location: "http://www.mdc.io/tesselate/"
 tags: js editor game sprite
 available: true
 ---

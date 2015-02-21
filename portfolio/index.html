@@ -8,8 +8,8 @@ title: Portfolio
 <section class="portfolio">
 	<ul class="grid">
 	{% for project in site.projects reversed | sort: 'date' %}
-		<li class="grid-item{% unless project.available %} unavailable{% endunless %}">
-			<a href="{% if project.available %}{{ project.location }}{% else %}javascript:void(0){% endif %}">
+		<li>
+			<a href="{% if project.available %}{{ project.location }}{% else %}javascript:void(0){% endif %}" class="grid-item{% unless project.available %} unavailable{% endunless %}">
 				<div class="grid-item-preview"><img src="{{ project.preview_img_src }}"></div>
 				<div class="grid-item-caption">
 					<h2 class="grid-item-title">{{ project.title }}</h2>

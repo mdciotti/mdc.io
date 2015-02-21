@@ -70,6 +70,19 @@ a.button:hover, a.button:focus {
 	margin: -2px;
 }
 
+a[href] {
+	color: #AA0000;
+}
+a[href]:hover, a[href]:focus {
+	color: #FF0000;
+}
+a[href]:active {
+	color: #880000;
+}
+a[href]:visited {
+	color: #888888;
+}
+
 /* Default layout styles */
 
 .container {
@@ -90,7 +103,7 @@ a.button:hover, a.button:focus {
 /* BEGIN HEADER STYLING */
 body > header {
 	background-color: #f0f0f0;
-	/*border-bottom: thin solid #222222;*/
+	border-bottom: thin solid #CCCCCC;
 	margin-bottom: 2em;
 }
 
@@ -119,7 +132,7 @@ body > header h1 b {
 }
 body > header h1 a {
 	text-decoration: none;
-	color: #222222;
+	color: #222222 !important;
 }
 body > header nav {
 	flex: 1 1 auto;
@@ -135,7 +148,7 @@ body > header nav ul li {
 }
 body > header nav ul li a {
 	display: block;
-	color: #222222;
+	color: #222222 !important;
 	text-decoration: none;
 	font-size: 1.25em;
 	padding: 1em 0;
@@ -143,12 +156,13 @@ body > header nav ul li a {
 	text-align: center;
 	outline: none;
 }
-body > header nav ul li.selected a {
-	border-color: #222222;
-	font-weight: bold;
-}
 body > header nav ul li:hover a, header nav ul li a:focus {
 	border-color: #222222;
+}
+body > header nav ul li.selected a {
+	border-color: #CC0000;
+	font-weight: bold;
+	color: #CC0000 !important;
 }
 /* END HEADER STYLING */
 /* BEGIN JOURNAL STYLING */
@@ -164,10 +178,13 @@ body > header nav ul li:hover a, header nav ul li a:focus {
 	text-decoration: none;
 	border-bottom: thin solid #CCCCCC;
 }
+.journal-list ul li:first-child a {
+	border-top: thin solid #CCCCCC;
+}
 .journal-list ul li a:hover {
 	background-color: #eeeeee;
 }
-.journal-list ul li a:hover .post-title {
+.journal-list ul li a:hover .entry-title {
 	text-decoration: underline;
 	/*border-bottom: thin solid #222222;*/
 }
@@ -306,74 +323,73 @@ article table th {
 article table tr:last-child td {
 	border-bottom: none;
 }
-
-article a[href] {
-	color: #AA0000;
-}
-article a[href]:hover, article a[href]:focus {
-	color: #FF0000;
-}
-article a[href]:active {
-	color: #880000;
-}
-article a[href]:visited {
-	color: #888888;
-}
 /* END JOURNAL STYLING */
 /* BEGIN GRID ITEM STYLING */
-ul.grid {
+.grid {
 	list-style-type: none;
 	padding: 0;
 }
-ul.grid li.grid-item {
+.grid li {
 	display: block;
 	width: 300px;
 	float: left;
 	margin: 5px;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
-ul.grid li.grid-item a {
+.grid .grid-item {
 	display: block;
 	background-color: #eeeeee;
 	color: inherit;
 	text-decoration: none;
 	position: relative;
 	overflow: hidden;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
-ul.grid li.grid-item a .grid-item-preview {
+.grid .grid-item .grid-item-preview {
 	overflow: hidden;
 	height: 220px;
 }
-ul.grid li.grid-item a .grid-item-preview img {
+.grid .grid-item .grid-item-preview img {
 	width: 320px;
 	transform-origin: 160px 120px;
 	transform: translate(-10px, -10px) scale(0.9375);
 	transform-origin: 160px 120px;
 	transition: 0.5s transform cubic-bezier(0.19, 1, 0.22, 1);
 }
-ul.grid li.grid-item a:hover .grid-item-preview img {
+.grid .grid-item:hover .grid-item-preview img {
 	transform-origin: 160px 120px;
 	transform: translate(-10px, -10px) scale(1);
 }
-ul.grid li.grid-item a .grid-item-caption {
+.grid .grid-item .grid-item-caption {
 	padding: 1em;
 	overflow: hidden;
 }
-ul.grid li.grid-item a h2.grid-item-title {
+.grid .grid-item h2.grid-item-title {
 	margin: 0;
 	line-height: 1.2;
+	color: inherit;
 }
-ul.grid li.grid-item a p.grid-item-description {
+.grid .grid-item p.grid-item-description {
 	margin: 0;
 	line-height: 1.2;
+	color: inherit;
+}
+.grid .grid-item:hover .grid-item-caption {
+	background-color: #CC0000;
+}
+.grid .grid-item:hover h2.grid-item-title {
+	/*text-decoration: underline;*/
+	color: #FFFFFF;
+}
+.grid .grid-item:hover p.grid-item-description {
+	color: #CCCCCC;
 }
 /* END GRID ITEM STYLING */
-ul.grid li.grid-item a .grid-item-caption time {
+.grid .grid-item .grid-item-caption time {
 	position: absolute;
 	top: 0;
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.3);
-	color: #ffffff;
+	color: #FFFFFF;
 	font-size: 0.8em;
 	line-height: 1;
 	padding: 0.5em;
@@ -381,13 +397,20 @@ ul.grid li.grid-item a .grid-item-caption time {
 	margin-top: -2em;
 	transition: 0.5s margin-top cubic-bezier(0.19, 1, 0.22, 1);
 }
-ul.grid li.grid-item a:hover .grid-item-caption time {
+.grid .grid-item:hover .grid-item-caption time {
 	margin-top: 0;
 }
-ul.grid li.grid-item.unavailable {
+.grid .grid-item.unavailable {
 	opacity: 0.5;
 }
-ul.grid li.grid-item.unavailable a {
+.grid .grid-item.unavailable:hover .grid-item-caption {
+	background-color: #EEEEEE;
+}
+.grid .grid-item.unavailable:hover h2.grid-item-title,
+.grid .grid-item.unavailable:hover p.grid-item-description {
+	color: #222222;
+}
+.grid .grid-item.unavailable {
 	cursor: default;
 }
 

@@ -212,10 +212,10 @@ window.addEventListener('load', function () {
 	bg_canvas.width = window.innerWidth;
 	bg_canvas.height = window.innerHeight;
 
-	var subtitle = document.querySelector('#intro p.subtitle');
-	var v = verbs[Math.floor(verbs.length * Math.random())];
-	var n = nouns[Math.floor(nouns.length * Math.random())];
-	subtitle.innerHTML = "I " + v + " " + n + ".";
+	// var subtitle = document.querySelector('#intro p.subtitle');
+	// var v = verbs[Math.floor(verbs.length * Math.random())];
+	// var n = nouns[Math.floor(nouns.length * Math.random())];
+	// subtitle.innerHTML = "I " + v + " " + n + ".";
 
 	var themeList = {
 		"light": {

@@ -1,6 +1,6 @@
 ---
 title: "Fabric"
-description: "Space-time fabric simulation"
+description: "Two-dimensional space-time fabric simulation"
 date: 2015-02-21 10:00:00
 preview_img_src: "/img/fabric.png"
 location: "http://www.mdc.io/fabric/"

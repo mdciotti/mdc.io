@@ -9,8 +9,8 @@ title: Lab
 <section class="lab-list">
 	<ul class="grid">
 	{% for experiment in site.experiments reversed | sort: 'date' %}
-		<li class="grid-item{% unless experiment.available %} unavailable{% endunless %}">
-			<a href="{% if experiment.available %}{{ experiment.location }}{% else %}javascript:void(0){% endif %}">
+		<li>
+			<a href="{% if experiment.available %}{{ experiment.location }}{% else %}javascript:void(0){% endif %}" class="grid-item{% unless experiment.available %} unavailable{% endunless %}">
 				<div class="grid-item-preview"><img src="{{ experiment.preview_img_src }}"></div>
 				<div class="grid-item-caption">
 					<h2 class="grid-item-title">{{ experiment.title }}</h2>

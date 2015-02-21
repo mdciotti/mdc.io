@@ -67,8 +67,11 @@ img#fallback-logo {
 #intro p {
 	margin: 0;
 	font-style: italic;
-	color: #808080;
+	/*color: #666666;*/
 	line-height: 1.5;
+	font-size: 0.5em;
+	width: 75%;
+	margin: 0 auto;
 }
 #intro nav ul {
 	list-style-type: none;

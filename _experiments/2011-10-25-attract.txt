@@ -1,8 +1,9 @@
 ---
 title:  "Attract"
 description: "3D strange attractor generator and viewer in WebGL"
-date:   2014-05-03 01:07:51
-preview_img_src: "http://placekitten.com/g/320/240"
+date:   2011-10-25 20:00:00
+preview_img_src: "/img/attract.png"
 location: "http://www.mdc.io/attract/"
-categories: js webgl
+tags: js webgl
+available: true
 ---

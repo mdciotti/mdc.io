@@ -1,0 +1,9 @@
+---
+title:  "Calc"
+description: "simple online calculator and math parser"
+date:   2013-07-27 20:00:00
+preview_img_src: "/img/calc.png"
+location: "http://www.mdc.io/calc/"
+tags: js math
+available: true
+---

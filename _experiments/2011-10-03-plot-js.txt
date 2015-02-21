@@ -1,0 +1,9 @@
+---
+title:  "Plot.js"
+description: "naïve Javascript equation grapher (unfinished)"
+date:   2011-10-03 19:00:00
+preview_img_src: "/img/plot-js.png"
+location: "http://www.mdc.io/plot.js/"
+tags: js canvas math
+available: false
+---

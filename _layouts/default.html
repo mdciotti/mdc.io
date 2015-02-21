@@ -11,9 +11,9 @@
 				<div id="logo"><img src="/img/logo.png"></div>
 				<nav>
 					<ul>
-						<li{% if page.title contains "Journal" %} class="selected"{% endif %}><a href="/journal">journal</a></li>
-						<li{% if page.title contains "Portfolio" %} class="selected"{% endif %}><a href="/portfolio">portfolio</a></li>
-						<li{% if page.title contains "Lab" %} class="selected"{% endif %}><a href="/lab">lab</a></li>
+						<li{% if page.url contains "journal" %} class="selected"{% endif %}><a href="/journal">journal</a></li>
+						<li{% if page.url contains "portfolio" %} class="selected"{% endif %}><a href="/portfolio">portfolio</a></li>
+						<li{% if page.url contains "lab" %} class="selected"{% endif %}><a href="/lab">lab</a></li>
 					</ul>
 				</nav>
 			</div>

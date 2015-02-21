@@ -255,27 +255,27 @@ window.addEventListener('load', function () {
 		context: bg_ctx
 	}).draw();
 	
-	function toggleTheme() {
-		var classes = document.body.classList;
+	// function toggleTheme() {
+	// 	var classes = document.body.classList;
 
-		classes.toggle('dark');
-		// p.theme = Logo.theme = classes.contains('dark') ? "dark" : "light";
+	// 	classes.toggle('dark');
+	// 	// p.theme = Logo.theme = classes.contains('dark') ? "dark" : "light";
 		
-		if (classes.contains('dark')) {
-			p.theme = "dark";
-			Logo.color = "#eeeeee";
-		} else {
-			p.theme = "light";
-			Logo.color = "#222222";
-		}
+	// 	if (classes.contains('dark')) {
+	// 		p.theme = "dark";
+	// 		Logo.color = "#eeeeee";
+	// 	} else {
+	// 		p.theme = "light";
+	// 		Logo.color = "#222222";
+	// 	}
 
-		p.draw();
-		Logo.render();
-	}
+	// 	p.draw();
+	// 	Logo.render();
+	// }
 
-	Logo.el = document.getElementById('logo');
-	Logo.ctx = Logo.el.getContext('2d');
-	Logo.render();
+	// Logo.el = document.getElementById('logo');
+	// Logo.ctx = Logo.el.getContext('2d');
+	// Logo.render();
 	// var logoAnimator = loop();
 
 	// var gui = new dat.GUI();

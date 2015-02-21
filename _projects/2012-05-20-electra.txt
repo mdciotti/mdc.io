@@ -1,0 +1,9 @@
+---
+title:  "Electra"
+description: "A simple company website layout and theme"
+date:   2012-05-20 23:00:00
+preview_img_src: "/img/electra.png"
+location: "http://www.mdc.io/electra/"
+tags: design
+available: true
+---

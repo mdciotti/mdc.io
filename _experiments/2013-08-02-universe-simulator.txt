@@ -1,0 +1,9 @@
+---
+title:  "Universe"
+description: "a two dimensional astronomical body simulator"
+date:   2013-08-02 17:00:00
+preview_img_src: "/img/universe.png"
+location: "http://www.mdc.io/universe/"
+tags: js canvas universe gravity sandbox
+available: true
+---

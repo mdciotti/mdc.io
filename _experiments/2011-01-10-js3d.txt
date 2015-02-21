@@ -1,0 +1,9 @@
+---
+title:  "JS3D"
+description: "naïve Javascript 3D renderer in HTML5 canvas"
+date:   2011-01-10 21:00:00
+preview_img_src: "/img/js3d.png"
+location: "http://www.mdc.io/js3d/"
+tags: js canvas 3d
+available: false
+---

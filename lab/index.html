@@ -1,20 +1,21 @@
 ---
 layout: default
-title: Lab | Maxwell Ciotti
+title: Lab
 ---
 
 <h1>Lab Experiments</h1>
-<p class="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+<p>In my spare time I enjoy exploring miscellaneous mathematical or computer-science related topics that tend to plague my mind for a while through programming and visualization. Below you will find several experiments which have resulted from these explorations.</p>
+<p><em>Please note: many of these experiments have not been fully tested for cross-browser support. Chrome tends to have the least trouble for me.</em></p>
 <section class="lab-list">
 	<ul class="grid">
-	{% for experiment in site.experiments %}
-		<li class="grid-item">
-			<a href="{{ experiment.location }}">
-				<!-- <time datetime="{{ experiment.date | date_to_xmlschema }}">{{ experiment.date | date_to_string }}</time> -->
+	{% for experiment in site.experiments reversed | sort: 'date' %}
+		<li class="grid-item{% unless experiment.available %} unavailable{% endunless %}">
+			<a href="{% if experiment.available %}{{ experiment.location }}{% else %}javascript:void(0){% endif %}">
 				<div class="grid-item-preview"><img src="{{ experiment.preview_img_src }}"></div>
 				<div class="grid-item-caption">
 					<h2 class="grid-item-title">{{ experiment.title }}</h2>
-					<p class="grid-item-description">{{ experiment.description }}</p>
+					<time datetime="{{ experiment.date | date_to_xmlschema }}">{{ experiment.date | date_to_string }}</time>
+					<p class="grid-item-description">{{ experiment.description | downcase }}</p>
 				</div>
 			</a>
 		</li>

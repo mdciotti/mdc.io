@@ -76,9 +76,14 @@ a.button:hover, a.button:focus {
 	max-width: 640px;
 	margin: 0 auto;
 }
-.container p.subtitle {
-	font-size: 1.2em;
+.container h1 {
+	text-align: center;
+}
+.container p {
+	/*font-size: 1.2em;*/
 	line-height: 1.5;
+}
+.container p.subtitle {
 	color: #444444;
 	font-style: italic;
 }
@@ -107,6 +112,7 @@ body > header h1 {
 	flex: 1 1 auto;
 	margin: 0.75em 0;
 	font-weight: 100;
+	text-align: left !important;
 }
 body > header h1 b {
 	font-weight: bold;
@@ -171,14 +177,18 @@ body > header nav ul li:hover a, header nav ul li a:focus {
 }
 
 .post h1 {
-	font-size: 3em;
+	font-size: 2em;
 	margin-top: 1em;
 	margin-bottom: 0;
+}
+.post p.author {
+	text-align: center;
 }
 .post p.subtitle {
 	line-height: 1.5;
 	/*font-size: 1.2em;*/
 	color: #888888;
+	text-align: center;
 }
 .post time {
 	font-size: 1em;
@@ -209,7 +219,7 @@ body > header nav ul li:hover a, header nav ul li a:focus {
 }
 
 article {
-	font-size: 1.2em;
+	/*font-size: 1.2em;*/
 	line-height: 1.5;
 }
 article h2 {
@@ -297,16 +307,16 @@ article table tr:last-child td {
 	border-bottom: none;
 }
 
-article a {
+article a[href] {
 	color: #AA0000;
 }
-article a:hover, article a:focus {
+article a[href]:hover, article a[href]:focus {
 	color: #FF0000;
 }
-article a:active {
+article a[href]:active {
 	color: #880000;
 }
-article a:visited {
+article a[href]:visited {
 	color: #888888;
 }
 /* END JOURNAL STYLING */
@@ -317,18 +327,37 @@ ul.grid {
 }
 ul.grid li.grid-item {
 	display: block;
-	width: 50%;
+	width: 300px;
 	float: left;
-	/*margin: 1em;*/
+	margin: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
 ul.grid li.grid-item a {
 	display: block;
 	background-color: #eeeeee;
 	color: inherit;
 	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+}
+ul.grid li.grid-item a .grid-item-preview {
+	overflow: hidden;
+	height: 220px;
+}
+ul.grid li.grid-item a .grid-item-preview img {
+	width: 320px;
+	transform-origin: 160px 120px;
+	transform: translate(-10px, -10px) scale(0.9375);
+	transform-origin: 160px 120px;
+	transition: 0.5s transform cubic-bezier(0.19, 1, 0.22, 1);
+}
+ul.grid li.grid-item a:hover .grid-item-preview img {
+	transform-origin: 160px 120px;
+	transform: translate(-10px, -10px) scale(1);
 }
 ul.grid li.grid-item a .grid-item-caption {
 	padding: 1em;
+	overflow: hidden;
 }
 ul.grid li.grid-item a h2.grid-item-title {
 	margin: 0;
@@ -339,6 +368,28 @@ ul.grid li.grid-item a p.grid-item-description {
 	line-height: 1.2;
 }
 /* END GRID ITEM STYLING */
+ul.grid li.grid-item a .grid-item-caption time {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: #ffffff;
+	font-size: 0.8em;
+	line-height: 1;
+	padding: 0.5em;
+	display: block;
+	margin-top: -2em;
+	transition: 0.5s margin-top cubic-bezier(0.19, 1, 0.22, 1);
+}
+ul.grid li.grid-item a:hover .grid-item-caption time {
+	margin-top: 0;
+}
+ul.grid li.grid-item.unavailable {
+	opacity: 0.5;
+}
+ul.grid li.grid-item.unavailable a {
+	cursor: default;
+}
 
 footer {
 

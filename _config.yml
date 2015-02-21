@@ -3,10 +3,10 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-highlighter: true
+highlighter: pygments
 description: "A central hub of Maxwell Ciotti's journal, portfolio, and lab"
-url: "www.mdc.io"
-permalink: /posts/:title
+url: "http://www.mdc.io"
+permalink: /journal/:title
 github: mdciotti
 twitter: mdciotti
 email: max@mdc.io

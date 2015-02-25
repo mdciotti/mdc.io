@@ -28,4 +28,4 @@ Hello! I am a student pursuing a degree in computer science, with a focus on com
 
 To see what I've been thinking about most recently, head over to my [journal](/journal/)! You can also subscribe to my entries to receive them as I post them with [RSS](/journal/feed.xml).
 
-You can also either view my résumé [online as HTML](/resume/) or [download it as PDF](/resume/maxwell-ciotti.pdf).
+My **résumé** is available to view [online as HTML](/resume/) or to [download as PDF](/resume/maxwell-ciotti.pdf).

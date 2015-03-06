@@ -11,6 +11,9 @@ github: mdciotti
 twitter: mdciotti
 email: max@mdc.io
 role: "Student designer & web developer"
+timezone: America/Chicago
+encoding: utf-8
 collections:
 - projects
 - experiments
+exclude: [vendor, misc]

@@ -2,7 +2,7 @@
 title:  "Flock"
 description: "3D modular flocking algorithm in HTML5 Canvas"
 date:   2014-10-16 20:00:00
-preview_img_src: "/img/flock.png"
+preview_img_src: "flock.png"
 location: "http://www.mdc.io/flock/"
 tags: js canvas flocking
 available: true

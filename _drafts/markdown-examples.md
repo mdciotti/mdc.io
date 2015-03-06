@@ -55,7 +55,7 @@ There are six levels of headings. They correspond with the six levels of HTML he
 
 Of course, demonstrating what headings look like messes up the structure of the page.
 
-I don't recommend using more than three or four levels of headings here, because, when you're smallest heading isn't too small, and you're largest heading isn't too big, and you want each size up to look noticeably larger and more important, there there are only so many sizes that you can use.
+I don't recommend using more than three or four levels of headings here, because, when your smallest heading isn't too small, and your largest heading isn't too big, and you want each size up to look noticeably larger and more important, there there are only so many sizes that you can use.
 
 ## URLs
 

@@ -11,7 +11,7 @@ title: Lab
 	{% for experiment in site.experiments reversed | sort: 'date' %}
 		<li>
 			<a href="{% if experiment.available %}{{ experiment.location }}{% else %}javascript:void(0){% endif %}" class="grid-item{% unless experiment.available %} unavailable{% endunless %}">
-				<div class="grid-item-preview"><img src="{{ experiment.preview_img_src }}"></div>
+				<div class="grid-item-preview"><img src="/img/preview/{{ experiment.preview_img_src }}"></div>
 				<div class="grid-item-caption">
 					<h2 class="grid-item-title">{{ experiment.title }}</h2>
 					<time datetime="{{ experiment.date | date_to_xmlschema }}">{{ experiment.date | date_to_string }}</time>

@@ -11,10 +11,10 @@
 				<div id="logo"><a href="/"><img src="/img/logo.png"></a></div>
 				<nav>
 					<ul>
-						<li{% if page.url contains "about" %} class="selected"{% endif %}><a href="/about">about</a></li>
-						<li{% if page.url contains "journal" %} class="selected"{% endif %}><a href="/journal">journal</a></li>
-						<li{% if page.url contains "portfolio" %} class="selected"{% endif %}><a href="/portfolio">portfolio</a></li>
-						<li{% if page.url contains "lab" %} class="selected"{% endif %}><a href="/lab">lab</a></li>
+						<li{% if page.title == "About" %} class="selected"{% endif %}><a href="/about">about</a></li>
+						<li{% if page.title == "Journal" %} class="selected"{% endif %}><a href="/journal">journal</a></li>
+						<li{% if page.title == "Portfolio" %} class="selected"{% endif %}><a href="/portfolio">portfolio</a></li>
+						<li{% if page.title == "Lab" %} class="selected"{% endif %}><a href="/lab">lab</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -22,5 +22,6 @@
 		<div class="container">
 			{{ content }}
 		</div>
+		{% include footer.html %}
 	</body>
 </html>

@@ -10,7 +10,7 @@ title: Portfolio
 	{% for project in site.projects reversed | sort: 'date' %}
 		<li>
 			<a href="{% if project.available %}{{ project.location }}{% else %}javascript:void(0){% endif %}" class="grid-item{% unless project.available %} unavailable{% endunless %}">
-				<div class="grid-item-preview"><img src="{{ project.preview_img_src }}"></div>
+				<div class="grid-item-preview"><img src="/img/preview/{{ project.preview_img_src }}"></div>
 				<div class="grid-item-caption">
 					<h2 class="grid-item-title">{{ project.title }}</h2>
 					<time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date_to_string }}</time>

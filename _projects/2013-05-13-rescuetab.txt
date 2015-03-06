@@ -2,7 +2,7 @@
 title:  "RescueTab"
 description: "Chrome Extension to view recently closed tabs"
 date:   2013-05-13 18:00:00
-preview_img_src: "/img/rescuetab.png"
+preview_img_src: "rescuetab.png"
 location: "http://www.mdc.io/rescuetab/"
 tags: chrome
 available: false

@@ -160,7 +160,7 @@ body > header {
 }
 
 body > header .container {
-	min-height: 10em;
+	/*min-height: 10em;*/
 	display: flex;
 	align-items: flex-end;
 }
@@ -201,6 +201,7 @@ body > header nav {
 }
 body > header nav ul {
 	display: flex;
+	flex-wrap: wrap;
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
@@ -262,7 +263,7 @@ body > footer h2 b {
 	border-top: thin solid #CCCCCC;
 }
 .journal-list ul li a:hover {
-	background-color: #eeeeee;
+	background-color: #ffffff;
 }
 .journal-list ul li a:hover .entry-title {
 	text-decoration: underline;
@@ -318,6 +319,7 @@ body > footer h2 b {
 article {
 	/*font-size: 1.2em;*/
 	line-height: 1.5;
+	padding: 0 1em;
 }
 article h2 {
 	font-size: 1.5em;
@@ -338,7 +340,6 @@ article h3 {
 
 article p {
 	line-height: 1.5;
-	padding: 0 1em;
 }
 
 article ul, article ol {
@@ -404,7 +405,19 @@ article table th {
 article table tr:last-child td {
 	border-bottom: none;
 }
+article img,
+article canvas {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+article img.fullwidth {
+
+}
 /* END JOURNAL STYLING */
+article .gist table {
+	border: none;
+}
 /* BEGIN GRID ITEM STYLING */
 .grid {
 	list-style-type: none;
@@ -431,7 +444,7 @@ article table tr:last-child td {
 	border: thin solid #CCCCCC;
 }
 .grid .grid-item:hover {
-	border-color: #CC0000;
+	/*border-color: #CC0000;*/
 }
 .grid .grid-item .grid-item-preview {
 	overflow: hidden;
@@ -463,14 +476,14 @@ article table tr:last-child td {
 	color: #222222;
 }
 .grid .grid-item:hover .grid-item-caption {
-	background-color: #CC0000;
+	background-color: #FFFFFF;
 }
 .grid .grid-item:hover h2.grid-item-title {
 	/*text-decoration: underline;*/
-	color: #FFFFFF;
+	color: #CC0000;
 }
 .grid .grid-item:hover p.grid-item-description {
-	color: #CCCCCC;
+	/*color: #CCCCCC;*/
 }
 /* END GRID ITEM STYLING */
 .grid .grid-item .grid-item-caption time {
@@ -491,7 +504,7 @@ article table tr:last-child td {
 	margin-top: 0;
 }
 .grid .grid-item.unavailable {
-	opacity: 0.5;
+	opacity: 0.25;
 	border-color: #CCCCCC;
 }
 .grid .grid-item.unavailable:hover .grid-item-caption {
@@ -506,5 +519,8 @@ article table tr:last-child td {
 }
 
 footer {
-
+	font-size: 0.8em;
+	text-align: center;
+	color: #888888;
+	margin: 3em 0;
 }

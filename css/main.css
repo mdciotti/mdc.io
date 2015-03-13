@@ -64,6 +64,10 @@ a.button {
 	color: #222222;
 	text-decoration: none;
 	outline: none;
+	cursor: default;
+}
+a[href].button {
+	cursor: pointer;
 }
 a.button:hover, a.button:focus {
 	border-width: 3px;
@@ -342,8 +346,15 @@ article p {
 	line-height: 1.5;
 }
 
+article p.soft {
+	color: #666666;
+}
+
 article ul, article ol {
 	/*line-height: 1.5;*/
+}
+article .float-right {
+	float: right;
 }
 
 article blockquote {
@@ -372,7 +383,7 @@ article pre {
 	color: #444444;
 	font-family: 'Monaco', 'Consolas', monospace;
 	/*font-size: ;*/
-	/*line-height: 1.2;*/
+	line-height: 1.2;
 	overflow: auto;
 	max-height: 50em;
 }
@@ -405,6 +416,21 @@ article table th {
 article table tr:last-child td {
 	border-bottom: none;
 }
+
+table.bit-field {
+	width: auto;
+	margin: 0 auto;
+}
+table.bit-field td,
+table.bit-field th {
+	border: thin solid #888888;
+	padding: 0.25em 0.5em;
+	text-align: center;
+}
+table.bit-field tr.bits td {
+	width: 2em;
+}
+
 article img,
 article canvas {
 	display: block;
@@ -413,6 +439,16 @@ article canvas {
 }
 article img.fullwidth {
 
+}
+article img.pixelated {
+	image-rendering: optimizeSpeed;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: optimize-contrast;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+	-ms-interpolation-mode: nearest-neighbor;
 }
 /* END JOURNAL STYLING */
 article .gist table {

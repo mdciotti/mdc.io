@@ -3,7 +3,7 @@
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 2px;
-  color: #666666;
+  color: #888888;
 }
 .subtitle a[href] {
   color: #cccccc;
@@ -37,7 +37,7 @@ h1,
 h2 {
   font-family: 'Nixie One', 'American Typewriter', monospace;
   font-weight: lighter;
-  color: #aa0000;
+  color: #cccc33;
 }
 h1 {
   font-size: 240%;
@@ -51,9 +51,9 @@ a {
   outline: none;
 }
 a.button {
-  border: 1px solid #aa0000;
+  border: 1px solid #cccc33;
   padding: 4px 8px;
-  color: #aa0000;
+  color: #cccc33;
   text-decoration: none;
   outline: none;
   cursor: default;
@@ -61,36 +61,36 @@ a.button {
 a.button:hover,
 a.button:focus {
   color: #111111;
-  background-color: #aa0000;
+  background-color: #cccc33;
 }
 a.button:active {
-  color: #880000;
-  border-color: #880000;
+  color: #7a7a1f;
+  border-color: #7a7a1f;
 }
 a[href].button {
   cursor: pointer;
 }
 a[href]:not(.button) {
-  color: #aa0000;
+  color: #cccc33;
   text-decoration: none;
 }
 a[href]:not(.button):hover,
 a[href]:not(.button):focus {
-  color: #ff0000;
-  border-bottom: thin solid #ff0000;
+  color: #e0e085;
+  border-bottom: thin solid #e0e085;
 }
 a[href]:not(.button):active {
-  color: #880000;
-  border-color: #880000;
+  color: #7a7a1f;
+  border-color: #7a7a1f;
 }
 a[href]:not(.button):visited {
-  color: #666666;
-  border-color: #666666;
+  color: #888888;
+  border-color: #888888;
 }
 .about .picture {
   float: left;
   margin: 0 1em;
-  border: 1px solid #aa0000;
+  border: 1px solid #cccc33;
   padding: 8px;
   overflow: hidden;
   background-image: url('/img/avatar512.jpg');
@@ -100,15 +100,18 @@ a[href]:not(.button):visited {
   height: 256px;
 }
 header.container {
-  padding: 8em 0 8em;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 header.container h1 {
   text-transform: uppercase;
   letter-spacing: 8px;
+  margin-top: 30vh;
 }
 header.container h1 + p {
-  margin-bottom: 8em;
+  flex: 3 3 auto;
 }
 section.container {
   padding: 32px 10px;
@@ -129,7 +132,7 @@ section.container > h2:first-child + p {
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 2px;
-  color: #666666;
+  color: #888888;
 }
 section.container > h2:first-child + p a[href] {
   color: #cccccc;
@@ -155,7 +158,7 @@ section.container > h2:first-child + p a[href]:visited {
 footer.container {
   font-size: 0.8em;
   text-align: center;
-  color: #666666;
+  color: #888888;
   margin: 3em auto;
 }
 footer.container ul {
@@ -190,14 +193,14 @@ footer.container li {
 }
 .content p.subtitle {
   line-height: 1.5;
-  color: #666666;
+  color: #888888;
   text-align: center;
 }
 .content p.soft {
-  color: #666666;
+  color: #888888;
 }
 .content time {
-  color: #666666;
+  color: #888888;
   font-weight: lighter;
   text-transform: uppercase;
 }
@@ -207,7 +210,7 @@ footer.container li {
 }
 .content blockquote {
   font-style: italic;
-  border: 4px double #666666;
+  border: 4px double #888888;
   padding: 0.75em 3em;
   color: #aaaaaa;
   margin: 0;
@@ -333,7 +336,7 @@ footer.container li {
   font-weight: lighter;
 }
 .lab .grid .grid-item-title .year {
-  color: #666666;
+  color: #888888;
 }
 .lab .grid .grid-item-actions {
   font-size: 0.8em;
@@ -349,7 +352,7 @@ footer.container li {
 }
 .list .list-item .list-item-description {
   margin: 0;
-  color: #666666;
+  color: #888888;
 }
 .list.small {
   font-size: 0.9em;

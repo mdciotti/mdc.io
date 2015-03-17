@@ -110,16 +110,21 @@ a {
 }
 
 header.container {
-	padding: 8em 0 8em;
 	text-align: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 
 	h1 {
 		text-transform: uppercase;
 		letter-spacing: 8px;
+		// flex: 1 1 auto;
+		// justify-content: center;
+		margin-top: 30vh;
 	}
 
 	h1 + p {
-		margin-bottom: 8em;
+		flex: 3 3 auto;
 	}
 }
 

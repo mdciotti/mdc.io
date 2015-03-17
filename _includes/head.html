@@ -7,28 +7,23 @@
 		<meta name="description" content="{{ site.description }}">
 		<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}/">
 
-		<!-- Syntax Highlighting CSS -->
-		<link rel="stylesheet" href="/css/syntax.css">
-
 		<!-- Custom fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,700,300italic|Nixie+One" rel="stylesheet" type="text/css">
 
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="/css/main.css">
 
-		<!-- Custom JS -->
-		<script src="/js/main.js"></script>
+		<!-- Syntax Highlighting CSS -->
+		<link rel="stylesheet" href="/css/syntax.css">
 
-		{% if page.intro %}
-		<!-- Intro Page -->
-		<script src="/js/intro.js"></script>
-		<link rel="stylesheet" href="/css/intro.css">
-		{% endif %}
+		<!-- Custom JS -->
+		<!-- // <script src="/js/main.js"></script> -->
 
 		{% if page.math %}
 		<!-- // <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 		<!-- TODO: Switch to KaTeX when it has more features -->
 		<!-- // <script src="/vendor/katex/katex.min.js"></script> -->
+		<!-- // <script src="/js/math.js"></script> -->
 		<!-- <link rel="stylesheet" type="text/css" href="/vendor/katex/katex.min.css"> -->
 		{% endif %}
 

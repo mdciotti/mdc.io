@@ -21,5 +21,5 @@ function renderMath() {
 }
 
 window.addEventListener('load', function (e) {
-    // renderMath();
+    renderMath();
 });

@@ -14,7 +14,7 @@ role: "Student designer & web developer"
 timezone: America/Chicago
 encoding: utf-8
 collections:
-  projects
-  experiments
+  - projects
+  - experiments
 exclude: [styles, vendor, misc]
 keep_files: [css]

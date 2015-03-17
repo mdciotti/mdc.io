@@ -1,5 +1,18 @@
 
 var QR = (function (dom) {
+    "use strict";
+
+    function pad(str, len, c) {
+        while (str.length < len) {
+            str = c + str;
+        }
+        return str;
+    }
+
+    function inspect(bits, len) {
+        console.log(pad(bits.toString(2), len, "0"));
+        // return bits;
+    }
 
     // Constructor
     // @param version !required
@@ -10,7 +23,6 @@ var QR = (function (dom) {
         try {
             if (arguments.length === 0) {
                 throw new Error("QR() must be passed a version number");
-                return void(0);
             }
         } catch (e) {
             console.error(e.message);
@@ -55,14 +67,13 @@ var QR = (function (dom) {
     QR.KANJI = 8;
     QR.FNC1_SECOND = 9;
 
-    QR.FORMAT_MASK = 0b101010000010010;
-    // QR.FORMAT_MASK = 0x5412;
+    // QR.FORMAT_MASK = 0b101010000010010;
+    QR.FORMAT_MASK = 0x5412;
 
     QR.NO_MASK = function (i, j) { return 0; };
 
     // Private Static Members
     var ALPHANUMERIC_CHARSET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ $%*+-./:";
-    var NUMERIC_CHARSET = "0123456789";
 
     // Create a list of the alignment locations
     // All of the (x,y) coordinates can be generated from this list by permutation
@@ -86,35 +97,53 @@ var QR = (function (dom) {
 
         var isFinderPattern = false,
             isTimingPattern = false,
-            isDarkModule = false,
             isFormatString = false,
             isPattern = false,
             bit;
 
         for (var i = 0; i < size; i++) {
             for (var j = 0; j < size; j++) {
-                if (patterns & QR.FINDER_PATTERN) {
-                    isFinderPattern = (i < 8 && j < 8)
-                        || (i < 8 && j >= size - 8)
-                        || (i >= size - 8 && j < 8);
-                }
-                if (patterns & QR.TIMING_PATTERN) {
-                    isTimingPattern = i === 6 || j === 6;
-                }
-                if (patterns & QR.DARK_MODULE) {
-                    isDarkModule = i === size - 8 && j === 8;
-                }
                 if (format) {
-                    isFormatString = i === 8 && (j <= 8 || j >= size - 8)
-                        || j === 8 && (i <= 8 || i > size - 8);
+                    isFormatString = (i === 8) && (j <= 8 || j >= size - 8) ||
+                    (j === 8) && (i <= 8 || i > size - 8);
                 }
 
-                isPattern = isFinderPattern || isTimingPattern || isDarkModule || isFormatString;
+                isPattern = isFormatString;
                 bit = isPattern ? 0 : 1;
                 QR.setBit(i * size + j, bit, buffer);
             }
         }
 
+        // Add finder patterns
+        if (patterns & QR.FINDER_PATTERN) {
+            for (i = 0; i < 8; i++) {
+                for (j = 0; j < 8; j++) {
+                    QR.setBit(i * size + j, 0, buffer);
+                    QR.setBit((size - 1 - i) * size + j, 0, buffer);
+                    QR.setBit(i * size + (size - 1 - j), 0, buffer);
+                }
+            }
+        }
+
+        // Add format string
+        // if (format) {
+        //     for (i = size - 8; i)
+        // }
+
+        // Add timing pattern
+        if (patterns & QR.TIMING_PATTERN) {
+            for (i = size - 9; i >= 8; i--) {
+                QR.setBit(6 * size + i, 0, buffer);
+                QR.setBit(i * size + 6, 0, buffer);
+            }
+        }
+
+        // Add dark module
+        if (patterns & QR.DARK_MODULE) {
+            QR.setBit((size - 8) * size + 8, 0, buffer);
+        }
+
+        // Add alignment patterns
         if (patterns & QR.ALIGNMENT_PATTERN) {
             var lastIndex = alignmentLocations.length - 1;
             var pi, pj;
@@ -227,17 +256,6 @@ var QR = (function (dom) {
         }
     };
 
-    function pad(str, len, c) {
-        while (str.length < len) {
-            str = c + str;
-        }
-        return str;
-    }
-    function inspect(bits, len) {
-        console.log(pad(bits.toString(2), len, "0"));
-        // return bits;
-    }
-
     QR.prototype = {
         // Private Members
         _version: null,
@@ -288,33 +306,45 @@ var QR = (function (dom) {
         },
 
         get errorCorrection () {
+            // var mask = 0b110000000000000;
+            var mask = 0x6000;
             if (this.format === null) return 0;
-            return (this.format & 0b110000000000000) >> 13;
+            return (this.format & mask) >> 13;
         },
         set errorCorrection (value) {
+            // var mask = 0b110000000000000;
+            var mask = 0x6000;
             if (this.format === null) this.format = 0;
-            this.format |= 0b110000000000000;
-            this.format &= (value << 13) & 0b110000000000000;
+            this.format |= mask;
+            this.format &= (value << 13) & mask;
         },
 
         get mask () {
+            // var mask = 0b001110000000000;
+            var mask = 0x1C00;
             if (this.format === null) return 0;
-            return (this.format & 0b001110000000000) >> 10;
+            return (this.format & mask) >> 10;
         },
         set mask (value) {
+            // var mask = 0b001110000000000;
+            var mask = 0x1C00;
             if (this.format === null) this.format = 0;
-            this.format |= 0b001110000000000;
-            this.format &= (value << 10) & 0b001110000000000;
+            this.format |= mask;
+            this.format &= (value << 10) & mask;
         },
 
         get generator () {
+            // var mask = 0b000001111111111;
+            var mask = 0x03FF;
             if (this.format === null) return 0;
-            return this.format & 0b000001111111111;
+            return this.format & mask;
         },
         set generator (value) {
+            // var mask = 0b000001111111111;
+            var mask = 0x03FF;
             if (this.format === null) this.format = 0;
-            this.format |= 0b000001111111111;
-            this.format &= value & 0b000001111111111;
+            this.format |= mask;
+            this.format &= value & mask;
         }
     };
 
@@ -533,8 +563,8 @@ var QR = (function (dom) {
         switch (this.bitScanner.mode) {
             case QR.NUMERIC: bitsPerCodeword = 10; break;
             case QR.ALPHANUMERIC: bitsPerCodeword = 11; break;
-            case QR.BYTE: bitsPerCodeword = 8; break
-            case QR.KANJI: bitsPerCodeword = 13; break
+            case QR.BYTE: bitsPerCodeword = 8; break;
+            case QR.KANJI: bitsPerCodeword = 13; break;
             // TODO: set bitsPerCodeword for other encoding modes
             default: bitsPerCodeword = 0; break;
         }
@@ -675,7 +705,7 @@ var QR = (function (dom) {
                         default: this.getMaskModule = QR.NO_MASK; break;
                     }
                 } else {
-                    throw new Error("QR.setMask(m): parameter must be between 0 and 7 inclusive")
+                    throw new Error("QR.setMask(m): parameter must be between 0 and 7 inclusive");
                 }
             } else {
                 throw new Error("Unknown mask: QR.setMask(m) takes a number 0-7 or a mask function");
@@ -808,7 +838,7 @@ var QR = (function (dom) {
         this.fillModuleRect(left + 2, top + 2, 3, 3);
     };
 
-    QR.prototype.drawAlignmentPatterns = function (left, top) {
+    QR.prototype.drawAlignmentPatterns = function () {
         if (this.version > 1) {
             var i, j;
 
@@ -884,7 +914,7 @@ var QR = (function (dom) {
             this.drawTimingPatterns();
         }
         if (this.patterns & QR.ALIGNMENT_PATTERN) {
-            this.drawAlignmentPatterns(this.size - 7, this.size - 7);
+            this.drawAlignmentPatterns();
         }
     };
 

@@ -1,27 +1,8 @@
 <!DOCTYPE html>
 <html>
-	
 	{% include head.html %}
-
-	<body class="light">
-
-		<header>
-			<div class="container">
-				<!-- <h1 class="title"><a href="/">Maxwell<b>Ciotti</b></a></h1> -->
-				<div id="logo"><a href="/"><img src="/img/logo.png"></a></div>
-				<nav>
-					<ul>
-						<li{% if page.title == "About" %} class="selected"{% endif %}><a href="/about">about</a></li>
-						<li{% if page.title == "Journal" %} class="selected"{% endif %}><a href="/journal">journal</a></li>
-						<li{% if page.title == "Portfolio" %} class="selected"{% endif %}><a href="/portfolio">portfolio</a></li>
-						<li{% if page.title == "Lab" %} class="selected"{% endif %}><a href="/lab">lab</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<div class="container">
-			{{ content }}
-		</div>
+	<body>
+		{{ content }}
 		{% include footer.html %}
 	</body>
 </html>

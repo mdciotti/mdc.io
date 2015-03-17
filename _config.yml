@@ -14,10 +14,7 @@ role: "Student designer & web developer"
 timezone: America/Chicago
 encoding: utf-8
 collections:
-  projects:
-    output: true
-    permalink: /portfolio/:title/
-  experiments:
-    output: true
-    permalink: /lab/:title/
-exclude: [vendor, misc]
+  projects
+  experiments
+exclude: [styles, vendor, misc]
+keep_files: [css]

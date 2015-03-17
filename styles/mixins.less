@@ -1,0 +1,17 @@
+
+.subtitle {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 2px;
+	color: @soft;
+
+	a[href] {
+		color: @foreground;
+
+		&:hover, &:focus, &:active, &:visited {
+			color: @foreground;
+			border-color: @foreground;
+		}
+	}
+}

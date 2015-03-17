@@ -17,4 +17,3 @@ collections:
   - projects
   - experiments
 exclude: [styles, vendor, misc]
-keep_files: [css]

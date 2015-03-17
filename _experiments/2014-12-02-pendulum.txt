@@ -1,9 +1,0 @@
----
-title:  "Pendulum"
-description: "Simple coordinated pendulum animation in HTML5 Canvas"
-date:   2014-12-02 17:00:00
-preview_img_src: "pendulum.png"
-location: "http://www.mdc.io/pendulum/"
-tags: js
-available: true
----

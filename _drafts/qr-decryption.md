@@ -4,7 +4,9 @@ title:  "Manual Decryption of a Broken QR Code"
 date:   2015-03-04 09:30:00
 categories: crypto
 math: true
+feature: true
 scripts: [qr.js]
+description: "An interactive exploration of how to extract the contents of an unscannable QR code"
 ---
 
 [![][fez-screen-preview]][fez-screen]
@@ -56,7 +58,7 @@ I've spent some time recently with [FEZ][fez], the indie video game from Phil Fi
 				this.setModule(i, j, bit);
 			}
 		} else {
-			this.ctx.globalAlpha = 0.5;
+			this.ctx.globalAlpha = 0.25;
 		}
 
 		this.ctx.fillStyle = e.shiftKey ? "#0055AA" : "#AA0000";
@@ -122,7 +124,7 @@ The FEZ QR code fragment is 25 modules by 25 modules, where a *module* describes
 
 Every QR code has several required features: finder patterns, alignment patterns, timing patterns, and a dark module. See the diagram below for how these are laid out in the QR code.
 
-<ol class="float-right" style="line-height: 3; width:50%;" id="qr-features-key">
+<ol style="float: right; line-height: 2.75; width:50%;" id="qr-features-key">
 	<li><a class="button" data-patterns="1">Finder patterns</a></li>
 	<li><a class="button" data-patterns="2">Alignment patterns</a></li>
 	<li><a class="button" data-patterns="4">Timing patterns</a></li>
@@ -130,7 +132,7 @@ Every QR code has several required features: finder patterns, alignment patterns
 </ol>
 <canvas id="qr-features"
 	data-version="8"
-	data-scale="4"
+	data-scale="5"
 	data-color="#222222"
 	data-mask=""
 	data-patterns="15"
@@ -145,18 +147,18 @@ Every QR code has several required features: finder patterns, alignment patterns
 
 	qrFeatures.draw = function (pattern) {
 		qrFeatures.clear();
-		qrFeatures.ctx.globalAlpha = 0.25;
-		qrFeatures.ctx.fillStyle = "#000000";
+		// qrFeatures.ctx.globalAlpha = 0.1;
+		qrFeatures.ctx.fillStyle = "#EEEEEE";
 		qrFeatures.drawExternalBuffer(patternBuffer, false, false);
 
-		qrFeatures.ctx.fillStyle = "#AA0000";
-
+		qrFeatures.ctx.fillStyle = "#CCCCCC";
 		qrFeatures.patterns = QR.ALL_PATTERNS;
-		qrFeatures.ctx.globalAlpha = 0.5;
+		// qrFeatures.ctx.globalAlpha = 0.5;
 		qrFeatures.drawPatterns();
 
+		qrFeatures.ctx.fillStyle = "#000000";
 		qrFeatures.patterns = pattern;
-		qrFeatures.ctx.globalAlpha = 1;
+		// qrFeatures.ctx.globalAlpha = 1;
 		qrFeatures.drawPatterns();
 	};
 
@@ -292,7 +294,8 @@ TODO: make interactive mask applicator that displays decoded output
 
 1. [Thonky QR Code Tutorial][thonky]
 2. [Reed–Solomon codes for coders][wikiversity]
-3. [FEZ Screenshot][fez-screen-source]
+3. [DataGenetics: Wounded QR Codes][data-genetics]
+4. [FEZ Screenshot][fez-screen-source]
 
 <script>QR.drawAll()</script>
 
@@ -305,4 +308,5 @@ TODO: make interactive mask applicator that displays decoded output
 [qr-features]: http://www.thonky.com/qr-code-tutorial/function-patterns2.png
 [thonky]: http://www.thonky.com/qr-code-tutorial/
 [wikiversity]: http://en.wikiversity.org/wiki/Reed%E2%80%93Solomon_codes_for_coders
+[data-genetics]: http://datagenetics.com/blog/november12013/index.html
 [fez-screen-source]: http://commons.wikimedia.org/wiki/File:Fez_(video_game)_screenshot_08.png

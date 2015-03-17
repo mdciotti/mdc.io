@@ -5,8 +5,8 @@ kramdown:
 
 highlighter: pygments
 description: "A central hub of Maxwell Ciotti's journal, portfolio, and lab"
-url: "http://www.mdc.io"
-permalink: /journal/:title
+url: "http://mdc.io"
+permalink: /journal/:title/
 github: mdciotti
 twitter: mdciotti
 email: max@mdc.io
@@ -14,6 +14,7 @@ role: "Student designer & web developer"
 timezone: America/Chicago
 encoding: utf-8
 collections:
-- projects
-- experiments
-exclude: [vendor, misc]
+  projects
+  experiments
+exclude: [styles, vendor, misc]
+keep_files: [css]

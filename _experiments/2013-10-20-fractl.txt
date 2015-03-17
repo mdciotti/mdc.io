@@ -1,9 +1,0 @@
----
-title:  "Fractl"
-description: "Lindenmayer system fractal generation with HTML5 Canvas"
-date:   2013-10-20 12:00:00
-preview_img_src: "fractl.png"
-location: "http://www.mdc.io/fractl/"
-tags: js canvas fractal l-system
-available: true
----

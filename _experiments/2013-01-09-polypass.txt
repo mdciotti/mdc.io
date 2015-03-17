@@ -1,9 +1,0 @@
----
-title:  "PolyPass"
-description: "Password generator using Shamir's Shared Secret algorithm"
-date:   2013-01-09 20:39:00
-preview_img_src: "polypass.jpg"
-location: "http://www.mdc.io/polypass/"
-tags: js crypto
-available: false
----

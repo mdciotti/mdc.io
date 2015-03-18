@@ -1,9 +1,0 @@
----
-title:  "QuickHAC Chrome App"
-description: "Tool for students to quickly access their grades"
-date:   2014-05-03 12:00:00
-preview_img_src: "quickhac.png"
-location: "http://www.mdc.io/quickhac-preview/dist/"
-tags: education application chrome
-available: true
----

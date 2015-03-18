@@ -1,0 +1,78 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2993007,2015-03-18T01:16:19-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: CamingoCode-Italic by Jan Fromm
+ * URL: http://www.myfonts.com/fonts/jan-fromm/camingo-code/italic/
+ * 
+ * Webfont: CamingoCode-Regular by Jan Fromm
+ * URL: http://www.myfonts.com/fonts/jan-fromm/camingo-code/regular/
+ * 
+ * Webfont: CamingoCode-Bold by Jan Fromm
+ * URL: http://www.myfonts.com/fonts/jan-fromm/camingo-code/bold/
+ * 
+ * Webfont: CamingoCode-BoldItalic by Jan Fromm
+ * URL: http://www.myfonts.com/fonts/jan-fromm/camingo-code/bold-italic/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2993007
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) 2006-2013 by Jan Fromm. All rights reserved.
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file,
+ otherwise CSS will not work */
+/*@import url("//hello.myfonts.net/count/2dab6f");*/
+
+@font-face {
+	font-family: 'CamingoCode';
+	src: url('CamingoCode-Italic.eot');
+	src: url('CamingoCode-Italic.eot?#iefix') format('embedded-opentype'),
+	     url('CamingoCode-Italic.woff2') format('woff2'),
+	     url('CamingoCode-Italic.woff') format('woff'),
+	     url('CamingoCode-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'CamingoCode';
+	src: url('CamingoCode-Regular.eot');
+	src: url('CamingoCode-Regular.eot?#iefix') format('embedded-opentype'),
+	     url('CamingoCode-Regular.woff2') format('woff2'),
+	     url('CamingoCode-Regular.woff') format('woff'),
+	     url('CamingoCode-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CamingoCode';
+	src: url('CamingoCode-Bold.eot');
+	src: url('CamingoCode-Bold.eot?#iefix') format('embedded-opentype'),
+	     url('CamingoCode-Bold.woff2') format('woff2'),
+	     url('CamingoCode-Bold.woff') format('woff'),
+	     url('CamingoCode-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CamingoCode';
+	src: url('CamingoCode-BoldItalic.eot');
+	src: url('CamingoCode-BoldItalic.eot?#iefix') format('embedded-opentype'),
+	     url('CamingoCode-BoldItalic.woff2') format('woff2'),
+	     url('CamingoCode-BoldItalic.woff') format('woff'),
+	     url('CamingoCode-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}

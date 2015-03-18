@@ -6,6 +6,9 @@ categories: crypto
 math: true
 feature: true
 scripts: [qr.js]
+background: "/img/journal/fire.jpg"
+imageCredit: "Public Domain Archives"
+imageCreditURL: "http://publicdomainarchive.com/public-domain-images-fire-wood-dark-night-black-orange-warm/"
 description: "An interactive exploration of how to extract the contents of an unscannable QR code"
 ---
 
@@ -99,7 +102,7 @@ At one point in the game, there is a room with what looks like a QR code engrave
 
 This is problematic because no QR code scanner that I have tried can read it. Thankfully, QR codes are designed with an algorithm ([Reed–Solomon error correction][RSEC]) which allow it to be read correctly even if some of the code is mangled or missing. This does not help the scanner, however, because there is simply too much information missing or covered up. Knowing that the code must meet some basic format requirements, can we reconstruct the original QR code so that we can read the original data?
 
-## Extracting the QR Code
+## Reproducing the QR Code
 
 Because a scanner cannot read the code directly from the in-game graphics, I extracted what I could see of the code with a graphics editing program.
 

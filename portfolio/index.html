@@ -3,21 +3,25 @@ layout: default
 title: Portfolio
 ---
 
-<h1>Portfolio: Projects &amp; Designs</h1>
-<!-- <p class="subtitle"></p> -->
-<section class="portfolio">
-	<ul class="grid">
+<section class="portfolio content">
+<div class="container">
+<h2>Portfolio</h2>
+<p>An index of my professional projects and designs</p>
+
+<div class="big list">
 	{% for project in site.projects reversed | sort: 'date' %}
-		<li>
-			<a href="{% if project.available %}{{ project.location }}{% else %}javascript:void(0){% endif %}" class="grid-item{% unless project.available %} unavailable{% endunless %}">
-				<div class="grid-item-preview"><img src="/img/preview/{{ project.preview_img_src }}"></div>
-				<div class="grid-item-caption">
-					<h2 class="grid-item-title">{{ project.title }}</h2>
-					<time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date_to_string }}</time>
-					<p class="grid-item-description">{{ project.description | downcase }}</p>
-				</div>
-			</a>
-		</li>
+	<div class="list-item">
+		<div class="list-item-preview"><img src="/img/preview/{{ project.preview_img_src }}"></div>
+		<div class="list-item-caption">
+			<h3 class="list-item-title">{{ project.title }} <span class="year">{{ project.date | date: "%Y" }}</span></h3>
+			<ul class="list-item-actions">
+				{% if project.available %}<li class="list-item-action"><a href="{{ project.location }}" class="button">View {% if project.type %}{{ project.type }}{% else %}Project{% endif %}</a></li>{% endif %}
+				{% if project.source %}<li class="list-item-action"><a href="{{ project.source }}" class="button">GitHub</a></li>{% endif %}
+			</ul>
+			<div class="list-item-description">{{ project.output }}</div>
+		</div>
+	</div>
 	{% endfor %}
-	</ul>
+</div>
+</div>
 </section>

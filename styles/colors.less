@@ -3,11 +3,107 @@
 @background-light: #222222;
 @background-box: #222222;
 @foreground: #CCCCCC;
-@foreground-light: #AAAAAA;
-@soft: #888888;
-@primary: #CCCC33;
+@foreground-light: #999999;
+@soft: #666666;
+@primary: #00ACED;
 @primary-light: lighten(@primary, 20%);
 @primary-dark: darken(@primary, 20%);
+@secondary: #ED00AC;
+@secondary-light: lighten(@secondary, 20%);
+@secondary-dark: darken(@secondary, 20%);
+@tertiary: #CCCC00;
+@tertiary-light: lighten(@tertiary, 20%);
+@tertiary-dark: darken(@tertiary, 20%);
 @line-color: #333333;
 @line-color-dark: #888888;
 @line-color-darker: #AAAAAA;
+
+@accented-elements: {
+	h1, h2 {
+		color: @accent;
+	}
+
+	a {
+		border-color: @accent;
+
+		&.button {
+			color: @accent;
+
+			&:visited {
+				// color: inherit;
+				// border-color: inherit;
+			}
+
+			&:hover, &:focus {
+				color: @background;
+				// border-color: @accent-light;
+				background-color: @accent;
+			}
+
+			&:active {
+				color: @accent-dark;
+				border-color: @accent-dark;
+			}
+		}
+
+		&[href]:not(.button) {
+			color: @accent;
+			border-color: @accent;
+
+			&:visited {
+				// color: @soft;
+				// border-color: @soft;
+				color: @accent;
+			}
+
+			&:hover, &:focus {
+				color: @accent-light;
+				border-color: @accent-light;
+			}
+
+			&:active {
+				color: @accent-dark;
+				border-color: @accent-dark;
+			}
+		}
+	}
+
+	.about.container .picture {
+		border-color: @accent;
+	}
+};
+
+.default-colors {
+	@accent: @foreground;
+	@accent-light: lighten(@accent, 20%);
+	@accent-dark: darken(@accent, 20%);
+	@accented-elements();
+}
+
+.about-colors {
+	@accent: #00AC64;
+	@accent-light: lighten(@accent, 20%);
+	@accent-dark: darken(@accent, 20%);
+	@accented-elements();
+}
+
+.primary-colors {
+	@accent: @primary;
+	@accent-light: @primary-light;
+	@accent-dark: @primary-dark;
+	@accented-elements();
+}
+
+.secondary-colors {
+	@accent: @secondary;
+	@accent-light: @secondary-light;
+	@accent-dark: @secondary-dark;
+	@accented-elements();
+}
+
+.tertiary-colors {
+	@accent: @tertiary;
+	@accent-light: @tertiary-light;
+	@accent-dark: @tertiary-dark;
+	@accented-elements();
+}

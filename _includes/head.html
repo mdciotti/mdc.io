@@ -3,18 +3,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<!-- <title>{% if page.title %}{{ page.title | append:' × Maxwell Ciotti' }}{% else %}{{ site.name }}{% endif %}</title> -->
 		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="{{ site.description }}">
-		<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}/">
+		<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' | replace:'404.html','404'}}/">
 
 		<!-- Custom fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Lato:300,700,300italic|Nixie+One" rel="stylesheet" type="text/css">
+		<link href="/fonts/all.css" rel="stylesheet" type="text/css">
+		<link href="/fonts/CamingoCode/stylesheet.css" rel="stylesheet" type="text/css">
 
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="/css/main.css">
 
 		<!-- Syntax Highlighting CSS -->
-		<link rel="stylesheet" href="/css/syntax.css">
+		<link rel="stylesheet" href="/css/pygments-monokai.css">
 
 		<!-- Custom JS -->
 		<!-- // <script src="/js/main.js"></script> -->

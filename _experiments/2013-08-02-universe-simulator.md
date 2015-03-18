@@ -8,4 +8,4 @@ tags: js canvas universe gravity sandbox incomplete active
 available: true
 ---
 
-Universe Simulator is a two dimensional astronomical body simulator, and is a ongoing project of mine. I am fascinated by astrophysics and always wanted a planetary sandbox. This little tool is something I always come back to when I am out of ideas.
+Universe Simulator is a two dimensional astronomical body simulator and planetary sandbox. This little tool is something I always come back to when I am out of ideas.

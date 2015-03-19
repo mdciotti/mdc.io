@@ -16,4 +16,4 @@ encoding: utf-8
 collections:
   - projects
   - experiments
-exclude: [styles, vendor, misc]
+exclude: [styles, vendor, misc, design]

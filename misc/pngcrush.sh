@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd img/preview
+cd ../img
 mkdir min
 
 for IMG in *.png

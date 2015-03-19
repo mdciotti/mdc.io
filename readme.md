@@ -14,3 +14,4 @@ This is the source code for my personal website, including my journal, portfolio
 + Journal entry lede
 + Fix broken lab pages (push to trigger gh-pages build)
 + Landing background art?
++ Related entries or prev/next entry

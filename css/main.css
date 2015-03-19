@@ -105,6 +105,9 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+h4 {
+  font-weight: 300;
+}
 a {
   outline: none;
 }
@@ -115,6 +118,7 @@ a.button {
   outline: none;
   cursor: default;
   line-height: 2;
+  cursor: pointer;
 }
 a[href]:not(.button) {
   text-decoration: none;
@@ -362,6 +366,7 @@ footer .container li:last-child {
   padding: 0;
   border: none;
   background: none;
+  white-space: pre-wrap;
 }
 .content code {
   font-family: 'CamingoCode', 'Monaco', 'Consolas', monospace;

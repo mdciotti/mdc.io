@@ -32,6 +32,7 @@ var QR = (function (dom) {
         this.version = version;
         
         this.setColor(color ? color : "#000000");
+        // this.setBackground(bgColor ? bgColor : "none");
         this.setScale(scale ? scale : 8);
         // this.setMode(mode ? mode : QR.ALPHANUMERIC);
 
@@ -173,6 +174,7 @@ var QR = (function (dom) {
         var version = parseInt(el.getAttribute("data-version"));
         var scale = parseInt(el.getAttribute("data-scale"));
         var color = el.getAttribute("data-color");
+        var bgColor = el.getAttribute("data-background");
         var mask = parseInt(el.getAttribute("data-mask"));
         var patterns = parseInt(el.getAttribute("data-patterns"));
 
@@ -183,6 +185,7 @@ var QR = (function (dom) {
         var qr = new QR(version);
         qr.setScale(isNaN(scale) ? 8 : scale);
         qr.setColor(color);
+        qr.setBackground(bgColor);
         qr.setCanvas(el);
         if (!isNaN(mask)) qr.setMask(mask);
         if (!isNaN(patterns)) qr.patterns = patterns;
@@ -658,7 +661,10 @@ var QR = (function (dom) {
 
     QR.prototype.setColor = function (color) {
         this.color = color;
-        // this.ctx.fillStyle = this.color;
+    };
+
+    QR.prototype.setBackground = function (color) {
+        this.background = typeof color !== "string" ? null : color;
     };
 
     QR.prototype.setScale = function (scale) {
@@ -722,12 +728,24 @@ var QR = (function (dom) {
 
     QR.prototype.drawModule = function (i, j, data, clear) {
         if (clear) {
-            this.ctx.clearRect(
-                this.scale * (this.margin + j),
-                this.scale * (this.margin + i),
-                this.scale,
-                this.scale
-            );
+            if (this.background !== null) {
+                this.ctx.save();
+                this.ctx.fillStyle = this.background;
+                this.ctx.fillRect(
+                    this.scale * (this.margin + j),
+                    this.scale * (this.margin + i),
+                    this.scale,
+                    this.scale
+                );
+                this.ctx.restore();
+            } else {
+                this.ctx.clearRect(
+                    this.scale * (this.margin + j),
+                    this.scale * (this.margin + i),
+                    this.scale,
+                    this.scale
+                );
+            }
         }
         if (data) {
             this.ctx.fillRect(
@@ -749,12 +767,24 @@ var QR = (function (dom) {
     };
 
     QR.prototype.clearModuleRect = function (left, top, width, height) {
-        this.ctx.clearRect(
-            this.scale * (this.margin + left),
-            this.scale * (this.margin + top),
-            width * this.scale,
-            height * this.scale
-        );
+        if (this.background !== null) {
+            this.ctx.save();
+            this.ctx.fillStyle = this.background;
+            this.ctx.fillRect(
+                this.scale * (this.margin + left),
+                this.scale * (this.margin + top),
+                width * this.scale,
+                height * this.scale
+            );
+            this.ctx.restore();
+        } else {
+            this.ctx.clearRect(
+                this.scale * (this.margin + left),
+                this.scale * (this.margin + top),
+                width * this.scale,
+                height * this.scale
+            );
+        }
     };
 
     // | d | m | rule  |
@@ -927,8 +957,9 @@ var QR = (function (dom) {
     };
 
     QR.prototype.draw = function (clear) {
-        this.ctx.fillStyle = this.color;
+        console.log(this.background);
         if (clear !== false) this.clear();
+        this.ctx.fillStyle = this.color;
         
         // if (this.)
         this.drawBuffer(true, clear);

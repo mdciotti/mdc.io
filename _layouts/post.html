@@ -3,18 +3,18 @@ layout: default
 ---
 
 <header class="journal post content{% if page.background %} bg{% endif %}">
-	{% if page.background %}
-	<div class="background" style="background-image: url('{{ page.background }}');"></div>
-	<p class="image-credit soft">
-		<a href="{{ page.imageCreditURL }}">{{ page.imageCredit }}</a>
-	</p>
-	{% endif %}
 	<div class="container{% if page.background %} full-height{% endif %}">
 		<h1>{{ page.title }}</h1>
 		{% if page.author %}<p class="author">This is a guest post by {{ page.author }}.</p>{% endif %}
-		{% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
+		{% if page.description %}<p class="subtitle">{{ page.description }}</p>{% endif %}
 		<time>{{ page.date | date_to_long_string }}</time>
 	</div>
+	{% if page.background %}
+	<div class="background" style="background-image: url('{{ page.background }}');"></div>
+	<p class="photo-credit soft">
+		<a href="{{ page.photo_credit_url }}">{{ page.photo_credit }}</a>
+	</p>
+	{% endif %}
 </header>
 <section class="journal post content">
 	<article class="container">

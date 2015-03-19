@@ -73,35 +73,35 @@
 	}
 };
 
-.default-colors {
+.default-colors() {
 	@accent: @foreground;
 	@accent-light: lighten(@accent, 20%);
 	@accent-dark: darken(@accent, 20%);
 	@accented-elements();
 }
 
-.about-colors {
+.about-colors() {
 	@accent: #00AC64;
 	@accent-light: lighten(@accent, 20%);
 	@accent-dark: darken(@accent, 20%);
 	@accented-elements();
 }
 
-.primary-colors {
+.primary-colors() {
 	@accent: @primary;
 	@accent-light: @primary-light;
 	@accent-dark: @primary-dark;
 	@accented-elements();
 }
 
-.secondary-colors {
+.secondary-colors() {
 	@accent: @secondary;
 	@accent-light: @secondary-light;
 	@accent-dark: @secondary-dark;
 	@accented-elements();
 }
 
-.tertiary-colors {
+.tertiary-colors() {
 	@accent: @tertiary;
 	@accent-light: @tertiary-light;
 	@accent-dark: @tertiary-dark;

@@ -10,6 +10,26 @@
 	text-transform: uppercase;
 }
 
+.header() {
+	font-family: "Nixie One", "American Typewriter", monospace;
+}
+
+.sans() {
+	font-family: "Fira Sans", "Lato", "Helvetica Neue", sans-serif;
+}
+
+.serif() {
+	font-family: "Merriweather", "Georgia", serif;
+}
+
+.monospace() {
+	font-family: 'Monaco', 'Consolas', monospace;
+}
+
+.code() {
+	font-family: 'CamingoCode', 'Monaco', 'Consolas', monospace;
+}
+
 .text-figures(@on: on) {
 	-moz-font-feature-settings: "onum" @on;
 	-ms-font-feature-settings: "onum" @on;
@@ -66,7 +86,7 @@
 	.flex-align-content(@rowspace);
 }
 
-.flex-box {
+.flex-box() {
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
@@ -103,21 +123,15 @@
 }
 
 .flex-item(@grow: 0, @shrink: 0, @basis: auto, @align: auto) {
-	-ms-flex-grow: @grow;
-	-webkit-flex-grow: @grow;
-	flex-grow: @grow;
+	-ms-flex: @grow @shrink @basis;
+	-webkit-flex: @grow @shrink @basis;
+	flex: @grow @shrink @basis;
 
-	-ms-flex-shrink: @shrink;
-	-webkit-flex-shrink: @shrink;
-	flex-shrink: @shrink;
-
-	-ms-flex-basis: @basis;
-	-webkit-flex-basis: @basis;
-	flex-basis: @basis;
-
-	-ms-align-self: @align;
-	-webkit-align-self: @align;
-	align-self: @align;
+	& when not (@align = auto) {
+		-ms-align-self: @align;
+		-webkit-align-self: @align;
+		align-self: @align;
+	}
 }
 
 .pixelated {

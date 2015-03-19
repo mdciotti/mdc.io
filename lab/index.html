@@ -13,11 +13,11 @@ title: Lab
 <p class="soft"><em>Please note: many of these experiments have not been tested for cross-browser support.</em></p>
 
 </div>
-<div class="grid wrap wide-container">
+<div class="wide-container grid">
 	{% for experiment in site.experiments reversed | sort: 'date' %}
 	{% unless experiment.hidden %}
 	<div class="grid-item">
-		<div class="grid-item-preview"><img src="/img/preview/{{ experiment.preview_img_src }}"></div>
+		<div class="grid-item-preview"><img src="/img/preview/{{ experiment.preview_img_src }}" width="278" height="208"></div>
 		<div class="grid-item-caption">
 			<h3 class="grid-item-title">{{ experiment.title | upcase }} <span class="year">{{ experiment.date | date: "%Y" }}</span></h3>
 			<ul class="grid-item-actions">

@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Manual Decryption of a Broken QR Code"
+title:  "QR Code Forensics"
 date:   2015-03-04 09:30:00
 categories: crypto
 math: true
 feature: true
 scripts: [qr.js]
 background: "/img/journal/fire.jpg"
-imageCredit: "Public Domain Archives"
-imageCreditURL: "http://publicdomainarchive.com/public-domain-images-fire-wood-dark-night-black-orange-warm/"
+photo_credit: "Public Domain Archives"
+photo_credit_url: "http://publicdomainarchive.com/public-domain-images-fire-wood-dark-night-black-orange-warm/"
 description: "An interactive exploration of how to extract the contents of an unscannable QR code"
 ---
 
@@ -17,9 +17,10 @@ description: "An interactive exploration of how to extract the contents of an un
 I've spent some time recently with [FEZ][fez], the indie video game from Phil Fish and Renaud Bedárd. It's a fantastic gem, and I wholeheartedly recommend it if you're into puzzle games. If taking your time collecting all the items and solving all the puzzles sounds like you, this game is for you. Plus, the [soundtrack][fez-ost] is *amazing*.
 
 <canvas id="qr-editor"
-	data-version="1"
+	data-version="2"
 	data-scale="16"
-	data-color="#222222"
+	data-color="#111111"
+	data-background="#CCCCCC"
 	data-mask=""
 	data-patterns="15"
 	data-bits="">
@@ -34,8 +35,7 @@ I've spent some time recently with [FEZ][fez], the indie video game from Phil Fi
 	var size = qrEditor.size;
 	var button = 0;
 
-	qrEditor.ctx.globalAlpha = 0.5;
-	qrEditor.drawPatterns();
+	qrEditor.draw();
 
 	qrEditor.draw = function (e) {
 		var j = Math.floor((e.pageX - e.target.offsetLeft) / this.scale) - 4;
@@ -44,9 +44,11 @@ I've spent some time recently with [FEZ][fez], the indie video game from Phil Fi
 		this.clear();
 		// this.fillFromBuffer(buffer, false);
 
-		this.ctx.globalAlpha = 0.5;
+		// this.ctx.globalAlpha = 0.5;
+		this.ctx.fillStyle = "#888888";
 		this.drawPatterns();
-		this.ctx.globalAlpha = 1.0;
+		// this.ctx.globalAlpha = 1.0;
+		this.ctx.fillStyle = this.color;
 		this.drawBuffer(false);
 
 		var leftMouseDown = button === 1;
@@ -63,6 +65,21 @@ I've spent some time recently with [FEZ][fez], the indie video game from Phil Fi
 		} else {
 			this.ctx.globalAlpha = 0.25;
 		}
+
+		// Draw grid
+		this.ctx.save();
+		this.ctx.translate(this.margin * this.scale, this.margin * this.scale);
+		// this.ctx.translate(-0.5, -0.5);
+		this.ctx.strokeStyle = "#888888";
+		this.ctx.beginPath();
+		for (var line = 0; line <= size; line++) {
+			this.ctx.moveTo(0, line * this.scale);
+			this.ctx.lineTo(size * this.scale, line * this.scale);
+			this.ctx.moveTo(line * this.scale, 0);
+			this.ctx.lineTo(line * this.scale, size * this.scale);
+		}
+		this.ctx.stroke();
+		this.ctx.restore();
 
 		this.ctx.fillStyle = e.shiftKey ? "#0055AA" : "#AA0000";
 		this.drawModule(i, j, 1, false);
@@ -110,6 +127,7 @@ Because a scanner cannot read the code directly from the in-game graphics, I ext
 	data-version="2"
 	data-scale="8"
 	data-color="#222222"
+	data-background="#CCCCCC"
 	data-mask=""
 	data-patterns="0"
 	data-bits="AMD8AQAJAoDQBQCkCwBZFwCsIABUfwCQAAAkLAAfzgHkCQDI9gGM5waAzI6zFwEWn1RDPF8AUuP8mdcIwondxfSpS/1GV0rroEKcfwigAQ==">
@@ -137,6 +155,7 @@ Every QR code has several required features: finder patterns, alignment patterns
 	data-version="8"
 	data-scale="5"
 	data-color="#222222"
+	data-background="#CCCCCC"
 	data-mask=""
 	data-patterns="15"
 	data-bits="">
@@ -150,18 +169,15 @@ Every QR code has several required features: finder patterns, alignment patterns
 
 	qrFeatures.draw = function (pattern) {
 		qrFeatures.clear();
-		// qrFeatures.ctx.globalAlpha = 0.1;
-		qrFeatures.ctx.fillStyle = "#EEEEEE";
+		qrFeatures.ctx.fillStyle = "#BBBBBB";
 		qrFeatures.drawExternalBuffer(patternBuffer, false, false);
 
-		qrFeatures.ctx.fillStyle = "#CCCCCC";
+		qrFeatures.ctx.fillStyle = "#888888";
 		qrFeatures.patterns = QR.ALL_PATTERNS;
-		// qrFeatures.ctx.globalAlpha = 0.5;
 		qrFeatures.drawPatterns();
 
-		qrFeatures.ctx.fillStyle = "#000000";
+		qrFeatures.ctx.fillStyle = "#111111";
 		qrFeatures.patterns = pattern;
-		// qrFeatures.ctx.globalAlpha = 1;
 		qrFeatures.drawPatterns();
 	};
 
@@ -182,8 +198,6 @@ Every QR code has several required features: finder patterns, alignment patterns
 	});
 })();
 </script>
-
-<!-- ![Diagram of QR features][qr-features] -->
 
 Every QR code also has a *format specifier*: a 15-bit string containing metadata about how to decode the QR data. When a QR code is generated, the format string is masked (XOR) with the binary string `101010000010010`. To read the original format data, we must reverse that process. This simply means to XOR the format string with that constant:
 
@@ -251,6 +265,7 @@ The mask bits from the FEZ QR code fragment are `001`, which means mask 1 is use
 	data-version="2"
 	data-scale="8"
 	data-color="#222222"
+	data-background="#CCCCCC"
 	data-mask="1"
 	data-patterns="0"
 	data-bits="">
@@ -262,6 +277,7 @@ If we apply this mask to the FEZ QR fragment (which was already masked when gene
 	data-version="2"
 	data-scale="8"
 	data-color="#222222"
+	data-background="#CCCCCC"
 	data-mask="1"
 	data-patterns="15"
 	data-bits="AMD8AQAJAoDQBQCkCwBZFwCsIABUfwCQAAAkLAAfzgHkCQDI9gGM5waAzI6zFwEWn1RDPF8AUuP8mdcIwondxfSpS/1GV0rroEKcfwigAQ==">
@@ -270,6 +286,7 @@ If we apply this mask to the FEZ QR fragment (which was already masked when gene
 	data-version="2"
 	data-scale="8"
 	data-color="#222222"
+	data-background="#CCCCCC"
 	data-mask="2"
 	data-patterns="15"
 	data-bits="AJkBAHIBAPwFAKACAMAFAKAiAAAAAID6ABzlzkECSxEaycc4BYzQrT0EtETFB/EWrAMxE+ABNMAD4AMGAAQMEA4GYIgqwKVRAHCJAF75AQ==">
@@ -278,6 +295,7 @@ If we apply this mask to the FEZ QR fragment (which was already masked when gene
 	data-version="1"
 	data-scale="8"
 	data-color="#222222"
+	data-background="#CCCCCC"
 	data-mask=""
 	data-patterns="15"
 	data-bits="AAcAoAEAEAAADgDQAAAeAAAAAIgAJ+eZpWqHbMUI1224CQEoNoBcBHhFAKwawOYBTG2A0wEQEwE=">
@@ -286,6 +304,7 @@ If we apply this mask to the FEZ QR fragment (which was already masked when gene
 	data-version="1"
 	data-scale="8"
 	data-color="#222222"
+	data-background="#CCCCCC"
 	data-mask="3"
 	data-patterns="15"
 	data-bits="ABMAoAIAYACAAwDAAAA8AAAAAMgArVzaduJ5KmrRDtnZrQA0AkDiA/h1AB4OIAoBfBoA9wiwdwA=">

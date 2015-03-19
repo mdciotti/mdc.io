@@ -1,25 +1,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<!-- <title>{% if page.title %}{{ page.title | append:' × Maxwell Ciotti' }}{% else %}{{ site.name }}{% endif %}</title> -->
 		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="{{ site.description }}">
-		<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' | replace:'404.html','404'}}/">
-
-		<!-- Custom fonts -->
+		<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+		<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'/index.html','/' | replace:'/404.html','/404/'}}">
 		<link href="/fonts/all.css" rel="stylesheet" type="text/css">
-		<link href="/fonts/CamingoCode/stylesheet.css" rel="stylesheet" type="text/css">
-
-		<!-- Custom CSS -->
 		<link rel="stylesheet" href="/css/main.css">
-
-		<!-- Syntax Highlighting CSS -->
-		<link rel="stylesheet" href="/css/pygments-monokai.css">
-
-		<!-- Custom JS -->
 		<!-- // <script src="/js/main.js"></script> -->
-
 		{% if page.math %}
 		<!-- // <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 		<!-- TODO: Switch to KaTeX when it has more features -->
@@ -27,13 +15,10 @@
 		<!-- // <script src="/js/math.js"></script> -->
 		<!-- <link rel="stylesheet" type="text/css" href="/vendor/katex/katex.min.css"> -->
 		{% endif %}
-
 		{% if page.scripts %}
 		{% for path in page.scripts %}
 		<script src="/js/{{ path }}"></script>
 		{% endfor %}
 		{% endif %}
-
-		<!-- favicon -->
 		<link href="/img/logo.png" rel="icon" type="image/png">
 	</head>

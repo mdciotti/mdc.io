@@ -9,18 +9,25 @@
 
 .default-colors();
 
-html { min-height: 100%; font-size: @unit; }
+html { font-size: @unit; }
 body {
 	.sans();
 	margin: 0;
 	font-weight: 300;
 	font-size: @unit;
-	min-height: 100%;
+	min-height: 100vh;
 	line-height: 1;
 	color: @foreground-light;
 	background-color: @background;
 	background-image: url(/img/escheresque.png);
 	text-rendering: optimizeLegibility;
+	// display: flex;
+	.flex-box;
+	.flex-direction(column);
+}
+
+body > section {
+	.flex-item(1);
 }
 
 * { // http://www.paulirish.com/2012/box-sizing-border-box-ftw/
@@ -93,26 +100,13 @@ a {
 }
 
 header.bg {
-	// .perspective(300px);
 	min-height: 100vh;
-	overflow: hidden;
-
-	.background {
-		// background: attr(data-bg url);
-		background-size: cover;
-		background-position: center;
-		// background-attachment: fixed;
-		z-index: -1;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-	}
+	background-size: cover;
+	background-position: center;
+	position: relative;
 
 	&.content .container {
 		h1, p, time {
-			// .perspective-layer(-1px);
 			padding: 0 @unit @unit;
 			background-color: rgba(0,0,0,0.5);
 			color: #FFFFFF;
@@ -144,15 +138,6 @@ header.bg {
 		a[href] {
 			border-bottom: none;
 		}
-	}
-
-	.container {
-		position: absolute;
-		top: 0;
-		right: 0;
-		botttom: 0;
-		left: 0;
-		margin: auto;
 	}
 }
 

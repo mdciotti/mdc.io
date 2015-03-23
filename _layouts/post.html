@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<header class="journal post content{% if page.background %} bg{% endif %}">
+<header class="journal post content{% if page.background %} bg{% endif %}"{% if page.background %} style="background-image: url('{{ page.background }}');"{% endif %}>
 	<div class="container{% if page.background %} full-height{% endif %}">
 		<div class="m-logo">
 			<a href="/"><img src="{{ site.logo }}" width="125" height="125"></a>
@@ -15,7 +15,6 @@ layout: default
 		<div class="flex-space"></div>
 	</div>
 	{% if page.background %}
-	<div class="background" style="background-image: url('{{ page.background }}');"></div>
 	<p class="photo-credit soft">
 		<a href="{{ page.photo_credit_url }}">{{ page.photo_credit }}</a>
 	</p>
@@ -23,6 +22,7 @@ layout: default
 </header>
 <section class="journal post content">
 	<article class="container">
+	{% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
 	{{ content }}
 	</article>
 </section>

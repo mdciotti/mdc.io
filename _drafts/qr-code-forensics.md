@@ -10,13 +10,14 @@ background: "/img/journal/fire.jpg"
 photo_credit: "Public Domain Archives"
 photo_credit_url: "http://publicdomainarchive.com/public-domain-images-fire-wood-dark-night-black-orange-warm/"
 description: "An interactive exploration of how to extract the contents of an unscannable QR code"
+lede: "QR Codes are everywhere, from item tracking to product packaging to bitcoin addresses. They are incredibly resilient to damage and deformation, but what happens if no matter what you try, it still won't scan? It turns out we can still sometimes read the data by cracking it open manually."
 ---
 
-[![][fez-screen-preview]][fez-screen]
+[![][fez-screen-preview]][fez-screen]{:class="pixelated"}
 
 I've spent some time recently with [FEZ][fez], the indie video game from Phil Fish and Renaud Bedárd. It's a fantastic gem, and I wholeheartedly recommend it if you're into puzzle games. If taking your time collecting all the items and solving all the puzzles sounds like you, this game is for you. Plus, the [soundtrack][fez-ost] is *amazing*.
 
-<canvas id="qr-editor"
+<canvas id="qr-editor" class="pixelated"
 	data-version="2"
 	data-scale="16"
 	data-color="#111111"
@@ -123,7 +124,7 @@ This is problematic because no QR code scanner that I have tried can read it. Th
 
 Because a scanner cannot read the code directly from the in-game graphics, I extracted what I could see of the code with a graphics editing program.
 
-<canvas class="qr"
+<canvas class="pixelated qr"
 	data-version="2"
 	data-scale="8"
 	data-color="#222222"
@@ -151,7 +152,7 @@ Every QR code has several required features: finder patterns, alignment patterns
 	<li><a class="button" data-patterns="4">Timing patterns</a></li>
 	<li><a class="button" data-patterns="8">Dark module</a></li>
 </ol>
-<canvas id="qr-features"
+<canvas id="qr-features" class="pixelated"
 	data-version="8"
 	data-scale="5"
 	data-color="#222222"
@@ -261,7 +262,7 @@ Mask | Bits  | Formula (integer arithmetic)
 
 The mask bits from the FEZ QR code fragment are `001`, which means mask 1 is used. On empty data ($$ d = 0 $$), mask 1 looks like this:
 
-<canvas class="qr"
+<canvas class="pixelated qr"
 	data-version="2"
 	data-scale="8"
 	data-color="#222222"
@@ -273,7 +274,7 @@ The mask bits from the FEZ QR code fragment are `001`, which means mask 1 is use
 
 If we apply this mask to the FEZ QR fragment (which was already masked when generated), we will effectively unmask the data. Combine this with the standard patterns where they were missing, and you get the following:
 
-<canvas class="qr"
+<canvas class="pixelated qr"
 	data-version="2"
 	data-scale="8"
 	data-color="#222222"
@@ -282,7 +283,7 @@ If we apply this mask to the FEZ QR fragment (which was already masked when gene
 	data-patterns="15"
 	data-bits="AMD8AQAJAoDQBQCkCwBZFwCsIABUfwCQAAAkLAAfzgHkCQDI9gGM5waAzI6zFwEWn1RDPF8AUuP8mdcIwondxfSpS/1GV0rroEKcfwigAQ==">
 </canvas>
-<canvas class="qr"
+<canvas class="pixelated qr"
 	data-version="2"
 	data-scale="8"
 	data-color="#222222"
@@ -291,7 +292,7 @@ If we apply this mask to the FEZ QR fragment (which was already masked when gene
 	data-patterns="15"
 	data-bits="AJkBAHIBAPwFAKACAMAFAKAiAAAAAID6ABzlzkECSxEaycc4BYzQrT0EtETFB/EWrAMxE+ABNMAD4AMGAAQMEA4GYIgqwKVRAHCJAF75AQ==">
 </canvas>
-<canvas class="qr"
+<canvas class="pixelated qr"
 	data-version="1"
 	data-scale="8"
 	data-color="#222222"
@@ -300,7 +301,7 @@ If we apply this mask to the FEZ QR fragment (which was already masked when gene
 	data-patterns="15"
 	data-bits="AAcAoAEAEAAADgDQAAAeAAAAAIgAJ+eZpWqHbMUI1224CQEoNoBcBHhFAKwawOYBTG2A0wEQEwE=">
 </canvas>
-<canvas class="qr"
+<canvas class="pixelated qr"
 	data-version="1"
 	data-scale="8"
 	data-color="#222222"

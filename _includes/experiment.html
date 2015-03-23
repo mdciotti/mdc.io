@@ -1,0 +1,16 @@
+<div class="grid-item">
+	<div class="grid-item-preview"><img src="/img/preview/{{ experiment.preview_img_src }}" width="278" height="208"></div>
+	<div class="grid-item-caption">
+		<h3 class="grid-item-title">
+			{{ experiment.title }}
+			<span class="year">{{ experiment.date | date: "%Y" }}</span>
+		</h3>
+		<ul class="grid-item-actions">
+			{% if experiment.available %}
+			<li class="grid-item-action"><a href="{{ experiment.location }}" class="button">Launch Experiment</a></li>
+			<li class="grid-item-action"><a href="{{ experiment.source }}" class="button">GitHub</a></li>
+			{% endif %}
+		</ul>
+		<div class="grid-item-description">{{ experiment.output }}</div>
+	</div>
+</div>

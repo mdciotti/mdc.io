@@ -34,15 +34,17 @@ Installation
 Usage
 -----
 
-    require 'github/markup'
-    GitHub::Markup.render('README.markdown', "* One\n* Two")
+{% highlight ruby %}
+require 'github/markup'
+GitHub::Markup.render('README.markdown', "* One\n* Two")
+{% endhighlight %}
 
 Or, more realistically:
 
-```ruby
+{% highlight ruby %}
 require 'github/markup'
 GitHub::Markup.render(file, File.read(file))
-```
+{% endhighlight %}
 
 Contributing
 ------------

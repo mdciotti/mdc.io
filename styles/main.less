@@ -9,18 +9,27 @@
 
 .default-colors();
 
-html { min-height: 100%; font-size: @unit; }
+html { font-size: @unit; }
 body {
 	.sans();
 	margin: 0;
 	font-weight: 300;
 	font-size: @unit;
-	min-height: 100%;
+	min-height: 100vh;
 	line-height: 1;
 	color: @foreground-light;
 	background-color: @background;
-	background-image: url(/img/escheresque.png);
+	background-image: url(/img/escheresque@2x.png);
+	background-size: 48px 30px;
+	image-resolution: 2dppx;
 	text-rendering: optimizeLegibility;
+	// display: flex;
+	.flex-box;
+	.flex-direction(column);
+}
+
+body > section {
+	.flex-item(1);
 }
 
 * { // http://www.paulirish.com/2012/box-sizing-border-box-ftw/
@@ -40,6 +49,10 @@ a {
 		cursor: default;
 		line-height: 2;
 		cursor: pointer;
+
+		&.more {
+			font-size: 0.8rem;
+		}
 	}
 
 	&[href]:not(.button) {
@@ -67,7 +80,7 @@ a {
 	padding: (2 * @unit) @unit;
 }
 
-.about.content .container {
+.page.content .container {
 	max-width: @max-width-narrow;
 	font-size: 22px;
 	.text-figures;
@@ -93,26 +106,13 @@ a {
 }
 
 header.bg {
-	// .perspective(300px);
 	min-height: 100vh;
-	overflow: hidden;
-
-	.background {
-		// background: attr(data-bg url);
-		background-size: cover;
-		background-position: center;
-		// background-attachment: fixed;
-		z-index: -1;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-	}
+	background-size: cover;
+	background-position: center;
+	position: relative;
 
 	&.content .container {
 		h1, p, time {
-			// .perspective-layer(-1px);
 			padding: 0 @unit @unit;
 			background-color: rgba(0,0,0,0.5);
 			color: #FFFFFF;
@@ -144,15 +144,6 @@ header.bg {
 		a[href] {
 			border-bottom: none;
 		}
-	}
-
-	.container {
-		position: absolute;
-		top: 0;
-		right: 0;
-		botttom: 0;
-		left: 0;
-		margin: auto;
 	}
 }
 
@@ -202,12 +193,14 @@ header.content .container {
 
 section.content .container {
 
+	& > h1:first-child,
 	& > h2:first-child {
 		text-transform: uppercase;
 		letter-spacing: 4px;
 		text-align: center;
 	}
 
+	& > h1:first-child + p,
 	& > h2:first-child + p {
 		.subtitle;
 	}
@@ -266,11 +259,11 @@ footer .container {
 	}
 
 	h1 {
-		// font-size: 2.4rem;
+		font-size: 2.4rem;
 	}
 
 	h2 {
-		// font-size: 1.5rem;
+		font-size: 1.5rem;
 	}
 
 	h3 {
@@ -288,6 +281,13 @@ footer .container {
 
 		&.soft {
 			color: @soft;
+		}
+
+		&.lede {
+			color: @soft;
+			.serif;
+			font-style: italic;
+			font-size: 1.2rem;
 		}
 	}
 
@@ -470,8 +470,8 @@ footer .container {
 	}
 }
 
-.about {
-	.about-colors();
+.page {
+	.page-colors();
 }
 
 .lab {
@@ -554,10 +554,6 @@ footer .container {
 
 	.list {
 
-	}
-
-	.more.button {
-		font-size: 0.8rem;
 	}
 }
 

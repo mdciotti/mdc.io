@@ -4,11 +4,11 @@ layout: default
 
 <header class="intro content">
 <div class="container full-height">
-<a href="/"><img src="/img/m-transparent.png" width="250" height="250"></a>
+<a href="/"><img src="{{ site.logo }}" width="250" height="250"></a>
 <div class="flex-space"></div>
 <h1>Hey, I'm Maxwell.</h1>
-<p>I am a student and frontend developer. I also design websites, apps, and other digital media. Most of my time is spent obsessing over the small details on my experiments. I enjoy indie games, mountain biking, rocketry, and oddly enough, cooking.<br>Still curious? <a href="/about/">Discover more about me</a>.</p>
-<p class="subtitle">Scroll down for more</p>
+<p class="soft">I am a student and frontend developer. I also design websites, apps, and other digital media. Most of my time is spent obsessing over the small details on my experiments. I enjoy indie games, mountain biking, rocketry, and oddly enough, cooking.<br>Still curious? <a href="/about/">Discover more about me</a>.</p>
+<div class="more-below"></div>
 </div>
 </header>
 <section class="journal content">
@@ -17,7 +17,7 @@ layout: default
 <p>My thoughts &amp; <a href="/journal">journal</a> entries</p>
 <h3>Latest Journal Entries</h3>
 <div class="small list">
-{% for entry in site.posts limit:5 %}
+{% for entry in site.posts limit:3 %}
 	<div class="list-item">
 		<h4 class="list-item-title">
 			<a href="{{ entry.url }}" class="entry-title">{{ entry.title }}</a>

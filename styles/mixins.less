@@ -30,11 +30,11 @@
 	font-family: 'CamingoCode', 'Monaco', 'Consolas', monospace;
 }
 
-.text-figures(@on: on) {
-	-moz-font-feature-settings: "onum" @on;
-	-ms-font-feature-settings: "onum" @on;
-	-webkit-font-feature-settings: "onum" @on;
-	font-feature-settings: "onum" @on;
+.text-figures(@toggle: on) {
+	-moz-font-feature-settings: "onum" @toggle;
+	-ms-font-feature-settings: "onum" @toggle;
+	-webkit-font-feature-settings: "onum" @toggle;
+	font-feature-settings: "onum" @toggle;
 }
 
 .antialiased {
@@ -63,7 +63,7 @@
 .subtitle {
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 0.9rem;
 	letter-spacing: 2px;
 	color: @soft;
 
@@ -143,4 +143,11 @@
 	image-rendering: crisp-edges;
 	image-rendering: pixelated;
 	-ms-interpolation-mode: nearest-neighbor;
+}
+
+.no-select() {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }

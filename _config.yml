@@ -4,11 +4,10 @@ kramdown:
   input: GFM
 
 highlighter: pygments
-description: "A central hub of Maxwell Ciotti's journal, portfolio, and lab"
+description: "A central hub uniting Maxwell Ciotti's journal, portfolio, and lab"
 url: "http://mdc.io"
 permalink: /journal/:title/
-github: mdciotti
-twitter: mdciotti
+logo: /img/m-transparent.svg
 email: max@mdc.io
 role: "Student designer & web developer"
 timezone: America/Chicago

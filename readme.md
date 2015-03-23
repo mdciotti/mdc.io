@@ -7,10 +7,10 @@ This is the source code for my personal website, including my journal, portfolio
     + http://phoboslab.org/
 + Journal index: http://rein.pk/
 + Project listing: http://nothingmagical.com/
++ http://www.makeitgo.ws/
 
 ## TODO
 + Link to social sites
-+ Logo/favicon
 + Journal entry lede
 + Fix broken lab pages (push to trigger gh-pages build)
 + Landing background art?

@@ -11,7 +11,7 @@
 .subtitle {
   text-align: center;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 0.9rem;
   letter-spacing: 2px;
   color: #666666;
 }
@@ -75,6 +75,7 @@ a[href]:not(.button):active {
 }
 html {
   min-height: 100%;
+  font-size: 20px;
 }
 body {
   font-family: "Fira Sans", "Lato", "Helvetica Neue", sans-serif;
@@ -91,22 +92,6 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-h1,
-h2 {
-  font-family: "Nixie One", "American Typewriter", monospace;
-  font-weight: 400;
-}
-h1 {
-  font-size: 240%;
-}
-h3 {
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-h4 {
-  font-weight: 300;
 }
 a {
   outline: none;
@@ -128,22 +113,29 @@ a[href]:not(.button):focus {
   text-decoration: underline;
 }
 .flex-space {
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 .container {
   max-width: 832px;
   margin: 0 auto;
-  padding: 32px 16px;
+  padding: 40px 20px;
 }
 .wide-container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 32px 16px;
+  padding: 40px 20px;
 }
 .about.content .container {
-  max-width: 640px;
+  max-width: 700px;
+  font-size: 22px;
+  -moz-font-feature-settings: "onum" on;
+  -ms-font-feature-settings: "onum" on;
+  -webkit-font-feature-settings: "onum" on;
+  font-feature-settings: "onum" on;
 }
-.about.content .picture {
+.about.content .container .picture {
   margin: 0 auto;
   border: 1px solid;
   padding: 8px;
@@ -155,7 +147,7 @@ a[href]:not(.button):focus {
   height: 256px;
 }
 @media screen and (min-width: 600px) {
-  .about.content .picture {
+  .about.content .container .picture {
     float: left;
     margin: 0 1em 0 0;
   }
@@ -177,7 +169,7 @@ header.bg .background {
 header.bg.content .container h1,
 header.bg.content .container p,
 header.bg.content .container time {
-  padding: 0 22px 22px;
+  padding: 0 20px 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
   display: fixed;
@@ -187,7 +179,7 @@ header.bg.content .container time {
   margin: 0;
 }
 header.bg.content .container h1 {
-  padding-top: 22px;
+  padding-top: 20px;
 }
 header.bg.content .container time {
   color: rgba(255, 255, 255, 0.6);
@@ -195,7 +187,7 @@ header.bg.content .container time {
 header.bg .photo-credit {
   position: absolute;
   bottom: 0;
-  right: 1em;
+  right: 1rem;
   font-size: 14px;
   line-height: 1;
 }
@@ -215,12 +207,11 @@ header.bg .container {
 }
 header.content .container {
   text-align: center;
-  max-width: 800px;
 }
 header.content .container h1 {
   text-transform: uppercase;
   letter-spacing: 8px;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 header.content .container h1 + p {
   -ms-flex: 1 0 auto;
@@ -248,6 +239,14 @@ header.content .container.full-height .m-logo {
 header.content .container time {
   letter-spacing: 0.25em;
 }
+header.content .container .more-below {
+  display: block;
+  content: '';
+  width: 48px;
+  height: 16px;
+  background: url(/img/more-indicator.png) 0 -1px;
+  margin: 0 auto;
+}
 section.content .container > h2:first-child {
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -256,7 +255,7 @@ section.content .container > h2:first-child {
 section.content .container > h2:first-child + p {
   text-align: center;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 0.9rem;
   letter-spacing: 2px;
   color: #666666;
 }
@@ -279,10 +278,9 @@ section.content .container > h2:first-child + p a[href]:visited {
   font-feature-settings: "onum" on;
 }
 footer .container {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   text-align: center;
   color: #666666;
-  margin: 3em auto;
 }
 footer .container ul {
   list-style-type: none;
@@ -307,25 +305,23 @@ footer .container li:last-child {
   line-height: 1.5;
   overflow: hidden;
 }
-.content h1 {
-  font-size: 2em;
-  margin-top: 1em;
-  margin-bottom: 0;
+.content h1,
+.content h2,
+.content h3 {
+  font-weight: 300;
 }
+.content h1,
 .content h2 {
-  font-size: 1.5em;
+  font-family: "Nixie One", "American Typewriter", monospace;
   margin-bottom: 0;
 }
 .content h3 {
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 .content p.author {
-  text-align: center;
-}
-.content p.subtitle {
-  line-height: 1.5;
-  color: #666666;
   text-align: center;
 }
 .content p.soft {
@@ -347,10 +343,10 @@ footer .container li:last-child {
 .content blockquote {
   font-family: "Merriweather", "Georgia", serif;
   font-style: italic;
-  border-left: 0.25em solid #666666;
+  border-left: 0.25rem solid #666666;
   color: #666666;
-  margin: 1.5em 0 1.5em -1em;
-  padding-left: 0.75em;
+  margin: 1.5rem 0 1.5rem -1rem;
+  padding-left: 0.75rem;
 }
 .content blockquote p {
   margin: 0;
@@ -358,12 +354,12 @@ footer .container li:last-child {
 .content pre {
   font-family: 'Monaco', 'Consolas', monospace;
   border: thin solid #333333;
-  padding: 1em;
+  padding: 1rem;
   background-color: #222222;
   color: #999999;
   line-height: 1.2;
   overflow: auto;
-  max-height: 50em;
+  max-height: 50rem;
 }
 .content pre code {
   padding: 0;
@@ -380,6 +376,10 @@ footer .container li:last-child {
   font-size: 0.8em;
 }
 .content table {
+  -moz-font-feature-settings: "onum" off;
+  -ms-font-feature-settings: "onum" off;
+  -webkit-font-feature-settings: "onum" off;
+  font-feature-settings: "onum" off;
   border-top: thin solid #888888;
   border-bottom: thin solid #888888;
   border-collapse: collapse;
@@ -389,11 +389,11 @@ footer .container li:last-child {
 }
 .content table td {
   border-bottom: thin solid #333333;
-  padding: 0.5em 1em;
+  padding: 0.5rem 1rem;
 }
 .content table th {
   border-bottom: medium double #888888;
-  padding: 0.5em 1em;
+  padding: 0.5rem 1rem;
   letter-spacing: 0.1em;
   text-transform: lowercase;
   font-size: 0.8em;
@@ -412,11 +412,11 @@ footer .container li:last-child {
 .content table.bit-field td,
 .content table.bit-field th {
   border: thin solid #888888;
-  padding: 0.25em 0.5em;
+  padding: 0.25rem 0.5rem;
   text-align: center;
 }
 .content table.bit-field tr.bits td {
-  width: 2em;
+  width: 2rem;
 }
 .content img,
 .content canvas {
@@ -429,7 +429,7 @@ footer .container li:last-child {
 }
 .grid {
   list-style-type: none;
-  padding: 1em 0 0;
+  padding: 1rem 0 0;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -453,7 +453,7 @@ footer .container li:last-child {
 }
 .grid-item-caption {
   overflow: hidden;
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 .grid-item-actions {
   list-style-type: none;
@@ -473,6 +473,10 @@ footer .container li:last-child {
   width: 125px;
   height: 125px;
   z-index: 100;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .m-logo:hover {
   opacity: 1;
@@ -566,16 +570,10 @@ footer .container li:last-child {
   border-color: #cccc00;
 }
 .list {
-  padding-top: 16px;
+  padding-top: 20px;
 }
 .list-item {
-  padding: 0 0 32px;
-}
-.list-item-caption {
-  -ms-flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  flex: 1 0 auto;
-  padding-left: 1em;
+  padding: 0 0 40px;
 }
 .list-item-title {
   margin: 0;
@@ -595,6 +593,31 @@ footer .container li:last-child {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.list.big .list-item-preview {
+  -ms-flex: 0 0 320px;
+  -webkit-flex: 0 0 320px;
+  flex: 0 0 320px;
+  margin: 0 20px 20px;
+}
+.list.big .list-item-caption {
+  -ms-flex: 1 0 320px;
+  -webkit-flex: 1 0 320px;
+  flex: 1 0 320px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 720px) {
+  .list.big .list-item {
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
 .list.big.alternate .list-item:nth-child(2n) {
   text-align: right;
@@ -604,8 +627,6 @@ footer .container li:last-child {
 }
 .list.big.alternate .list-item:nth-child(2n) .list-item-caption {
   order: 1;
-  padding-right: 1em;
-  padding-left: 0;
 }
 .journal h1,
 .journal h2 {
@@ -649,7 +670,7 @@ footer .container li:last-child {
   margin-top: 0;
 }
 .journal .more.button {
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 .portfolio h1,
 .portfolio h2 {
@@ -705,12 +726,10 @@ footer .container li:last-child {
 .lab .grid-item-actions,
 .portfolio .grid-item-actions,
 .lab .list-item-actions,
-.portfolio .list-item-actions {
-  font-size: 0.8em;
-}
+.portfolio .list-item-actions,
 .lab .grid-item-description,
 .portfolio .grid-item-description,
 .lab .list-item-description,
 .portfolio .list-item-description {
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }

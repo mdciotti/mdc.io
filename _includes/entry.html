@@ -1,0 +1,22 @@
+{% case include.type %}
+{% when 'long' %}
+<div class="list-item">
+	<h2 class="list-item-title">
+		<a href="{{ entry.url }}" class="entry-title">{{ entry.title }}</a>
+	</h2>
+	<time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date_to_long_string }}</time>
+	{% if entry.lede %}
+	<p class="list-item-description">{{ entry.lede }}</p>
+	{% else %}
+	<p class="list-item-description">{{ entry.description }}</p>
+	{% endif %}
+</div>
+{% else %}
+<div class="list-item">
+	<h4 class="list-item-title">
+		<a href="{{ entry.url }}" class="entry-title">{{ entry.title }}</a>
+		<time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date: "%m/%Y" }}</time>
+	</h4>
+	<p class="list-item-description">{{ entry.description }}</p>
+</div>
+{% endcase %}

@@ -11,6 +11,7 @@ layout: default
 <div class="more-below"></div>
 </div>
 </header>
+
 <section class="journal content">
 <div class="container">
 <h2>From My Journal</h2>
@@ -18,13 +19,7 @@ layout: default
 <h3>Latest Journal Entries</h3>
 <div class="small list">
 {% for entry in site.posts limit:3 %}
-	<div class="list-item">
-		<h4 class="list-item-title">
-			<a href="{{ entry.url }}" class="entry-title">{{ entry.title }}</a>
-			<time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date: "%m/%Y" }}</time>
-		</h4>
-		<p class="list-item-description">{{ entry.description }}</p>
-	</div>
+{% include entry.html %}
 {% endfor %}
 </div>
 <p><a href="/journal" class="more button">More journal entries</a></p>
@@ -32,18 +27,13 @@ layout: default
 <div class="small list">
 {% for entry in site.posts limit:3 %}
 {% if entry.feature %}
-	<div class="list-item">
-		<h4 class="list-item-title">
-			<a href="{{ entry.url }}" class="entry-title">{{ entry.title }}</a>
-			<time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date: "%m/%Y" }}</time>
-		</h4>
-		<p class="list-item-description">{{ entry.description }}</p>
-	</div>
+{% include entry.html %}
 {% endif %}
 {% endfor %}
 </div>
 </div>
 </section>
+
 <section class="lab content">
 <div class="container">
 <h2>From My Lab</h2>
@@ -54,46 +44,22 @@ layout: default
 <div class="wide-container grid">
 {% for experiment in site.experiments reversed | sort:'date' %}
 {% unless experiment.tags contains 'inactive' or experiment.hidden %}
-	<div class="grid-item">
-		<div class="grid-item-preview"><img src="/img/preview/{{ experiment.preview_img_src }}" width="278" height="208"></div>
-		<div class="grid-item-caption">
-			<h3 class="grid-item-title">
-				{{ experiment.title }}
-				<span class="year">{{ experiment.date | date: "%Y" }}</span>
-			</h3>
-			<ul class="grid-item-actions">
-				{% if experiment.available %}
-				<li class="grid-item-action"><a href="{{ experiment.location }}" class="button">Launch Experiment</a></li>
-				<li class="grid-item-action"><a href="{{ experiment.source }}" class="button">GitHub</a></li>
-				{% endif %}
-			</ul>
-			<div class="grid-item-description">{{ experiment.output }}</div>
-		</div>
-	</div>
+{% include experiment.html %}
 {% endunless %}
 {% endfor %}
 </div>
 </section>
+
 <section class="portfolio content">
 <div class="container">
 <h2>From My Portfolio</h2>
 <p>Professional <a href="/portfolio/">projects</a> &amp; designs</p>
 </div>
 <div class="wide-container big list">
-	{% for project in site.projects reversed sort:'date' %}
-	{% if project.feature %}
-		<div class="list-item">
-			<div class="list-item-preview"><img src="/img/preview/{{ project.preview_img_src }}" width="320" height="240"></div>
-			<div class="list-item-caption">
-				<h3 class="list-item-title">{{ project.title }} <span class="year">{{ project.date | date: "%Y" }}</span></h3>
-				<ul class="list-item-actions">
-					{% if project.available %}<li class="list-item-action"><a href="{{ project.location }}" class="button">View {% if project.type %}{{ project.type }}{% else %}Project{% endif %}</a></li>{% endif %}
-					{% if project.source %}<li class="list-item-action"><a href="{{ project.source }}" class="button">GitHub</a></li>{% endif %}
-				</ul>
-				<div class="list-item-description">{{ project.output }}</div>
-			</div>
-		</div>
-	{% endif %}
-	{% endfor %}
+{% for project in site.projects reversed sort:'date' %}
+{% if project.feature %}
+{% include project.html %}
+{% endif %}
+{% endfor %}
 </div>
 </section>

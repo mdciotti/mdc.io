@@ -8,19 +8,13 @@ title: Journal
 </div>
 <section class="journal content">
 <div class="container">
-<h2>Journal Archive</h2>
+<h1>Journal Archive</h1>
 <p>A complete index of my journal entries</p>
 <p>Would you like to receive the latest posts as they are published?<br>Go ahead and <a href="/journal/feed.xml">Subscribe</a>.</p>
 
 <div class="list">
 	{% for entry in site.posts %}
-	<div class="list-item">
-		<h3 class="list-item-title">
-			<a href="{{ entry.url }}" class="entry-title">{{ entry.title }}</a>
-		</h3>
-		<time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date_to_long_string }}</time>
-		<p class="list-item-description">{{ entry.description }}</p>
-	</div>
+	{% include entry.html type='long' %}
 	{% endfor %}
 </div>
 </div>

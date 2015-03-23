@@ -22,6 +22,7 @@ layout: default
 </header>
 <section class="journal post content">
 	<article class="container">
+	{% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
 	{{ content }}
 	</article>
 </section>

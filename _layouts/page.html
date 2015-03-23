@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
-	{% include head.html %}
-	<body>
-		<section class="page content container">
-			{{ content }}
-		</section>
-		{% include footer.html %}
-	</body>
+{% include head.html %}
+<body>
+<div class="m-logo">
+<a href="/"><img src="{{ site.logo }}" width="125" height="125"></a>
+</div>
+<section class="page content">
+<div class="container">
+{{ content }}
+</div>
+</section>
+{% include footer.html %}
+</body>
 </html>

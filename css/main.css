@@ -70,7 +70,7 @@ a[href]:not(.button):active {
   color: #999999;
   border-color: #999999;
 }
-.about.container .picture {
+.page.container .picture {
   border-color: #cccccc;
 }
 html {
@@ -85,7 +85,9 @@ body {
   line-height: 1;
   color: #999999;
   background-color: #111111;
-  background-image: url(/img/escheresque.png);
+  background-image: url(/img/escheresque@2x.png);
+  background-size: 48px 30px;
+  image-resolution: 2dppx;
   text-rendering: optimizeLegibility;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -116,6 +118,9 @@ a.button {
   line-height: 2;
   cursor: pointer;
 }
+a.button.more {
+  font-size: 0.8rem;
+}
 a[href]:not(.button) {
   text-decoration: none;
 }
@@ -138,7 +143,7 @@ a[href]:not(.button):focus {
   margin: 0 auto;
   padding: 40px 20px;
 }
-.about.content .container {
+.page.content .container {
   max-width: 700px;
   font-size: 22px;
   -moz-font-feature-settings: "onum" on;
@@ -146,7 +151,7 @@ a[href]:not(.button):focus {
   -webkit-font-feature-settings: "onum" on;
   font-feature-settings: "onum" on;
 }
-.about.content .container .picture {
+.page.content .container .picture {
   margin: 0 auto;
   border: 1px solid;
   padding: 8px;
@@ -158,7 +163,7 @@ a[href]:not(.button):focus {
   height: 256px;
 }
 @media screen and (min-width: 600px) {
-  .about.content .container .picture {
+  .page.content .container .picture {
     float: left;
     margin: 0 1em 0 0;
   }
@@ -242,11 +247,13 @@ header.content .container .more-below {
   background: url(/img/more-indicator.png) 0 -1px;
   margin: 0 auto;
 }
+section.content .container > h1:first-child,
 section.content .container > h2:first-child {
   text-transform: uppercase;
   letter-spacing: 4px;
   text-align: center;
 }
+section.content .container > h1:first-child + p,
 section.content .container > h2:first-child + p {
   text-align: center;
   text-transform: uppercase;
@@ -254,12 +261,17 @@ section.content .container > h2:first-child + p {
   letter-spacing: 2px;
   color: #666666;
 }
+section.content .container > h1:first-child + p a[href],
 section.content .container > h2:first-child + p a[href] {
   color: #cccccc;
 }
+section.content .container > h1:first-child + p a[href]:hover,
 section.content .container > h2:first-child + p a[href]:hover,
+section.content .container > h1:first-child + p a[href]:focus,
 section.content .container > h2:first-child + p a[href]:focus,
+section.content .container > h1:first-child + p a[href]:active,
 section.content .container > h2:first-child + p a[href]:active,
+section.content .container > h1:first-child + p a[href]:visited,
 section.content .container > h2:first-child + p a[href]:visited {
   color: #cccccc;
   border-color: #cccccc;
@@ -310,6 +322,12 @@ footer .container li:last-child {
   font-family: "Nixie One", "American Typewriter", monospace;
   margin-bottom: 0;
 }
+.content h1 {
+  font-size: 2.4rem;
+}
+.content h2 {
+  font-size: 1.5rem;
+}
 .content h3 {
   font-size: 1rem;
   margin-bottom: 0;
@@ -321,6 +339,12 @@ footer .container li:last-child {
 }
 .content p.soft {
   color: #666666;
+}
+.content p.lede {
+  color: #666666;
+  font-family: "Merriweather", "Georgia", serif;
+  font-style: italic;
+  font-size: 1.2rem;
 }
 .content time {
   color: #666666;
@@ -488,42 +512,42 @@ footer .container li:last-child {
     margin: 2rem auto;
   }
 }
-.about h1,
-.about h2 {
+.page h1,
+.page h2 {
   color: #00ac64;
 }
-.about a {
+.page a {
   border-color: #00ac64;
 }
-.about a.button {
+.page a.button {
   color: #00ac64;
 }
-.about a.button:hover,
-.about a.button:focus {
+.page a.button:hover,
+.page a.button:focus {
   color: #111111;
   background-color: #00ac64;
 }
-.about a.button:active {
+.page a.button:active {
   color: #004629;
   border-color: #004629;
 }
-.about a[href]:not(.button) {
+.page a[href]:not(.button) {
   color: #00ac64;
   border-color: #00ac64;
 }
-.about a[href]:not(.button):visited {
+.page a[href]:not(.button):visited {
   color: #00ac64;
 }
-.about a[href]:not(.button):hover,
-.about a[href]:not(.button):focus {
+.page a[href]:not(.button):hover,
+.page a[href]:not(.button):focus {
   color: #13ff9c;
   border-color: #13ff9c;
 }
-.about a[href]:not(.button):active {
+.page a[href]:not(.button):active {
   color: #004629;
   border-color: #004629;
 }
-.about .about.container .picture {
+.page .page.container .picture {
   border-color: #00ac64;
 }
 .lab h1,
@@ -561,7 +585,7 @@ footer .container li:last-child {
   color: #666600;
   border-color: #666600;
 }
-.lab .about.container .picture {
+.lab .page.container .picture {
   border-color: #cccc00;
 }
 .list {
@@ -658,14 +682,11 @@ footer .container li:last-child {
   color: #006287;
   border-color: #006287;
 }
-.journal .about.container .picture {
+.journal .page.container .picture {
   border-color: #00aced;
 }
 .journal h3 {
   margin-top: 0;
-}
-.journal .more.button {
-  font-size: 0.8rem;
 }
 .portfolio h1,
 .portfolio h2 {
@@ -702,7 +723,7 @@ footer .container li:last-child {
   color: #870062;
   border-color: #870062;
 }
-.portfolio .about.container .picture {
+.portfolio .page.container .picture {
   border-color: #ed00ac;
 }
 .lab .grid-item-title,

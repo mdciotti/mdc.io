@@ -10,6 +10,6 @@ This is the source code for my personal website, including my journal, portfolio
 + http://www.makeitgo.ws/
 
 ## TODO
-+ Fix broken lab pages (push to trigger gh-pages build)
++ Write instructions for labs
 + Related entries or prev/next entry
 + Journal index pagination

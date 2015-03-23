@@ -86,6 +86,7 @@ body {
   line-height: 1;
   color: #999999;
   background-color: #111111;
+  background-image: url(/img/escheresque.png);
   text-rendering: optimizeLegibility;
 }
 * {

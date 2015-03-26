@@ -6,7 +6,7 @@
 	</h2>
 	<time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date_to_long_string }}</time>
 	{% if entry.lede %}
-	<p class="list-item-description">{{ entry.lede }}</p>
+	<p class="list-item-description">{{ entry.lede | markdownify | replace:'<p>','' | replace:'</p>','' }}</p>
 	{% else %}
 	<p class="list-item-description">{{ entry.description }}</p>
 	{% endif %}

@@ -4,10 +4,11 @@ layout: default
 
 <header class="intro content">
 <div class="container full-height">
-<a href="/"><img src="{{ site.logo }}" width="250" height="250"></a>
+{% include nav.html %}
 <div class="flex-space"></div>
 <h1>Hey, I'm Maxwell.</h1>
-<p class="soft">I am a student and frontend developer. I also design websites, apps, and other digital media. Most of my time is spent obsessing over the small details on my experiments. I enjoy indie games, mountain biking, rocketry, and oddly enough, cooking.<br>Still curious? <a href="/about/">Discover more about me</a>.</p>
+<p class="soft">I am a student and technophile. I also design and develop websites, apps, and other digital media. Much of my time is spent obsessing over the small details on my experiments. I enjoy photography, indie games, and oddly enough, cooking.</p>
+<p class="subtitle">Still curious? Discover more <a href="/about/">about me</a>.</p>
 <div class="more-below"></div>
 </div>
 </header>
@@ -15,14 +16,14 @@ layout: default
 <section class="journal content">
 <div class="container">
 <h2>From My Journal</h2>
-<p>My thoughts &amp; <a href="/journal">journal</a> entries</p>
+<p>My thoughts &amp; <a href="/journal/">journal</a> entries</p>
 <h3>Latest Journal Entries</h3>
 <div class="small list">
 {% for entry in site.posts limit:3 %}
 {% include entry.html %}
 {% endfor %}
 </div>
-<p><a href="/journal" class="more button">More journal entries</a></p>
+<p><a href="/journal/" class="more button">More journal entries</a></p>
 <h3>Notable Journal Entries</h3>
 <div class="small list">
 {% for entry in site.posts limit:3 %}

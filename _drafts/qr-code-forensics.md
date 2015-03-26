@@ -10,7 +10,7 @@ background: "/img/journal/fire.jpg"
 photo_credit: "Public Domain Archives"
 photo_credit_url: "http://publicdomainarchive.com/public-domain-images-fire-wood-dark-night-black-orange-warm/"
 description: "An interactive exploration of how to extract the contents of an unscannable QR code"
-lede: "QR Codes are everywhere, from item tracking to product packaging to bitcoin addresses. They are incredibly resilient to damage and deformation, but what happens if no matter what you try, it still won't scan? It turns out we can still sometimes read the data by cracking it open manually."
+lede: "QR Codes are everywhere, from item tracking to product packaging to bitcoin addresses. They are **incredibly** resilient to damage and deformation, but what happens if no matter what you try, it still won't scan? It turns out we can still sometimes read the data by cracking it open manually."
 ---
 
 [![][fez-screen-preview]][fez-screen]{:class="pixelated"}
@@ -109,12 +109,12 @@ I've spent some time recently with [FEZ][fez], the indie video game from Phil Fi
 })();
 </script>
 
-A word of caution: this journal entry includes spoilers for FEZ. I highly recommend playing the game 'organically,' that is, without spoilers or foreknowledge of certain game mechanics. I've made an effort to conceal potential spoilers, but if you intend to play the game, read with caution.
+*A word of caution: this journal entry includes spoilers for FEZ. I highly recommend playing the game 'organically,' that is, without spoilers or foreknowledge of certain game mechanics. I've made an effort to conceal potential spoilers, but if you intend to play the game, read with caution.*
 {: class="soft"}
 
 ## Problem
 
-At one point in the game, there is a room with what looks like a QR code engraved into the wall. However, there seems to be parts missing, not to mention that some of it is covered up by objects in the foreground.
+At one point in the game, there is a room with what looks like a QR code engraved into the wall. However, there are clearly parts missing, not to mention that some of it is covered up by objects in the foreground.
 
 ![FEZ QR Code][screenshot]{: class="pixelated spoiler"}
 
@@ -134,7 +134,7 @@ Because a scanner cannot read the code directly from the in-game graphics, I ext
 	data-bits="AMD8AQAJAoDQBQCkCwBZFwCsIABUfwCQAAAkLAAfzgHkCQDI9gGM5waAzI6zFwEWn1RDPF8AUuP8mdcIwondxfSpS/1GV0rroEKcfwigAQ==">
 </canvas>
 
-Unfortunately this still did not scan. I knew QR codes adhere to a standard format, so I figured there might be missing information that I can confidently fill in.
+Unfortunately this still did not scan. I knew QR codes adhere to a standard format, so I figured there might be missing information that I could confidently fill in. Luckily, I was right.
 
 ## Extracting Format Information
 

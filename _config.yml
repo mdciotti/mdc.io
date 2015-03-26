@@ -7,6 +7,7 @@ highlighter: pygments
 description: "A central hub uniting Maxwell Ciotti's journal, portfolio, and lab"
 url: "http://mdc.io"
 permalink: /journal/:title/
+feed: /journal/feed/
 logo: /img/m-transparent.svg
 email: max@mdc.io
 role: "Student designer & web developer"

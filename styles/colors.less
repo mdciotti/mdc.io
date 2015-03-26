@@ -19,6 +19,12 @@
 @line-color-darker: #AAAAAA;
 
 @accented-elements: {
+
+	::selection, ::-moz-selection {
+		background-color: @accent;
+		color: @background;
+	}
+
 	h1, h2 {
 		color: @accent;
 	}

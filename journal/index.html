@@ -3,14 +3,14 @@ layout: default
 title: Journal
 ---
 
-<div class="m-logo">
-	<a href="/"><img src="{{ site.logo }}" width="125" height="125"></a>
-</div>
+<header class="content">
+{% include nav.html %}
+</header>
 <section class="journal content">
 <div class="container">
-<h1>Journal Archive</h1>
+<h1>Journal</h1>
 <p>A complete index of my journal entries</p>
-<p>Would you like to receive the latest posts as they are published?<br>Go ahead and <a href="/journal/feed.xml">Subscribe</a>.</p>
+<p>Would you like to receive the latest posts as they are published?<br>Go ahead and <a href="{{ site.feed }}">Subscribe</a>.</p>
 
 <div class="list">
 	{% for entry in site.posts %}

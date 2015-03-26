@@ -20,12 +20,60 @@ body {
 	color: @foreground-light;
 	background-color: @background;
 	background-image: url(/img/escheresque@2x.png);
+	background-position: top center;
 	background-size: 48px 30px;
 	image-resolution: 2dppx;
 	text-rendering: optimizeLegibility;
 	// display: flex;
 	.flex-box;
 	.flex-direction(column);
+}
+
+.nav-floating {
+	.no-select;
+	z-index: 100;
+	text-align: center;
+
+	.m-logo {
+		margin: 0 auto @unit;
+		// opacity: 0.5;
+		// transition: opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+
+		img {
+			width: 125px;
+			height: 125px;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		line-height: 2;
+	}
+
+	@media screen and (min-width: 1200px) {
+		position: fixed;
+		top: @unit;
+		left: @unit;
+	}
+
+	@media screen and (min-width: 600px) and (max-width: 1199px) {
+		margin: 0 auto;
+
+		.m-logo img {
+			width: 250px;
+			height: 250px;
+		}
+
+		ul li {
+			display: inline-block;
+			margin: 0 @unit;
+		}
+	}
 }
 
 body > section {
@@ -147,6 +195,17 @@ header.bg {
 	}
 }
 
+header.intro .container {
+	padding: 0 @unit @unit;
+	max-width: @max-width-narrow;
+
+	@media screen and (max-width: 400px) {
+		h1 {
+			font-size: 2rem;
+		}
+	}
+}
+
 header.content .container {
 	text-align: center;
 	// max-width: 800px;
@@ -171,10 +230,6 @@ header.content .container {
 		h1 {
 			margin-top: 0;
 		}
-
-		.m-logo {
-			margin: 0 auto;
-		}
 	}
 
 	time {
@@ -182,12 +237,13 @@ header.content .container {
 	}
 
 	.more-below {
-	  display: block;
-	  content: '';
-	  width: 48px;
-	  height: 16px;
-	  background: url(/img/more-indicator.png) 0 -1px;
-	  margin: 0 auto;
+		display: block;
+		content: '';
+		width: 48px;
+		height: 16px;
+		background: url(/img/more-indicator@2x.png);
+		background-size: 48px 16px;
+		margin: 0 auto;
 	}
 }
 
@@ -217,6 +273,7 @@ footer .container {
 	text-align: center;
 	color: @soft;
 	// margin: 3rem auto;
+	.no-select;
 
 	ul {
 		list-style-type: none;
@@ -250,6 +307,15 @@ footer .container {
 
 	h1, h2, h3 {
 		font-weight: 300;
+
+		a[href] {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: none;
+				border-bottom: 1px solid;
+			}
+		}
 	}
 
 	h1, h2 {
@@ -259,7 +325,7 @@ footer .container {
 	}
 
 	h1 {
-		font-size: 2.4rem;
+		font-size: 2.25rem;
 	}
 
 	h2 {
@@ -444,40 +510,6 @@ footer .container {
 	}
 }
 
-.m-logo {
-	opacity: 0.5;
-	transition: opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1.0);
-	width: 125px;
-	height: 125px;
-	z-index: 100;
-	.no-select;
-
-	&:hover {
-		opacity: 1;
-	}
-
-	@media screen and (min-width: 1000px) {
-		position: fixed;
-		top: 1rem;
-		left: 1rem;
-	}
-
-	@media screen and (max-width: 999px) {
-		margin: 2rem auto;
-		// position: absolute;
-		// left: 0;
-		// right: 0;
-	}
-}
-
-.page {
-	.page-colors();
-}
-
-.lab {
-	.tertiary-colors();
-}
-
 .list {
 	padding-top: @unit;
 
@@ -545,20 +577,24 @@ footer .container {
 	}
 }
 
+.page {
+	.page-colors();
+}
+
 .journal {
 	.primary-colors();
 
 	h3 {
 		margin-top: 0;
 	}
-
-	.list {
-
-	}
 }
 
 .portfolio {
 	.secondary-colors();
+}
+
+.lab {
+	.tertiary-colors();
 }
 
 .lab,

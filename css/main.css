@@ -90,6 +90,7 @@ body {
   line-height: 1;
   color: #999999;
   background-color: #111111;
+  /* Background pattern modified version from subtlepatterns.com */
   background-image: url(/img/escheresque@2x.png);
   background-position: top center;
   background-size: 48px 30px;

@@ -9,8 +9,8 @@ url: "http://mdc.io"
 permalink: /journal/:title/
 feed: /journal/feed/
 logo: /img/m-transparent.svg
-email: max@mdc.io
 trackingID: 5515d88dde2e261e74002ed7
+email: me@mdc.io
 role: "Student designer & web developer"
 timezone: America/Chicago
 encoding: utf-8

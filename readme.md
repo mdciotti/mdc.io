@@ -8,8 +8,11 @@ This is the source code for my personal website, including my journal, portfolio
 + Journal index: http://rein.pk/
 + Project listing: http://nothingmagical.com/
 + http://www.makeitgo.ws/
++ http://www.timvandamme.com/
++ http://xsznix.github.io/
 
 ## TODO
 + Write instructions for labs
 + Related entries or prev/next entry
 + Journal index pagination
++ Journal entry/project/experiment sorting

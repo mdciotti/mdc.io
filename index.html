@@ -43,10 +43,11 @@ layout: default
 <!--<h3>Active Experiments</h3>-->
 </div>
 <div class="wide-container grid">
-{% for experiment in site.experiments reversed | sort:'date' %}
-{% unless experiment.tags contains 'inactive' or experiment.hidden %}
+{% assign experiments = (site.experiments | sort:'date') %}
+{% for experiment in experiments reversed %}
+{% if experiment.tags contains 'feature' %}
 {% include experiment.html %}
-{% endunless %}
+{% endif %}
 {% endfor %}
 </div>
 </section>
@@ -57,7 +58,8 @@ layout: default
 <p>Professional <a href="/portfolio/">projects</a> &amp; designs</p>
 </div>
 <div class="wide-container big list">
-{% for project in site.projects reversed sort:'date' %}
+{% assign projects = (site.projects | sort:'date') %}
+{% for project in projects reversed %}
 {% if project.feature %}
 {% include project.html %}
 {% endif %}

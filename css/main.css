@@ -35,11 +35,6 @@
   image-rendering: pixelated;
   -ms-interpolation-mode: nearest-neighbor;
 }
-::selection,
-::-moz-selection {
-  background-color: #cccccc;
-  color: #111111;
-}
 h1,
 h2 {
   color: #cccccc;
@@ -617,11 +612,6 @@ footer .container li:last-child {
 .list.big.alternate .list-item:nth-child(2n) .list-item-caption {
   order: 1;
 }
-.page ::selection,
-.page ::-moz-selection {
-  background-color: #00ac64;
-  color: #111111;
-}
 .page h1,
 .page h2 {
   color: #00ac64;
@@ -660,9 +650,9 @@ footer .container li:last-child {
 .page .page.container .picture {
   border-color: #00ac64;
 }
-.journal ::selection,
-.journal ::-moz-selection {
-  background-color: #00aced;
+.page ::selection,
+.page ::-moz-selection {
+  background-color: #00ac64;
   color: #111111;
 }
 .journal h1,
@@ -703,13 +693,13 @@ footer .container li:last-child {
 .journal .page.container .picture {
   border-color: #00aced;
 }
+.journal ::selection,
+.journal ::-moz-selection {
+  background-color: #00aced;
+  color: #111111;
+}
 .journal h3 {
   margin-top: 0;
-}
-.portfolio ::selection,
-.portfolio ::-moz-selection {
-  background-color: #ed00ac;
-  color: #111111;
 }
 .portfolio h1,
 .portfolio h2 {
@@ -749,9 +739,9 @@ footer .container li:last-child {
 .portfolio .page.container .picture {
   border-color: #ed00ac;
 }
-.lab ::selection,
-.lab ::-moz-selection {
-  background-color: #cccc00;
+.portfolio ::selection,
+.portfolio ::-moz-selection {
+  background-color: #ed00ac;
   color: #111111;
 }
 .lab h1,
@@ -791,6 +781,11 @@ footer .container li:last-child {
 }
 .lab .page.container .picture {
   border-color: #cccc00;
+}
+.lab ::selection,
+.lab ::-moz-selection {
+  background-color: #cccc00;
+  color: #111111;
 }
 .lab .grid-item-title,
 .portfolio .grid-item-title,

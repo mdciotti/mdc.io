@@ -1,0 +1,73 @@
+.dg {
+	font-size: 12px;
+	color: rgba(255,255,255,0.8);
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.dg.main .close-button {
+	background-color: rgba(0,0,0,0.6);
+	display: none;
+}
+.dg li:not(.folder) {
+	background: rgba(0,0,0,0.5);
+	border-bottom: none;
+	padding: 0 10px;
+}
+.dg li:not(.folder):hover {
+	/*background: rgba(0,0,0,0.6) !important;*/
+}
+.dg .cr {
+	border-left: none !important;
+	padding: 0 10px;
+}
+.dg .cr.boolean:hover,
+.dg .cr.function:hover {
+	background: rgba(0,0,0,0.6) !important;
+}
+.dg .c .slider,
+.dg .cr.number .c input[type="text"] {
+	background: rgba(0,0,0,0.25);
+	color: #00aced !important;
+}
+.dg .c .slider-fg {
+	background: #00aced;
+}
+.dg .c input[type="checkbox"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background: rgba(0,0,0,0.25);
+	width: 30%;
+	height: 13px;
+	margin: 4px 0;
+	padding: 3px;
+	display: block;
+	float: right;
+	box-sizing: content-box;
+	text-align: center;
+	color: inherit;
+}
+.dg .c input[type="checkbox"]::after {
+	content: 'off';
+}
+.dg .c input[type="checkbox"]:checked::after {
+	content: 'on';
+}
+.dg .c input[type="checkbox"]:checked {
+	background: #00aced;
+}
+.dg li.title {
+	padding: 0 10px;
+	background: rgba(0,0,0,0.6) !important;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 10px;
+	color: rgba(255,255,255,0.8);
+}
+.dg li.title:hover {
+	background: rgba(0,0,0,0.7) !important;
+}
+.dg li.folder {
+	border-left: none;
+}

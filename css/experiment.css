@@ -10,22 +10,27 @@ canvas {
 }
 
 a[href] {
-	color: #CCCC00;
+	color: #FFFF00;
 	text-decoration: none;
 	border-bottom: 1px solid transparent;
 }
 a[href]:hover {
-	border-color: #CCCC00;
+	border-color: #FFFF00;
 }
 
 kbd {
 	font-size: 16px;
-	border: 1px solid #888888;
+	border: 1px solid rgba(255,255,255,0.5);
 	padding: 0 4px;
 }
 
 strong {
 	font-weight: 500;
+}
+
+hr {
+	border: none;
+	border-bottom: 1px dashed rgba(255,255,255,0.5);
 }
 
 .info {
@@ -35,7 +40,8 @@ strong {
 	padding: 32px;
 	z-index: 100;
 	background-color: rgba(0,0,0,0.5);
-	color: #CCCCCC;
+	color: #FFFFFF;
+	opacity: 0.8;
 	width: 320px;
 	line-height: 1.5;
 	transition: transform 0.5s cubic-bezier(0, 0.2, 0.2, 1);

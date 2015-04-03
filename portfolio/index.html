@@ -9,10 +9,11 @@ title: Portfolio
 <section class="portfolio content">
 <div class="container">
 <h1>Portfolio</h1>
-<p>An index of my professional projects and designs</p>
+<p>An index of my professional projects &amp; designs</p>
 
 <div class="big list">
-	{% for project in site.projects reversed | sort: 'date' %}
+	{% assign projects = (site.projects | sort:'date') %}
+	{% for project in projects reversed %}
 	{% include project.html %}
 	{% endfor %}
 </div>

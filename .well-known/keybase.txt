@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/mdciotti
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://mdc.io
+  * I am mdciotti (https://keybase.io/mdciotti) on keybase.
+  * I have a public key with fingerprint 5B7A 9BBE C0E3 9EE3 322F  011C 8AC8 D94E 8A1C 957D
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "5b7a9bbec0e39ee3322f011c8ac8d94e8a1c957d",
+            "host": "keybase.io",
+            "key_id": "8ac8d94e8a1c957d",
+            "kid": "0101094d5ae0bc03a98213defdc84cf36919243ba14da85efbc0cb06229dac60dc830a",
+            "uid": "08b3f44ee4003d92d049f8e6e5f90300",
+            "username": "mdciotti"
+        },
+        "revoke": {
+            "sig_ids": [
+                "fb7ab6d079286da3790f9619d12eb403c156dec410698a5c7abcf3aee07a85e20f"
+            ]
+        },
+        "service": {
+            "hostname": "mdc.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1437020745,
+    "expire_in": 157680000,
+    "prev": "447cfd37d4cb1b20c0ad3a72f14de3c1e5f42643cba7e67d5765a2b0205b680d",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.20
+Comment: https://keybase.io/crypto
+
+yMJOAnicbZJZSBVRGMfv1W6LkEULlmHUkFSkceacM8u5LVAZdAkjLCEqu51tdFLv
+3O4dr5lIQkHQRgu0EpGttkD60L5KLxYUkVZYQWDRQw8l9FAZ1RkremnmYTjf/L/f
+9z//c+4Pzw7lhGuM652bnoJ94Yf39teFys/AWKPGPNGgRRu1ajnwcdxEpUwlU27C
+16KawSxKGJMcSESkRAhCB+g6tym3BcHSpjonhiW0Iq3KSwcdCsNoWs50PVVTi7gr
+VPU/+uqBH0BXL8HCoBIwDhAlNtSRkI7gNuYOMolOIEaM6lhQ25COEnEGTAiJoNwE
+SoYAVbi63zibIQdjKTEASBAoACaOLU1pOAQgAAJhWqYStFYqda3gruf7rtZUpKVk
+xquWQQJpt1KZTmvRVZqjts9MASwCbVNQZBHgEFMnQoeSYYC4bphCcqwDk9jU4Eqt
+PFMpgRWYhcDRKhRbTcy4fAAepPRv+u+UkinP97hXo2pVvp+MBnb8hmSgqZcs/qc7
+ztyEUIejGjIylXa9hBbVlZL7boDTMbIABBY2ijS5IemmZNwNFIZl2kA9wRiZUUiM
+Le4IZAnMmc4g4IAKRC3oqISl2pGKCkMTI86oJU1LKIBBIVNsgylUcHRpuT7haVGi
+bNJKhVSJJahfl5JaU8fd1YNC4ZzQ4EhWcL1COcNG/r100/qGhk7bL7643xdszq1f
+VLwPjCnZ/uBlScEWu7FwTb9z7UpeXixTe+Nb+4rj227M+DjV6X+/LlQOjlVuOnqo
+pbGzc++lPe3dUzro2q6yurFfusedWHe773Pu2ZPn13oFWyNzwrtvlU6YPKI7tq3r
+Oe1qjiK2JvHx2eO20sPL7j0U6FRx1pHsHa/yv57eNb1s4dJWsrg3JzKnbJQ5//qS
+wifLP5xoKXRKymc++tzfM/GN68L8dx0HD8bqX+8MzwatWefa4pNamnrnNb/tfjm6
+Jnb1/fhIj3Fn7Pz6EcbGvub+AxWLZuUWlEaOVFy+8Obi2Ya5JfkTPxW/bk8O7c38
+PHVzUC4/fGXIyh+xXxffPRY=
+=nzlO
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mdciotti
+
+==================================================================

@@ -86,9 +86,7 @@ body {
   color: #999999;
   background-color: #111111;
   /* Background pattern modified version from subtlepatterns.com */
-  background-image: url(/img/escheresque@2x.png);
   background-position: top center;
-  background-size: 48px 30px;
   image-resolution: 2dppx;
   text-rendering: optimizeLegibility;
   display: -ms-flexbox;
@@ -249,6 +247,11 @@ header.bg .photo-credit:before {
 }
 header.bg .photo-credit a[href] {
   border-bottom: none;
+}
+header.intro {
+  background-image: url(/img/graphy_@2x.png);
+  background-size: 80px 160px;
+  background-position: top center;
 }
 header.intro .container {
   padding: 0 20px 20px;

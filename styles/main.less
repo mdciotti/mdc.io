@@ -20,9 +20,9 @@ body {
 	color: @foreground-light;
 	background-color: @background;
 	/* Background pattern modified version from subtlepatterns.com */
-	background-image: url(/img/escheresque@2x.png);
+	// background-image: url(/img/escheresque@2x.png);
+	// background-size: 48px 30px;
 	background-position: top center;
-	background-size: 48px 30px;
 	image-resolution: 2dppx;
 	text-rendering: optimizeLegibility;
 	// display: flex;
@@ -194,6 +194,13 @@ header.bg {
 			border-bottom: none;
 		}
 	}
+}
+
+header.intro {
+	background-image: url(/img/graphy_@2x.png);
+	background-size: 80px 160px;
+	background-position: top center;
+	background-attachment: fixed;
 }
 
 header.intro .container {

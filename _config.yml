@@ -17,4 +17,4 @@ encoding: utf-8
 collections:
   - projects
   - experiments
-exclude: [styles, vendor, misc, design]
+exclude: [styles, vendor, misc, design, Gemfile, Gemfile.lock, serve.sh, readme.md, CNAME]

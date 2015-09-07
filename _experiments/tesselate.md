@@ -8,4 +8,4 @@ tags: js editor game sprite incomplete active
 available: true
 ---
 
-Tesselate is a basic tile map editor for sprite-based games.
+a basic tile map editor for sprite-based games

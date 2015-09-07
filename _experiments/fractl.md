@@ -8,4 +8,4 @@ tags: js canvas fractal l-system complete active feature
 available: true
 ---
 
-Fractl is a fractal generator using Lindenmayer systems for HTML5 canvas.
+a fractal generator using Lindenmayer systems for HTML5 canvas

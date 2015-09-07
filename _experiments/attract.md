@@ -8,4 +8,4 @@ tags: js webgl complete inactive
 available: true
 ---
 
-Attract is a 3D strange attractor generator and viewer in WebGL. I used this project to teach myself about 3D rendering with WebGL.
+a 3D strange attractor generator and viewer in WebGL, used to teach myself about 3D rendering with WebGL

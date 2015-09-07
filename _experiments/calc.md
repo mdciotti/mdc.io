@@ -8,4 +8,4 @@ tags: js math incomplete inactive
 available: true
 ---
 
-Calc is a simple online calculator and math parser. It is designed for small viewports, and therefore will work best on a mobile device.
+a simple online calculator and math parser designed for small viewports, and therefore will work best on a mobile device

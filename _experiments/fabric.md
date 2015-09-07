@@ -9,4 +9,4 @@ available: false
 hidden: true
 ---
 
-Fabric is a two-dimensional space-time fabric simulation. I'm still working on a preview.
+a two-dimensional space-time fabric simulation

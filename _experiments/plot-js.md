@@ -8,4 +8,4 @@ tags: js canvas math incomplete inactive
 available: false
 ---
 
-Plot.js is a naïve Javascript equation grapher. I created this early in high school, and consequently taught myself the basics of derivatives while still in Algebra II.
+a naïve Javascript equation grapher I created early in high school

@@ -8,4 +8,4 @@ tags: js crypto incomplete inactive
 available: false
 ---
 
-PolyPass is a password generator using Shamir's Shared Secret algorithm. I was inspired by [a post on DataGenetics](http://datagenetics.com/blog/november22012/).
+a password generator using Shamir's Shared Secret algorithm inspired by [a post on DataGenetics](http://datagenetics.com/blog/november22012/)

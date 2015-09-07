@@ -8,4 +8,4 @@ tags: js canvas vector field incomplete active feature
 available: true
 ---
 
-Streamline is a vector field simulator. I was inspired by [this earth windmap](http://earth.nullschool.net/) and by [this Starry Night interactive animation](https://vimeo.com/36466564).
+a vector field simulator inspired by [this earth windmap](http://earth.nullschool.net/) and by [this Starry Night interactive animation](https://vimeo.com/36466564)

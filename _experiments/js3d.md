@@ -8,4 +8,4 @@ tags: js canvas 3d inactive incomplete
 available: false
 ---
 
-JS3D is a naïve Javascript 3D renderer in HTML5 canvas. I wrote this extremely simple and limited 3D renderer as an early exploration of graphics pipelines.
+an extremely simple and limited Javascript 3D renderer in HTML5 canvas I wrote as an early exploration of graphics pipelines

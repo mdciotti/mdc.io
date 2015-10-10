@@ -45,7 +45,7 @@ layout: default
 <div class="wide-container grid">
 {% assign experiments = (site.experiments | sort:'date') %}
 {% for experiment in experiments reversed %}
-{% if experiment.tags contains 'feature' %}
+{% if experiment.feature %}
 {% include experiment.html %}
 {% endif %}
 {% endfor %}

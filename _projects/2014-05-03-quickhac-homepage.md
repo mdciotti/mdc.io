@@ -7,6 +7,9 @@ source: "http://github.com/quickhac/main-site"
 tags: education website design
 type: "Website"
 available: true
+attributes: {
+	technologies: [HTML, CSS, Jekyll]
+}
 ---
 
 Main website for the QuickHAC app

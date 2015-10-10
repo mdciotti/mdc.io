@@ -252,6 +252,7 @@ header.intro {
   background-image: url(/img/graphy_@2x.png);
   background-size: 80px 160px;
   background-position: top center;
+  background-attachment: fixed;
 }
 header.intro .container {
   padding: 0 20px 20px;
@@ -331,7 +332,8 @@ section.content .container > h2:first-child + p a[href]:visited {
   color: #cccccc;
   border-color: #cccccc;
 }
-.post.content .container {
+.post.content .container,
+.experiment.content .container {
   max-width: 700px;
   font-size: 22px;
   -moz-font-feature-settings: "onum" on;
@@ -575,6 +577,13 @@ footer .container li:last-child {
 .list-item-actions .list-item-action {
   display: inline-block;
   white-space: nowrap;
+}
+.list-item-attributes {
+  font-size: 0.8rem;
+}
+.list-item-attributes dt {
+  color: #666666;
+  text-transform: uppercase;
 }
 .list.big .list-item {
   display: -ms-flexbox;

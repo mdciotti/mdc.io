@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<header class="lab experiment content{% if page.background %} bg{% endif %}"{% if page.background %} style="background-image: url('{{ page.background }}');"{% endif %}>
+	<div class="container{% if page.background %} full-height{% endif %}">
+		<div class="m-logo">
+			<a href="/"><img src="{{ site.logo }}" width="125" height="125"></a>
+		</div>
+		<div class="flex-space"></div>
+		<h1>{{ page.title }}</h1>
+		{% if page.author %}<p class="author">This is a guest post by {{ page.author }}.</p>{% endif %}
+		{% if page.description %}<p class="subtitle">{{ page.description | markdownify | replace:'<p>','' | replace:'</p>','' }}</p>{% endif %}
+		<img src="/img/preview/{{ page.preview_img_src }}" width="278" height="208">
+		<time>{{ page.date | date_to_long_string }}</time>
+		<ul class="grid-item-actions">
+			{% if page.available %}
+			<li class="grid-item-action"><a href="{{ page.location }}" class="button">Launch Experiment</a></li>
+			<li class="grid-item-action"><a href="{{ page.source }}" class="button">View Source</a></li>
+			{% endif %}
+		</ul>
+		<dl class="list-item-attributes">
+			{% if page.attributes %}
+			{% for attribute in page.attributes %}
+			<dt>{{ attribute[0] }}</dt>
+			<dd>{{ attribute[1] | join:', ' }}</dd>
+			{% endfor %}
+			{% endif %}
+		</dl>
+		<div class="flex-space"></div>
+	</div>
+	{% if page.background %}
+	<p class="photo-credit soft">
+		<a href="{{ page.photo_credit_url }}">{{ page.photo_credit }}</a>
+	</p>
+	{% endif %}
+</header>
+<section class="lab experiment content">
+	<article class="container">
+	{{ content }}
+	</article>
+</section>

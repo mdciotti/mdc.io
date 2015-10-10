@@ -7,8 +7,16 @@
 		</h3>
 		<ul class="list-item-actions">
 			{% if project.available %}<li class="list-item-action"><a href="{{ project.location }}" class="button">View {% if project.type %}{{ project.type }}{% else %}Project{% endif %}</a></li>{% endif %}
-			{% if project.source %}<li class="list-item-action"><a href="{{ project.source }}" class="button">GitHub</a></li>{% endif %}
+			{% if project.source %}<li class="list-item-action"><a href="{{ project.source }}" class="button">View Source</a></li>{% endif %}
 		</ul>
+		<dl class="list-item-attributes">
+			{% if project.attributes %}
+			{% for attribute in project.attributes %}
+			<dt>{{ attribute[0] }}</dt>
+			<dd>{{ attribute[1] | join:', ' }}</dd>
+			{% endfor %}
+			{% endif %}
+		</dl>
 		<div class="list-item-description">{{ project.output }}</div>
 	</div>
 </div>

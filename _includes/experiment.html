@@ -1,16 +1,21 @@
 <div class="grid-item">
-	<div class="grid-item-preview"><img src="/img/preview/{{ experiment.preview_img_src }}" width="278" height="208"></div>
+	<div class="grid-item-preview">
+		<!-- <a href="{{ experiment.url }}"> -->
+			<img src="/img/preview/{{ experiment.preview_img_src }}" width="278" height="208">
+		<!-- </a> -->
+	</div>
 	<div class="grid-item-caption">
 		<h3 class="grid-item-title">
+			<!-- <a href="{{ experiment.url }}">{{ experiment.title }}</a> -->
 			{{ experiment.title }}
 			<span class="year">{{ experiment.date | date: "%Y" }}</span>
 		</h3>
 		<ul class="grid-item-actions">
 			{% if experiment.available %}
 			<li class="grid-item-action"><a href="{{ experiment.location }}" class="button">Launch Experiment</a></li>
-			<li class="grid-item-action"><a href="{{ experiment.source }}" class="button">GitHub</a></li>
+			<li class="grid-item-action"><a href="{{ experiment.source }}" class="button">View Source</a></li>
 			{% endif %}
 		</ul>
-		<div class="grid-item-description">{{ experiment.output }}</div>
+		{% if experiment.description %}<div class="grid-item-description">{{ experiment.description | markdownify }}</div>{% endif %}
 	</div>
 </div>

@@ -8,6 +8,10 @@ tags: education application chrome
 type: "Prototype"
 available: true
 feature: true
+attributes: {
+	technologies: [HTML, JS, CSS, Sass, TypeScript, scraping, AngularJS, Chrome Extension],
+	peak usage: "5000 active users"
+}
 ---
 
 Tool for students to quickly access their grades

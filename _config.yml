@@ -15,6 +15,14 @@ role: "Student designer & web developer"
 timezone: America/Chicago
 encoding: utf-8
 collections:
-  - projects
-  - experiments
+  projects:
+  experiments:
+    output: true
+    permalink: /lab/:title/
+defaults:
+  - scope:
+      path: ""
+      type: experiments
+    values:
+      layout: experiment
 exclude: [styles, vendor, misc, design, Gemfile, Gemfile.lock, serve.sh, readme.md, CNAME]

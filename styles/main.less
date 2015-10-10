@@ -270,7 +270,8 @@ section.content .container {
 	}
 }
 
-.post.content .container {
+.post.content .container,
+.experiment.content .container {
 	max-width: @max-width-narrow;
 	font-size: 22px;
 	.text-figures;
@@ -543,6 +544,15 @@ footer .container {
 			.list-item-action {
 				display: inline-block;
 				white-space: nowrap;
+			}
+		}
+
+		&-attributes {
+			font-size: 0.8rem;
+
+			dt {
+				color: @soft;
+				text-transform: uppercase;
 			}
 		}
 	}

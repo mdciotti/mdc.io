@@ -8,6 +8,9 @@ tags: chrome
 type: "Chrome Extension"
 available: false
 feature: true
+attributes: {
+	technologies: [HTML, JS, CSS, Chrome Extension]
+}
 ---
 
 Chrome Extension to view recently closed tabs

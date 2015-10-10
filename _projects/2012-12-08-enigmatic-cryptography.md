@@ -6,6 +6,9 @@ location: "http://crypto.mdc.io/"
 tags: crypto
 type: "Blog"
 available: true
+attributes: {
+	technologies: [HTML, JS, CSS, Jekyll]
+}
 ---
 
 Independent research project on the basics of cryptography

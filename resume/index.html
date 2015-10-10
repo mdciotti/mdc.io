@@ -24,6 +24,7 @@
 				}
 				header h1 {
 					letter-spacing: 5pt;
+					font-size: 200%;
 				}
 				header address {
 					font-family: 'Josefin Sans', sans-serif;
@@ -31,7 +32,7 @@
 					text-transform: uppercase;
 					letter-spacing: 1pt;
 				}
-				h1, h2, h3, h4, h5, h6 {
+				h1, h2 {
 					font-family: 'Josefin Sans', sans-serif;
 					text-transform: uppercase;
 					letter-spacing: 1pt;
@@ -40,7 +41,7 @@
 					border-bottom-width: thin;
 					border-bottom-style: solid;
 					margin-top: 2rem;
-					font-size: 1.2rem;
+					font-size: 120%;
 				}
 				section p {
 					font-style: italic;
@@ -55,8 +56,14 @@
 					display: block;
 				}
 				section details summary {
-					font-size: 1.2rem;
+					/*font-size: 1.2rem;*/
 					display: block;
+					margin-top: 0.5rem;
+				}
+				section details h3 {
+					font-weight: normal;
+					font-size: 100%;
+					display: inline;
 				}
 				section details time {
 					color: #888888;
@@ -64,16 +71,16 @@
 				}
 				section details p {
 					font-style: italic;
-					font-size: 0.8rem;
+					font-size: 80%;
 					margin: 0;
 				}
 				section details ul {
-					font-size: 0.8rem;
+					font-size: 80%;
 					/*list-style-position: outside;*/
 				}
 				footer {
 					text-align: center;
-					font-size: 0.8rem;
+					font-size: 80%;
 					border-top: thin solid;
 				}
 			}
@@ -83,8 +90,6 @@
 				}
 				section details time {
 					float: right;
-					margin-top: -1.5em;
-					font-size: 1.2rem;
 					color: inherit;
 				}
 			}
@@ -104,7 +109,7 @@
 					border-bottom: thin dotted #222222;
 					cursor: help;
 				}
-				h1, h2, h3, h4, h5, h6 {
+				h1, h2 {
 					color: #444444;
 				}
 				header, section, footer {
@@ -123,11 +128,11 @@
 					border-bottom-color: #cccccc;
 				}
 				section details summary {
-					cursor: pointer;
+					/*cursor: pointer;*/
 				}
 				section details summary::-webkit-details-marker {
 					color: #888888;
-					/*display: none;*/
+					display: none;
 				}
 				footer {
 					color: #888888;
@@ -140,7 +145,7 @@
 					counter-increment: page;
 					@bottom-center {
 						/* Doesn't seem to be supported yet */
-						content: 'Maxwell Ciotti R\00E9sum\00E9 \2014 ' counter(page) ' of ' counter(pages);
+						content: 'Maxwell Ciotti R\00E9sum\00E9 \2015 ' counter(page) ' of ' counter(pages);
 						font-family: 'Josefin Sans', sans-serif;
 						text-transform: uppercase;
 					}
@@ -154,7 +159,7 @@
 				a:link, a:visited {
 					color: inherit;
 				}
-				a[href^="http://"]:before {
+				a[href^="http://"]::before {
 					content: 'http://';
 				}
 				header:not(:first-of-type) {
@@ -182,7 +187,6 @@
 		<header>
 			<h1>Maxwell Ciotti</h1>
 			<address>
-				43 Stone Creek Pl, Spring, TX 78732<br>
 				<a href="tel:5123640226" rel="nofollow">(512)&nbsp;364-0226</a> &middot; <a href="mailto:max@mdc.io" rel="nofollow">max@mdc.io</a>
 			</address>
 		</header>
@@ -198,22 +202,26 @@
 		<section>
 			<h2>Education</h2>
 			<details open>
-				<summary>University of Houston</summary>
-				<time>2015&ndash;2017</time>
-				<p>Pursuing <abbr title="Bachelor of Science">B.S.</abbr>, Computer Science &amp; Mathematics minor</p>
+				<summary>
+					<h3>University of Houston</h3>
+					<time>Jun 2015&ndash;May 2018</time>
+					<p>Pursuing B.S., Computer Science &amp; Mathematics minor</p>
+				</summary>
 				<ul>
+					<li>Cumulative GPA: 3.5</li>
 					<li>Coursework in digital media, computer sciences, and mathematics</li>
-					<!--<li>Involvement in <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>, Student Rocket Society, <abbr title="Association for Computing Machinery">ACM</abbr>, <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr> <abbr title="Aerospace and Electronic Systems Society">AESS</abbr></li>-->
 				</ul>
 			</details>
 			<details open>
-				<summary>Lone Star College</summary>
-				<time>2014</time>
+				<summary>
+					<h3>Lone Star College</h3>
+					<time>Jun 2014&ndash;May 2015</time>
+				</summary>
 				<ul>
 					<li>Involvement in the Society of Math and Engineering and the Computer Science Club</li>
 				</ul>
 			</details>
-			<details open>
+			<!--<details open>
 				<summary>Florida Institute of Technology</summary>
 				<time>2013&ndash;2014</time>
 				<p>Aerospace Engineering</p>
@@ -221,145 +229,183 @@
 					<li>Coursework in engineering, mathematics, and space sciences</li>
 					<li>Involvement in <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>, Student Rocket Society, <abbr title="Association for Computing Machinery">ACM</abbr>, <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr> <abbr title="Aerospace and Electronic Systems Society">AESS</abbr></li>
 				</ul>
-			</details>
+			</details>-->
 		</section>
 		<section>
 			<h2>Employment</h2>
 			<details open>
-				<summary>H-E-B</summary>
-				<time>Aug 2014&ndash;Dec 2014</time>
-				<p>Customer Service Partner</p>
-			</details>
-			<details open>
-				<summary>Florida Institute of Technology <abbr title="Department of Environmental Regulation and Compliance">ERC</abbr></summary>
-				<time>Jan 2014&ndash;May 2014</time>
-				<p>Application developer</p>
+				<summary>
+					<h3>University of Houston: <abbr title="Data Analytics in Student Hands">DASH</abbr></h3>
+					<time>Aug 2015&ndash;</time>
+					<p>Research programmer, data analytics</p>
+				</summary>
 				<ul>
-					<li>Created and maintained a system to log <abbr title="Environmental Protection Agency">EPA</abbr> inspections for the Florida Institute of Technology</li>
-					<li>Developed a <abbr title="Representational State Transfer">REST</abbr> <abbr title="Application Programming Interface">API</abbr> and server-side utilities for managing and viewing reports</li>
-					<li>Developed a cross-platform touch-friendly logging application</li>
-					<li>Acted as office tech support</li>
+					<li>Honors program: Data Analytics in Student Hands</li>
+					<li>Maintained a form building application for a community health management system</li>
+					<!-- <li>TODO: Metrics? Impact?</li> -->
+				</ul>
+			</details>
+			<!-- <details open>
+				<summary>
+					<h3>H-E-B</h3>
+					<time>Aug 2014&ndash;Dec 2014</time>
+					<p>Customer Service Partner</p>
+				</summary>
+			</details> -->
+			<details open>
+				<summary>
+					<h3>Florida Institute of Technology <abbr title="Department of Environmental Regulation and Compliance">ERC</abbr></h3>
+					<time>Jan 2014&ndash;May 2014</time>
+					<p>Application developer</p>
+				</summary>
+				<ul>
+					<!-- TODO: What impact did I make on the department? (metrics) -->
+					<li>Created and maintained a system to log <abbr title="Environmental Protection Agency">EPA</abbr> inspections</li>
+					<li>Developed a REST API and server-side utilities for managing and viewing reports</li>
+					<!-- <li>Developed a cross-platform touch-friendly logging application</li> -->
+					<!-- <li>Acted as office tech support</li> -->
 				</ul>
 			</details>
 			<details open>
-				<summary>Austin First Mortgage</summary>
-				<time>Summer 2012</time>
-				<p>Contractor, website development</p>
+				<summary>
+					<h3>Austin First Mortgage</h3>
+					<time>Summer 2012</time>
+					<p>Contractor, website development</p>
+				</summary>
 				<ul>
 					<li>Created internal utilities to streamline loan processing involving financial calculations</li>
 					<li>Developed the public website so that users can easily access loan information</li>
 				</ul>
 			</details>
 			<details open>
-				<summary>VeritasU</summary>
-				<time>Summer 2012</time>
-				<p>Intern, software application design and development</p>
+				<summary>
+					<h3>VeritasU</h3>
+					<time>Summer 2012</time>
+					<p>Intern, software application design and development</p>
+				</summary>
 				<ul>
 					<li>Collaborated with a startup to create an online learning management system</li>
 					<li>Created a logo and designs for various pages within the application</li>
 				</ul>
 			</details>
 		</section>
-		<!--<section>
-			<h2>Self-Motivated Programming &amp; Design Experience</h2>
-			<!--<p>Complete list at <a href="http://www.mdc.io/portfolio">www.mdc.io/portfolio</a></p>->
-			<details open>
-				<summary>Fractal Generator</summary>
-				<time>Oct 2013&ndash;</time>
-				<p>Experimentation with rendering fractals using Lindenmayer Systems and Turtle graphics</p>
-				<ul>
-					<li>Languages: JavaScript/CoffeeScript, HTML, CSS</li>
-					<li>Created a parallel formal grammar rewriting system</li>
-				</ul>
-			</details>
-			<!--<details open>
-				<summary>dino.do</summary>
-				<time>Aug 2013</time>
-				<p>Minimalist productivity utility</p>
-				<ul>
-					<li>Languages: Ruby, JavaScript, HTML, CSS</li>
-					<li>Familiarization with managing user accounts</li>
-					<li>Familiarization with storing user data securely in a database</li>
-				</ul>
-			</details>->
-			<details open>
-				<summary>Universe Simulator</summary>
-				<time>Aug 2013&ndash;Dec 2013</time>
-				<p>Web application, capable of simulating a two-dimensional universe with realistic gravity, including various orbits and n-body choreographies</p>
-				<ul>
-					<li>Languages: JavaScript/CoffeeScript, HTML, CSS</li>
-					<li>Familiarization with various approaches to n-body problems</li>
-				</ul>
-			</details>
-			<details open>
-				<summary>QuickHAC</summary>
-				<time>Dec 2012&ndash;Aug 2013</time>
-				<p><a href="http://quickhac.com/">www.quickhac.com</a></p>
-				<p>Chrome extension and iOS/Android application, automatically checks student grades periodically and provides students with a more accessible and aesthetically pleasing interface to view their academic progress</p>
-				<ul>
-					<li>Languages: Ruby, HTML, CSS, JavaScript, TypeScript, JSON</li>
-					<li>Led design for iOS, Android, and Chrome platforms</li>
-					<li>Implemented the client-side logic and functionality</li>
-				</ul>
-			</details>
-			<details open>
-				<summary>Chaotic Attractor</summary>
-				<time>Oct 2011&ndash;Nov 2011</time>
-				<p>Web experiment, generates strange attractors</p>
-				<ul>
-					<li>Languages: JavaScript, HTML, CSS</li>
-					<li>Familiarization with the WebGL 3D graphics framework</li>
-				</ul>
-			</details>
-		</section>-->
 		<section>
 			<h2>Skills &amp; Abilities</h2>
 			<details open>
-				<summary>Computer Software</summary>
-				<p>Extensive experience with:</p>
+				<summary>
+					<h3>Computer Programming</h3>
+				</summary>
+				<!-- TODO: Split into separate categories of experience -->
+				<p>Known programming languages, tools, and paradigms, in order of experience</p>
 				<ul>
-					<li>creating interactive websites and website designs</li>
+					<li>JavaScript, CSS, HTML, Java, C, C++, Swift, Fortran, Make, Ruby, Bash, Batch Script</li>
+					<li>##### significant lines of code written</li>
+					<li>## contributions to open-source projects</li>
+				</ul>
+				<p>Experience with:</p>
+				<ul>
+					<li>UNIX command line and compiling software</li>
+					<li>Git version control system</li>
+					<!-- <li>REST APIs and SQL, Object-Store databases</li> -->
+				</ul>
+			</details>
+			<!-- <details open>
+				<summary>Graphic Design</summary>
+				<ul>
+					<li>Matured sense of design in graphic arts</li>
+					<li>Experience with GUI and UX design</li>
+				</ul>
+			</details> -->
+			<details open>
+				<summary>Computer Software</summary>
+				<!-- <p>Extensive experience with:</p>
+				<ul>
 					<li>document processing such as Microsoft Word and LaTeX</li>
 					<li>slideshow programs such as Microsoft PowerPoint</li>
 					<li>spreadsheet programs such as Microsoft Excel</li>
-				</ul>
-				<p>Intermediate experience with:</p>
+				</ul> -->
+				<!-- <p>Experience with:</p> -->
 				<ul>
-					<li><abbr title="computer-aided design">CAD</abbr> software such as AutoDesk Inventor and Creo Parametric</li>
-					<li>computational software such as MATLAB and Mathematica</li>
-					<li>graphics software such as Adobe Photoshop, Adobe Illustrator</li>
+					<li>Adobe Photoshop, Adobe Illustrator, Sketch</li>
+					<li>AutoDesk Inventor, Creo Parametric</li>
+					<li>MATLAB, Mathematica</li>
 				</ul>
 			</details>
-			<details open>
-				<summary>Computer Programming</summary>
-				<ul>
-					<li>Experience with UNIX-like terminals and compiling software</li>
-					<li>Experience with version control systems such as Git</li>
-					<li>Experience with REST APIs and SQL/Object-Store databases</li>
-				</ul>
-				<p>Known programming languages and paradigms, in order of experience</p>
-				<ul>
-					<li>JavaScript, <abbr title="Cascading Style Sheets">CSS</abbr>, <abbr title="Hypertext Markup Language">HTML</abbr>, C, C++, Fortran, PHP, Ruby, Lua, Make, Bash, Batch Script</li>
-				</ul>
-			</details>
-			<details open>
+			<!-- <details open>
 				<summary>Electronics</summary>
 				<ul>
 					<li>Familiar with computer components and building computers</li>
 					<li>Familiar with breadboard prototyping, <abbr title="Field-Programmable Gate Array">FPGA</abbr>s, and soldering</li>
 					<li>Experience with digital logic circuit design and state machines</li>
 				</ul>
+			</details> -->
+		</section>
+		<section>
+			<!-- <h2>Self-Motivated Programming &amp; Design Experience</h2> -->
+			<h2>Independent Programming &amp; Design Experience</h2>
+			<p>See an index of my projects and experiments at <a href="http://mdc.io">mdc.io</a></p>
+			<!--<p>Complete list at <a href="http://www.mdc.io/portfolio">www.mdc.io/portfolio</a></p>-->
+			<details open>
+				<summary>
+					<h3>Fractal Generator</h3>
+					<time>Oct 2013</time>
+				</summary>
+				<p>Web experiment, renders fractals using Lindenmayer Systems and turtle graphics</p>
+				<ul>
+					<li>Technologies: JavaScript/CoffeeScript, HTML5 Canvas</li>
+					<li>Created a parallel formal grammar rewriting system</li>
+				</ul>
+			</details>
+			<!--<details open>
+				<summary>
+					<h3>dino.do</h3>
+					<time>Aug 2013</time>
+				</summary>
+				<p>Minimalist productivity utility</p>
+				<ul>
+					<li>Languages: Ruby, JavaScript, HTML, CSS</li>
+					<li>Familiarization with managing user accounts</li>
+					<li>Familiarization with storing user data securely in a database</li>
+				</ul>
+			</details>-->
+			<details open>
+				<summary>
+					<h3>Particle Playground</h3>
+					<time>Aug 2013</time>
+				</summary>
+				<p>Web application, capable of simulating two-dimensional particle physics with realistic gravity, including various orbits and n-body choreographies</p>
+				<ul>
+					<li>Technologies: JavaScript (ES6), HTML5 Canvas</li>
+					<li>Familiarization with various approaches to n-body problems, quadtree optimization</li>
+				</ul>
 			</details>
 			<details open>
-				<summary>Graphic Design</summary>
+				<summary>
+					<h3>QuickHAC</h3>
+					<time>Dec 2012</time>
+				</summary>
+				<p><a href="http://quickhac.com/">www.quickhac.com</a></p>
+				<p>Chrome extension and iOS/Android application, automatically checks student grades and provides students with a more accessible interface to view their academic progress</p>
 				<ul>
-					<li>Matured sense of design in graphic arts</li>
-					<li>Experience with <abbr title="Graphical User Interface">GUI</abbr> and <abbr title="User Experience">UX</abbr> design</li>
+					<li>Technologies: Ruby, HTML, CSS, JavaScript, TypeScript</li>
+					<li>Led design for iOS, Android, and Chrome platforms</li>
+					<li>Implemented the client-side logic and functionality</li>
+					<li>5,000 users at peak usage</li>
+				</ul>
+			</details>
+			<details open>
+				<summary>
+					<h3>Chaotic Attractor</h3>
+					<time>Oct 2011</time>
+				</summary>
+				<p>Web experiment, generates strange attractors</p>
+				<ul>
+					<li>Technologies: JavaScript, WebGL</li>
 				</ul>
 			</details>
 		</section>
 		<footer>
-			<p>Updated 14 June 2015</p>
+			<p>Updated 9 October 2015</p>
 		</footer>
 	</body>
 </html>

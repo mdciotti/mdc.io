@@ -141,7 +141,7 @@
 			}
 			@media print {
 				@page {
-					margin: 1in;
+					margin: 0.5in 1in;
 					counter-increment: page;
 					@bottom-center {
 						/* Doesn't seem to be supported yet */
@@ -162,11 +162,16 @@
 				a[href^="http://"]::before {
 					content: 'http://';
 				}
+				header h1 {
+					margin-top: 0;
+					margin-bottom: 0.25em;
+				}
 				header:not(:first-of-type) {
 					page-break-before: always;
 				}
 				section h2 {
 					border-bottom-color: #000000;
+					margin-top: 0.5em;
 					margin-bottom: 0.25em;
 					page-break-after: avoid;
 				}
@@ -209,7 +214,10 @@
 				</summary>
 				<ul>
 					<li>Cumulative GPA: 3.5</li>
-					<li>Coursework in digital media, computer sciences, and mathematics</li>
+					<li>Coursework in computer sciences, digital media, and mathematics</li>
+					<li>Officer of IEEE NSM campus organization (historian)</li>
+					<li>Officer of CougarCS campus organization (designer)</li>
+					<li>Co-organizer of Humans of UH</li>
 				</ul>
 			</details>
 			<details open>
@@ -237,11 +245,14 @@
 				<summary>
 					<h3>University of Houston: <abbr title="Data Analytics in Student Hands">DASH</abbr></h3>
 					<time>Aug 2015&ndash;</time>
-					<p>Research programmer, data analytics</p>
+					<p>Application developer, research programmer (data analytics), IT support</p>
 				</summary>
 				<ul>
 					<li>Honors program: Data Analytics in Student Hands</li>
 					<li>Maintained a form building application for a community health management system</li>
+					<li>Created web application to view and modify a variety of environmental sensor data</li>
+					<li>Increased data editing efficiency by roughly 300%</li>
+					<!-- <li>Helped create a system for automatic data validation and flagging</li> -->
 					<!-- <li>TODO: Metrics? Impact?</li> -->
 				</ul>
 			</details>
@@ -285,6 +296,7 @@
 				</summary>
 				<ul>
 					<li>Collaborated with a startup to create an online learning management system</li>
+					<li>Helped prototype a quiz-building application</li>
 					<li>Created a logo and designs for various pages within the application</li>
 				</ul>
 			</details>
@@ -295,15 +307,18 @@
 				<summary>
 					<h3>Computer Programming</h3>
 				</summary>
-				<!-- TODO: Split into separate categories of experience -->
-				<p>Known programming languages, tools, and paradigms, in order of experience</p>
+				<!-- <p>Known programming languages, tools, and paradigms, in order of experience</p> -->
 				<ul>
-					<li>JavaScript, CSS, HTML, Java, C, C++, Swift, Fortran, Make, Ruby, Bash, Batch Script</li>
-					<li>##### significant lines of code written</li>
-					<li>## contributions to open-source projects</li>
-				</ul>
-				<p>Experience with:</p>
-				<ul>
+					<li>JavaScript: &gt; 25,000 lines of code written</li>
+					<li>CSS: &gt; 14,000 lines of code written</li>
+					<li>Java: &gt; 5,600 lines of code written</li>
+					<li>HTML: &gt; 4,800 lines of code written</li>
+					<li>C++: &gt; 2,900 lines of code written</li>
+					<li>Others: PHP, C, Swift, Lua, Fortran, Make, Ruby, Python, Bash, Batch Script, R</li>
+					<!-- <li>## contributions to open-source projects</li> -->
+				<!-- </ul> -->
+				<!-- <p>Experience with:</p> -->
+				<!-- <ul> -->
 					<li>UNIX command line and compiling software</li>
 					<li>Git version control system</li>
 					<!-- <li>REST APIs and SQL, Object-Store databases</li> -->
@@ -347,6 +362,18 @@
 			<!--<p>Complete list at <a href="http://www.mdc.io/portfolio">www.mdc.io/portfolio</a></p>-->
 			<details open>
 				<summary>
+					<h3>EvntQ</h3>
+					<time>Nov 2015</time>
+				</summary>
+				<p><a href="http://www.evntq.com">www.evntq.com</a></p>
+				<p>Web application, allows guests to act as a collaborative DJ at an event</p>
+				<ul>
+					<li>Technologies: Meteor, MongoDB, JavaScript, Spotify API</li>
+					<li>Created in less than 48 hours for the UH CodeRED Hackathon</li>
+				</ul>
+			</details>
+			<!--<details open>
+				<summary>
 					<h3>Fractal Generator</h3>
 					<time>Oct 2013</time>
 				</summary>
@@ -355,7 +382,7 @@
 					<li>Technologies: JavaScript/CoffeeScript, HTML5 Canvas</li>
 					<li>Created a parallel formal grammar rewriting system</li>
 				</ul>
-			</details>
+			</details>-->
 			<!--<details open>
 				<summary>
 					<h3>dino.do</h3>
@@ -373,7 +400,7 @@
 					<h3>Particle Playground</h3>
 					<time>Aug 2013</time>
 				</summary>
-				<p>Web application, capable of simulating two-dimensional particle physics with realistic gravity, including various orbits and n-body choreographies</p>
+				<p>Web experiment, capable of simulating two-dimensional particle physics with realistic gravity, including various orbits and n-body choreographies</p>
 				<ul>
 					<li>Technologies: JavaScript (ES6), HTML5 Canvas</li>
 					<li>Familiarization with various approaches to n-body problems, quadtree optimization</li>
@@ -393,7 +420,7 @@
 					<li>5,000 users at peak usage</li>
 				</ul>
 			</details>
-			<details open>
+			<!--<details open>
 				<summary>
 					<h3>Chaotic Attractor</h3>
 					<time>Oct 2011</time>
@@ -402,10 +429,10 @@
 				<ul>
 					<li>Technologies: JavaScript, WebGL</li>
 				</ul>
-			</details>
+			</details>-->
 		</section>
 		<footer>
-			<p>Updated 9 October 2015</p>
+			<p>Updated 2 December 2015</p>
 		</footer>
 	</body>
 </html>

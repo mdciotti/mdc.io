@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=false;">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>R&eacute;sum&eacute; &ndash; Maxwell Ciotti</title>
 		<meta name="googlebot" content="noindex, nofollow">
 		<meta name="robots" content="noindex, nofollow">
@@ -92,6 +92,9 @@
 					float: right;
 					color: inherit;
 				}
+				.columns { display: flex; }
+				.column { flex: 1; }
+				.column + .column { margin-left: 20px; }
 			}
 			@media screen {
 				body {
@@ -210,17 +213,14 @@
 				<summary>
 					<h3>University of Houston</h3>
 					<time>Jun 2015&ndash;May 2018</time>
-					<p>Pursuing B.S., Computer Science &amp; Mathematics minor</p>
+					<p>Pursuing Bachelor of Science in Computer Science &amp; minor in Mathematics (GPA 3.2)</p>
 				</summary>
-				<ul>
+				<!--<ul>
 					<li>Cumulative GPA: 3.5</li>
-					<li>Coursework in computer sciences, digital media, and mathematics</li>
-					<li>Officer of IEEE NSM campus organization (historian)</li>
-					<li>Officer of CougarCS campus organization (designer)</li>
-					<li>Co-organizer of Humans of UH</li>
-				</ul>
+					//<li>Coursework in computer sciences, digital media, and mathematics</li>
+				</ul>-->
 			</details>
-			<details open>
+			<!--<details open>
 				<summary>
 					<h3>Lone Star College</h3>
 					<time>Jun 2014&ndash;May 2015</time>
@@ -228,7 +228,7 @@
 				<ul>
 					<li>Involvement in the Society of Math and Engineering and the Computer Science Club</li>
 				</ul>
-			</details>
+			</details>-->
 			<!--<details open>
 				<summary>Florida Institute of Technology</summary>
 				<time>2013&ndash;2014</time>
@@ -240,7 +240,60 @@
 			</details>-->
 		</section>
 		<section>
-			<h2>Employment</h2>
+			<h2>Skills &amp; Abilities</h2>
+			<div class="columns">
+				<details open class="column">
+					<summary>
+						<h3>Programming Languages</h3>
+					</summary>
+					<!-- <p>Known programming languages, tools, and paradigms, in order of experience</p> -->
+					<ul>
+						<li>JavaScript: &gt; 25,000 lines of code written</li>
+						<li>CSS: &gt; 14,000 lines of code written</li>
+						<li>Java: &gt; 5,600 lines of code written</li>
+						<!-- <li>HTML: &gt; 4,800 lines of code written</li> -->
+						<li>C++: &gt; 4,000 lines of code written</li>
+						<li>PHP, C, Swift, Lua, Fortran, Make, Ruby, Python, Bash, Batch Script, R</li>
+					</ul>
+				</details>
+				<details open class="column">
+					<summary>Computer Software</summary>
+					<!-- <p>Extensive experience with:</p>
+					<ul>
+						<li>document processing such as Microsoft Word and LaTeX</li>
+						<li>slideshow programs such as Microsoft PowerPoint</li>
+						<li>spreadsheet programs such as Microsoft Excel</li>
+					</ul> -->
+					<!-- <p>Experience with:</p> -->
+					<ul>
+						<li>UNIX command line and compiling software</li>
+						<li>Git version control system</li>
+						<!-- <li>## contributions to open-source projects</li> -->
+						<!-- <li>REST APIs and SQL, Object-Store databases</li> -->
+						<li>Adobe Photoshop, Adobe Illustrator, Sketch</li>
+						<li>AutoDesk Inventor, Creo Parametric</li>
+						<li>MATLAB, Mathematica</li>
+					</ul>
+				</details>
+				<!-- <details open class="column">
+					<summary>Graphic Design</summary>
+					<ul>
+						<li>Matured sense of design in graphic arts</li>
+						<li>Experience with GUI and UX design</li>
+					</ul>
+				</details> -->
+				<!-- <details open class="column">
+					<summary>Electronics</summary>
+					<ul>
+						<li>Familiar with computer components and building computers</li>
+						<li>Familiar with breadboard prototyping, <abbr title="Field-Programmable Gate Array">FPGA</abbr>s, and soldering</li>
+						<li>Experience with digital logic circuit design and state machines</li>
+					</ul>
+				</details> -->
+			</div>
+		</section>
+		<section>
+			<h2>Work Experience</h2>
 			<details open>
 				<summary>
 					<h3>University of Houston: <abbr title="Data Analytics in Student Hands">DASH</abbr></h3>
@@ -248,12 +301,13 @@
 					<p>Application developer, research programmer (data analytics), IT support</p>
 				</summary>
 				<ul>
-					<li>Honors program: Data Analytics in Student Hands</li>
+					<!-- <li>Honors program: Data Analytics in Student Hands</li> -->
 					<li>Maintained a form building application for a community health management system</li>
 					<li>Created web application to view and modify a variety of environmental sensor data</li>
 					<li>Increased atmospheric sensor data editing efficiency by roughly 300%</li>
 					<!-- <li>Helped create a system for automatic data validation and flagging</li> -->
 					<!-- <li>TODO: Metrics? Impact?</li> -->
+					<li>Technologies: Node.js, Angular, Ionic</li>
 				</ul>
 			</details>
 			<!-- <details open>
@@ -275,9 +329,10 @@
 					<li>Developed a REST API and server-side utilities for managing and viewing reports</li>
 					<!-- <li>Developed a cross-platform touch-friendly logging application</li> -->
 					<!-- <li>Acted as office tech support</li> -->
+					<li>Technologies: Node.js, Keystone, MongoDB, Mongoose</li>
 				</ul>
 			</details>
-			<details open>
+			<!--<details open>
 				<summary>
 					<h3>Austin First Mortgage</h3>
 					<time>Summer 2012</time>
@@ -286,9 +341,10 @@
 				<ul>
 					<li>Created internal utilities to streamline loan processing involving financial calculations</li>
 					<li>Developed the public website so that users can easily access loan information</li>
+					<li>Technologies: Sinatra, PostgreSQL, SASS</li>
 				</ul>
-			</details>
-			<details open>
+			</details>-->
+			<!--<details open>
 				<summary>
 					<h3>VeritasU</h3>
 					<time>Summer 2012</time>
@@ -299,61 +355,27 @@
 					<li>Helped prototype a quiz-building application</li>
 					<li>Created a logo and designs for various pages within the application</li>
 				</ul>
-			</details>
+			</details>-->
 		</section>
 		<section>
-			<h2>Skills &amp; Abilities</h2>
-			<details open>
-				<summary>
-					<h3>Computer Programming</h3>
-				</summary>
-				<!-- <p>Known programming languages, tools, and paradigms, in order of experience</p> -->
-				<ul>
-					<li>JavaScript: &gt; 25,000 lines of code written</li>
-					<li>CSS: &gt; 14,000 lines of code written</li>
-					<li>Java: &gt; 5,600 lines of code written</li>
-					<li>HTML: &gt; 4,800 lines of code written</li>
-					<li>C++: &gt; 2,900 lines of code written</li>
-					<li>Others: PHP, C, Swift, Lua, Fortran, Make, Ruby, Python, Bash, Batch Script, R</li>
-					<!-- <li>## contributions to open-source projects</li> -->
-				<!-- </ul> -->
-				<!-- <p>Experience with:</p> -->
-				<!-- <ul> -->
-					<li>UNIX command line and compiling software</li>
-					<li>Git version control system</li>
-					<!-- <li>REST APIs and SQL, Object-Store databases</li> -->
-				</ul>
-			</details>
-			<!-- <details open>
-				<summary>Graphic Design</summary>
-				<ul>
-					<li>Matured sense of design in graphic arts</li>
-					<li>Experience with GUI and UX design</li>
-				</ul>
-			</details> -->
-			<details open>
-				<summary>Computer Software</summary>
-				<!-- <p>Extensive experience with:</p>
-				<ul>
-					<li>document processing such as Microsoft Word and LaTeX</li>
-					<li>slideshow programs such as Microsoft PowerPoint</li>
-					<li>spreadsheet programs such as Microsoft Excel</li>
-				</ul> -->
-				<!-- <p>Experience with:</p> -->
-				<ul>
-					<li>Adobe Photoshop, Adobe Illustrator, Sketch</li>
-					<li>AutoDesk Inventor, Creo Parametric</li>
-					<li>MATLAB, Mathematica</li>
-				</ul>
-			</details>
-			<!-- <details open>
-				<summary>Electronics</summary>
-				<ul>
-					<li>Familiar with computer components and building computers</li>
-					<li>Familiar with breadboard prototyping, <abbr title="Field-Programmable Gate Array">FPGA</abbr>s, and soldering</li>
-					<li>Experience with digital logic circuit design and state machines</li>
-				</ul>
-			</details> -->
+			<h2>Activities &amp; Involvement</h2>
+			<div class="columns">
+				<details open class="column">
+					<summary>Leadership</summary>
+					<ul>
+						<li>Officer of IEEE NSM (historian)</li>
+						<li>Officer of CougarCS (designer)</li>
+						<li>Co-organizer of Humans of UH</li>
+					</ul>
+				</details>
+				<details open class="column">
+					<summary>Community Involvement</summary>
+					<ul>
+						<li>Metropolitan Volunteer Program</li>
+						<li>Non-Music Major Orchestra</li>
+					</ul>
+				</details>
+			</div>
 		</section>
 		<section>
 			<!-- <h2>Self-Motivated Programming &amp; Design Experience</h2> -->
@@ -364,9 +386,9 @@
 				<summary>
 					<h3>EvntQ</h3>
 					<time>Nov 2015</time>
+					<p><a href="http://www.evntq.com">www.evntq.com</a></p>
+					<p>Web application, allows guests to act as a collaborative DJ at an event</p>
 				</summary>
-				<p><a href="http://www.evntq.com">www.evntq.com</a></p>
-				<p>Web application, allows guests to act as a collaborative DJ at an event</p>
 				<ul>
 					<li>Technologies: Meteor, MongoDB, JavaScript, Spotify API</li>
 					<li>Created in less than 48 hours for the UH CodeRED Hackathon</li>
@@ -376,8 +398,8 @@
 				<summary>
 					<h3>Fractal Generator</h3>
 					<time>Oct 2013</time>
+					<p>Web experiment, renders fractals using Lindenmayer Systems and turtle graphics</p>
 				</summary>
-				<p>Web experiment, renders fractals using Lindenmayer Systems and turtle graphics</p>
 				<ul>
 					<li>Technologies: JavaScript/CoffeeScript, HTML5 Canvas</li>
 					<li>Created a parallel formal grammar rewriting system</li>
@@ -387,36 +409,36 @@
 				<summary>
 					<h3>dino.do</h3>
 					<time>Aug 2013</time>
+					<p>Minimalist productivity utility</p>
 				</summary>
-				<p>Minimalist productivity utility</p>
 				<ul>
 					<li>Languages: Ruby, JavaScript, HTML, CSS</li>
 					<li>Familiarization with managing user accounts</li>
 					<li>Familiarization with storing user data securely in a database</li>
 				</ul>
 			</details>-->
-			<details open>
+			<!--<details open>
 				<summary>
 					<h3>Particle Playground</h3>
 					<time>Aug 2013</time>
+					<p>Web experiment, capable of simulating two-dimensional particle physics with realistic gravity, including various orbits and n-body choreographies</p>
 				</summary>
-				<p>Web experiment, capable of simulating two-dimensional particle physics with realistic gravity, including various orbits and n-body choreographies</p>
 				<ul>
 					<li>Technologies: JavaScript (ES6), HTML5 Canvas</li>
 					<li>Familiarization with various approaches to n-body problems, quadtree optimization</li>
 				</ul>
-			</details>
+			</details>-->
 			<details open>
 				<summary>
 					<h3>QuickHAC</h3>
 					<time>Dec 2012</time>
+					<p><a href="http://quickhac.com/">www.quickhac.com</a></p>
+					<p>Chrome extension and iOS/Android application, automatically checks student grades and provides students with a more accessible interface to view their academic progress</p>
 				</summary>
-				<p><a href="http://quickhac.com/">www.quickhac.com</a></p>
-				<p>Chrome extension and iOS/Android application, automatically checks student grades and provides students with a more accessible interface to view their academic progress</p>
 				<ul>
 					<li>Technologies: Ruby, HTML, CSS, JavaScript, TypeScript</li>
-					<li>Led design for iOS, Android, and Chrome platforms</li>
-					<li>Implemented the client-side logic and functionality</li>
+					<!-- <li>Led design for iOS, Android, and Chrome platforms</li> -->
+					<!-- <li>Implemented the client-side logic and functionality</li> -->
 					<li>5,000 users at peak usage</li>
 				</ul>
 			</details>
@@ -424,15 +446,15 @@
 				<summary>
 					<h3>Chaotic Attractor</h3>
 					<time>Oct 2011</time>
+					<p>Web experiment, generates strange attractors</p>
 				</summary>
-				<p>Web experiment, generates strange attractors</p>
 				<ul>
 					<li>Technologies: JavaScript, WebGL</li>
 				</ul>
 			</details>-->
 		</section>
 		<footer>
-			<p>Updated 2 December 2015</p>
+			<p>Updated 30 January 2016</p>
 		</footer>
 	</body>
 </html>

@@ -30,7 +30,7 @@ var QR = (function (dom) {
 
         // TODO: assert parameters are correct
         this.version = version;
-        
+
         this.setColor(color ? color : "#000000");
         // this.setBackground(bgColor ? bgColor : "none");
         this.setScale(scale ? scale : 8);
@@ -298,7 +298,7 @@ var QR = (function (dom) {
         },
 
         get format () {
-            return this._format;  
+            return this._format;
         },
         set format (value) {
             this._format = value & 0x7FFF;
@@ -592,6 +592,9 @@ var QR = (function (dom) {
         }
     };
 
+    // Reads the data from the QR code
+    // @param bool mask whether to unmask before reading or not
+    // @return string   the content of the QR code.
     QR.prototype.readData = function (mask) {
         var codewords;
         this.draw();
@@ -960,7 +963,7 @@ var QR = (function (dom) {
         console.log(this.background);
         if (clear !== false) this.clear();
         this.ctx.fillStyle = this.color;
-        
+
         // if (this.)
         this.drawBuffer(true, clear);
         // }

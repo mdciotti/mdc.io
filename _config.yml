@@ -3,7 +3,7 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-highlighter: pygments
+highlighter: rouge
 description: "A central hub uniting my journal, portfolio, and lab"
 url: "http://mdc.io"
 permalink: /journal/:title/

@@ -7,7 +7,7 @@ source: "http://github.com/mdciotti/rescuetab/"
 tags: chrome
 type: "Chrome Extension"
 available: false
-feature: true
+feature: false
 attributes: {
 	technologies: [HTML, JS, CSS, Chrome Extension]
 }

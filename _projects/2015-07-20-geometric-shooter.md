@@ -8,7 +8,7 @@ tags: software, game
 type: "Game"
 available: false
 attributes: {
-	technologies: [Lua, C++, OpenGL]
+	technologies: [LÖVE, Lua, C++, OpenGL]
 }
 ---
 

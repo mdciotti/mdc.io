@@ -1,9 +1,10 @@
 ---
+title: Github Markup
+date: 2015-02-15 12:00:00 -06:00
+categories:
+- test
 layout: post
-title:  "Github Markup"
-date:   2015-02-15 12:00:0
-categories: test
-author: "GitHub"
+author: GitHub
 ---
 
 We use this library on GitHub when rendering your README or any other

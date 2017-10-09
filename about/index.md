@@ -1,19 +1,24 @@
 ---
-layout: page
 title: Maxwell Ciotti
+layout: page
 ---
 
 # Maxwell Ciotti
-(Almost) all you ever wanted to know about me
 
-<div class="picture"></div>
+[GitHub](https://github.com/mdciotti)
+[Twitter](https://twitter.com/mdciotti)
+[Keybase](https://keybase.io/mdciotti)
 
-Hello! I am a student pursuing a degree in computer science, with a focus on computational mathematics. I love learning about and playing with technology, especially how it converges with interactive design. Many of my [experiments](/lab/) represent this intersection of science and design, so if you're curious go check them out! While programming and designing are my go-to hobbies, I also enjoy casual gaming, photography, exploring the outdoors, inventing, building, drawing, and for some odd reason, cooking.
+<!-- <div class="picture"></div> -->
 
-I'm passionate about discovery and innovation, especially in terms of interplanetary exploration. My dream is to help humanity push the bounds of our understanding of and place within the universe.
+Hello! I am a fourth-year **student pursuing a degree in computer science** and mathematics. My research interests include scientific visualization, simulation, robotics control, and artificial intelligence.
+
+- I **design and develop websites** and user interfaces for fun. This is how I was introduced to programming, and it never seems to get old.
+- I'm always discovering and toying with technology, especially how it converges with interactive design. Along with programming and designing, I also enjoy photography, hiking, inventing, casual gaming, and cooking.
+- I'm **enthusastic about** scientific discovery and innovation, especially in terms of **space exploration**. My dream is to help humanity push the bounds of our understanding of and place within the universe.
 
 To see what I've been thinking about most recently, head over to my [journal](/journal/)! You can also [subscribe]({{ site.feed }}) to receive entries as I post them. For less constructed thoughts, [follow @mdciotti on Twitter](https://twitter.com/mdciotti).
 
 My **résumé** is available to [view as HTML](/resume/) or to [download as PDF](/resume/maxwell-ciotti.pdf).
 
-[Email me@mdc.io](mailto:me@mdc.io) with any questions or if you just want to say hi.
+I am currently **available for a research-based internship** for the summer of 2017. Contact me [via hire@mdc.io](mailto:hire@mdc.io) for inquiries.

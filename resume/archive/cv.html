@@ -20,7 +20,7 @@
 					text-decoration: none;
 				}
 				header {
-					/* text-align: center; */
+					text-align: center;
 				}
 				header h1 {
 					letter-spacing: 5pt;
@@ -77,53 +77,12 @@
 				section details ul {
 					font-size: 80%;
 					/*list-style-position: outside;*/
-					padding-left: 20px;
-				}
-				section dl.small dt,
-				section dl.small dd,
-				section dl dd.small {
-					font-size: 80%;
-				}
-				section dl.inline dt {
-					/* display: inline-block; */
-					float: left;
-					clear: both;
-					margin-right: 4px;
-				}
-				section dl.inline dt::after {
-					content: ': ';
-				}
-				section dl dd {
-					font-style: italic;
-					margin-left: 20px;
-					margin-bottom: 4px;
 				}
 				footer {
 					text-align: center;
 					font-size: 80%;
 					border-top: thin solid;
 				}
-				.tex sub, .latex sub, .latex sup {
-					text-transform: uppercase;
-				}
-				.tex sub, .latex sub {
-					vertical-align: -0.5ex;
-					margin-left: -0.1667em;
-					margin-right: -0.125em;
-				}
-				.tex, .latex, .tex sub, .latex sub {
-					font-size: 1em;
-				}
-				.latex sup {
-					font-size: 0.85em;
-					vertical-align: 0.15em;
-					margin-left: -0.36em;
-					margin-right: -0.15em;
-				}
-			}
-			::selection {
-				background: #333333;
-				color: #ffffff;
 			}
 			@media screen and (min-width: 5in), print {
 				section p {
@@ -136,8 +95,6 @@
 				.columns { display: flex; }
 				.column { flex: 1; }
 				.column + .column { margin-left: 20px; }
-				.column-wide { flex: 7; margin-left: 40px; }
-				.column-narrow { flex: 3; }
 			}
 			@media screen {
 				body {
@@ -159,8 +116,8 @@
 					color: #444444;
 				}
 				header, section, footer {
-					max-width: 8in;
-					/* padding: 0 0.25in; */
+					max-width: 6.5in;
+					padding: 0 0.25in;
 					margin: 0 auto;
 				}
 				header {
@@ -187,7 +144,7 @@
 			}
 			@media print {
 				@page {
-					margin: 0.75in 1in;
+					margin: 0.5in 1in;
 					counter-increment: page;
 					@bottom-center {
 						/* Doesn't seem to be supported yet */
@@ -208,34 +165,27 @@
 				a[href^="http://"]::before {
 					content: 'http://';
 				}
-				a[href^="https://"]::before {
-					content: 'https://';
-				}
 				header h1 {
 					margin-top: 0;
-					margin-bottom: 0.5em;
+					margin-bottom: 0.25em;
 				}
 				header:not(:first-of-type) {
 					page-break-before: always;
 				}
 				section h2 {
 					border-bottom-color: #000000;
-					margin-top: 1em;
+					margin-top: 0.5em;
 					margin-bottom: 0.25em;
 					page-break-after: avoid;
 				}
 				section details summary ~ p, section details summary ~ ul {
 					margin-top: 0.25em;
-					margin-bottom: 0.5em;
+					margin-bottom: 0.25em;
 				}
 				section details {
 					/*page-break-inside: avoid;*/
 				}
 				section details summary::-webkit-details-marker {
-					display: none;
-				}
-				footer {
-					margin-top: 0.5em;
 					display: none;
 				}
 			}
@@ -244,125 +194,19 @@
 	<body>
 		<header>
 			<h1>Maxwell Ciotti</h1>
-			<!-- <address>
+			<address>
 				<a href="tel:5123640226" rel="nofollow">(512)&nbsp;364-0226</a> &middot; <a href="mailto:max@mdc.io" rel="nofollow">max@mdc.io</a>
-			</address> -->
+			</address>
 		</header>
-		<section class="columns">
-		<div class="column-narrow">
-		<section>
-			<h2>Contact</h2>
-			<!-- <address>
-				<a href="tel:5123640226" rel="nofollow">(512)&nbsp;364-0226</a> <br>
-				<a href="mailto:max@mdc.io" rel="nofollow">max@mdc.io</a> <br>
-				<a href="https://www.mdc.io">www.mdc.io</a>
-			</address> -->
-			<details open>
-				<summary></summary>
-				<dl class="inline">
-					<dt>Phone</dt>
-					<dd><a href="tel:5123640226" rel="nofollow">(512)&nbsp;364-0226</a></dd>
-					<dt>Email</dt>
-					<dd><a href="mailto:max@mdc.io" rel="nofollow">max@mdc.io</a></dd>
-					<dt>Website</dt>
-					<dd><a href="https://www.mdc.io">www.mdc.io</a></dd>
-				</dl>
-			</details>
-			<details open>
-				<summary></summary>
-				<dl class="small inline">
-					<dt>GitHub</dt>
-					<dd><a href="https://github.com/mdciotti" rel="nofollow">@mdciotti</a></dd>
-					<dt>Twitter</dt>
-					<dd><a href="https://twitter.com/mdciotti">@mdciotti</a></dd>
-					<dt>Facebook</dt>
-					<dd><a href="https://www.facebook.com/mdciotti" rel="nofollow">mdciotti</a></dd>
-					<dt>500px</dt>
-					<dd><a href="https://500px.com/mdciotti" rel="nofollow">mdciotti</a></dd>
-					<dt>Keybase</dt>
-					<dd><a href="https://keybase.io/mdciotti" rel="nofollow">mdciotti</a></dd>
-				</dl>
-			</details>
-		</section>
-		<section>
-			<h2>Skills</h2>
-			<details open>
-				<summary>
-					<h3>Programming Languages</h3>
-				</summary>
-				<!-- <p>Known programming languages, tools, and paradigms, in order of experience</p> -->
-				<!-- <ul>
-					<li>JavaScript: 28k SLOC</li>
-					<li>CSS: 15k SLOC</li>
-					<li>Java: 10k SLOC</li>
-					<li>C++: 7k SLOC</li>
-					<li>C: 3k SLOC</li>
-					<li>Lua, Python, Swift, Fortran, Make, Bash, R</li>
-					<li>Graphics: OpenGL, WebGL, HTML5 Canvas</li>
-					<li>Web: Node.js, Express, Meteor, jQuery, Underscore, Backbone, Angular, React, Jekyll</li>
-				</ul> -->
-				<dl class="small">
-					<dt>Fluent<!--  (&gt;25k LOC) --></dt>
-					<dd>JavaScript, C, Python, Lua</dd>
-					<dt>Experienced<!--  (&gt;10k LOC) --></dt>
-					<dd>GLSL, C++, Java</dd>
-					<dt>Literate<!--  (&gt;1k LOC) --></dt>
-					<dd>Swift, Fortran, Bash</dd>
-					<dt>Others</dt>
-					<dd>Make, R, PHP, Ruby</dd>
-				</dl>
-			</details>
-			<details open>
-				<summary>Frameworks &amp; APIs</summary>
-				<!-- <p>Extensive experience with:</p>
-				<ul>
-					<li>document processing such as Microsoft Word and LaTeX</li>
-					<li>slideshow programs such as Microsoft PowerPoint</li>
-					<li>spreadsheet programs such as Microsoft Excel</li>
-				</ul> -->
-				<!-- <p>Experience with:</p> -->
-				<ul>
-					<li>OpenGL, WebGL, HTML5 Canvas</li>
-					<!-- <li>Writing tests &amp; documentation</li> -->
-					<!-- <li>## contributions to open-source projects</li> -->
-					<li>Node.js, Sinatra, Ruby on Rails</li>
-					<li>React, Angular, Ionic, CSS</li>
-				</ul>
-			</details>
-			<details open>
-				<summary>Software</summary>
-				<ul>
-					<li>Linux, macOS, Windows</li>
-					<li>UNIX command line</li>
-					<li>Git, SVN version control</li>
-					<li><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> document typesetting</li>
-					<li>MySQL, MongoDB</li>
-					<li>Photoshop, Illustrator, Sketch</li>
-					<li>AutoDesk Inventor, Creo</li>
-					<li>MATLAB, Mathematica</li>
-				</ul>
-			</details>
-			<details open class="column">
-				<summary>Graphic Design</summary>
-				<ul>
-					<li>Matured sense of design</li>
-					<li>Experience with UI/UX design</li>
-					<li><abbr title="Digital single-lens reflex">DSLR</abbr> photography</li>
-					<!-- <li>Photoshop, Illustrator, Sketch</li> -->
-				</ul>
-			</details>
-			<details open>
-				<summary>Electronics</summary>
-				<ul>
-					<!-- <li>Familiar with computer components and building computers</li> -->
-					<li>Breadboard prototyping, <abbr title="Field-Programmable Gate Array">FPGA</abbr>s</li>
-					<li>Digital logic circuit design, state machines</li>
-					<li>Arduino, Raspberry Pi, Particle</li>
-				</ul>
-			</details>
-		</section>
-		</div>
-		<div class="column-wide">
+		<!--<section>
+			<h2>Profile</h2>
+			<p>Determined and pragmatic student concentrated on continual improvement. Devoted to assisting individuals through any means possible. Effective at finding solutions to problems and discovering and optimizing inefficient systems. Knowledgeable in contributing to a team effort with effective communication. Highly experienced with computer hardware and software, especially in creating documents, spreadsheets, and slideshows. Prepared to learn new tools to complete tasks more effectively or reliably. Focused on consistent quality work and accuracy. Meticulous about organization and fine details.<!-- Pleased to complete tedious or time-consuming tasks.</p>
+		</section>-->
+		<!-- <section>
+			<h2>About Me</h2>
+			<p>I have been designing and developing websites for over five years, using mainly HTML, CSS, and JavaScript. I am also familiar with PHP and databases. I have worked on several team programming projects. I consider myself to be extremely meticulous about how I organize files and information. I am highly experienced with computer hardware and software, and am willing to learn new tools to get the job done more effectively or more reliably. I do not mind tedious or time-consuming tasks, as I feel I am rather patient and methodical. I strive to be correct and accurate rather than hasty in my work. I am always happy to work with others and assist individuals in whatever way I can.</p>
+			<p>I have over four years of experience in designing and developing websites and web applications using HTML, CSS, and JavaScript, among other technologies. I am familiar with XML and JSON, PHP, object-oriented programming. I have contributed to several open-source projects, and am familiar with git. I am passionate about creating clean and functional user interfaces. I have worked with SQL and noSQL databases. I consider myself to be extremely meticulous about organization and attention to detail. I am familiar with modern web standards and cross-browser compatibility. Good user interaction and graphical interface design is always one of my top priorities. Editing is a natural talent of mine.</p>
+		</section> -->
 		<section>
 			<h2>Education</h2>
 			<details open>
@@ -370,15 +214,16 @@
 					<h3>University of Houston</h3>
 					<time>Jun 2015&ndash;May 2018 (expected)</time>
 					<p>Bachelor of Science in computer science &amp; minor in mathematics</p>
+					<!-- <ul>
+						<li>Coursework in digital image processing, artificial intelligence</li>
+					</ul> -->
 				</summary>
-				<ul>
-					<li>Coursework in digital image processing, artificial intelligence</li>
-					<li>Involvement in CougarCS, <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>@UH, <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr>-<abbr title="Natural Science and Mathematics">NSM</abbr></li>
-					<!-- <li>Cumulative GPA: 3.5</li> -->
-					<!-- //<li>Coursework in computer sciences, digital media, and mathematics</li> -->
-				</ul>
+				<!--<ul>
+					<li>Cumulative GPA: 3.5</li>
+					//<li>Coursework in computer sciences, digital media, and mathematics</li>
+				</ul>-->
 			</details>
-			<details open>
+			<!--<details open>
 				<summary>
 					<h3>Lone Star College</h3>
 					<time>Jun 2014&ndash;May 2015</time>
@@ -386,35 +231,29 @@
 				<ul>
 					<li>Involvement in the Society of Math and Engineering and the Computer Science Club</li>
 				</ul>
-			</details>
-			<details open>
-				<summary>
-					<h3>Florida Institute of Technology</h3>
-					<time>Aug 2013&ndash;May 2014</time>
-					<p>Aerospace Engineering</p>
-				</summary>
+			</details>-->
+			<!--<details open>
+				<summary>Florida Institute of Technology</summary>
+				<time>2013&ndash;2014</time>
+				<p>Aerospace Engineering</p>
 				<ul>
 					<li>Coursework in engineering, mathematics, and space sciences</li>
 					<li>Involvement in <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>, Student Rocket Society, <abbr title="Association for Computing Machinery">ACM</abbr>, <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr> <abbr title="Aerospace and Electronic Systems Society">AESS</abbr></li>
 				</ul>
-			</details>
+			</details>-->
 		</section>
 		<section>
 			<h2>Research</h2>
-			<dl>
-				<dt>Interests</dt>
-				<dd class="small">visualization, simulation, robotics, graphics, machine learning, analytics</dd>
-			</dl>
+			<p>Interests: visualization, simulation, robotics, analytics, graphics, machine learning</p>
 			<details open>
 				<summary>
-					<h3>Pathline Placement for Unsteady Flow</h3>
+					<h3>Pathline Placement &amp; Visualization of Vector Fields</h3>
 					<time>Mar 2016&ndash;Nov 2016</time>
 					<p>Undergraduate research with Dr. Guoning Chen</p>
+					<ul>
+						<li>Developed a statistical approach to clean visualization of unsteady flow</li>
+					</ul>
 				</summary>
-				<ul>
-					<li>Developed a statistical approach to cleanly visualize time-variant vector fields</li>
-					<li>Created a 2D vector mesh interpolator and visualization tool using WebGL</li>
-				</ul>
 			</details>
 		</section>
 		<section>
@@ -422,28 +261,26 @@
 			<details open>
 				<summary>
 					<h3>University of Houston: <abbr title="Data Analytics in Student Hands">DASH</abbr></h3>
-					<time>Aug 2015&ndash;present</time>
+					<time>Aug 2015&ndash;</time>
 					<p>Web application developer, data analyst, IT support</p>
 				</summary>
 				<ul>
 					<!-- <li>Honors program: Data Analytics in Student Hands</li> -->
-					<li>Created geographic data visualization for atmospheric data modeling</li>
-					<li>Created NAS backup verification shell script for over 30 computers</li>
-					<li>Created web application to view and modify a variety of environmental sensor data</li>
-					<li>Improved atmospheric sensor data editing efficiency by roughly 3x</li>
 					<li>Maintained a form building application for a community health management system</li>
+					<li>Created web application to view and modify a variety of environmental sensor data</li>
+					<li>Increased atmospheric sensor data editing efficiency by roughly 300%</li>
 					<!-- <li>Helped create a system for automatic data validation and flagging</li> -->
 					<!-- <li>TODO: Metrics? Impact?</li> -->
-					<li>Technologies: Node.js, Meteor, MongoDB, React, MapBox, WebGL, Angular, Ionic</li>
+					<li>Technologies: Node.js, Meteor, MongoDB, Angular, Ionic</li>
 				</ul>
 			</details>
-			<details open>
+			<!-- <details open>
 				<summary>
 					<h3>H-E-B</h3>
 					<time>Aug 2014&ndash;Dec 2014</time>
 					<p>Customer Service Partner</p>
 				</summary>
-			</details>
+			</details> -->
 			<details open>
 				<summary>
 					<h3>Florida Institute of Technology <abbr title="Department of Environmental Regulation and Compliance">ERC</abbr></h3>
@@ -459,7 +296,7 @@
 					<li>Technologies: Node.js, Keystone, MongoDB, Mongoose</li>
 				</ul>
 			</details>
-			<details open>
+			<!--<details open>
 				<summary>
 					<h3>Austin First Mortgage</h3>
 					<time>Summer 2012</time>
@@ -470,8 +307,8 @@
 					<li>Developed the public website so that users can easily access loan information</li>
 					<li>Technologies: Sinatra, PostgreSQL, SASS</li>
 				</ul>
-			</details>
-			<details open>
+			</details>-->
+			<!--<details open>
 				<summary>
 					<h3>VeritasU</h3>
 					<time>Summer 2012</time>
@@ -482,24 +319,23 @@
 					<li>Helped prototype a quiz-building application</li>
 					<li>Created a logo and designs for various pages within the application</li>
 				</ul>
-			</details>
+			</details>-->
 		</section>
 		<section>
-			<h2>Leadership &amp; Involvement</h2>
+			<h2>Activities &amp; Involvement</h2>
 			<div class="columns">
 				<details open class="column">
-					<summary>Responsibilities</summary>
+					<summary>Leadership</summary>
 					<ul>
 						<!-- <li>Officer of IEEE NSM (historian)</li> -->
-						<li>Officer of CougarCS (designer), 2 years</li>
-						<li>Lead designer of CodeRED Hackathon</li>
+						<li>Officer of CougarCS (designer)</li>
+						<li>Co-organizer of CodeRED Hackathon</li>
 					</ul>
 				</details>
 				<details open class="column">
 					<summary>Community Involvement</summary>
 					<ul>
 						<li>Metropolitan Volunteer Program</li>
-						<li>UH <abbr title="Cougar Assisted Relief Efforts">CARES</abbr></li>
 						<!-- <li>Non-Music Major Orchestra</li> -->
 					</ul>
 				</details>
@@ -507,8 +343,7 @@
 		</section>
 		<section>
 			<!-- <h2>Self-Motivated Programming &amp; Design Experience</h2> -->
-			<!-- <h2>Independent Programming &amp; Design Experience</h2> -->
-			<h2>Independent Projects</h2>
+			<h2>Independent Programming &amp; Design Experience</h2>
 			<p>See an index of my projects and experiments at <a href="https://www.mdc.io">www.mdc.io</a></p>
 			<!--<p>Complete list at <a href="http://www.mdc.io/portfolio">www.mdc.io/portfolio</a></p>-->
 			<details open>
@@ -523,30 +358,7 @@
 					<li>Created in less than 48 hours for the UH CodeRED Hackathon</li>
 				</ul>
 			</details>
-			<details open>
-				<summary>
-					<h3>Turmites</h3>
-					<time>Sep 2015</time>
-					<p><a href="http://mdciotti.github.io/turmites/">http://mdciotti.github.io/turmites/</a></p>
-					<p>A simple turmite and cellular automata simulator with the ability share creations</p>
-				</summary>
-				<ul>
-					<li>Technologies: JavaScript, HTML5 Canvas</li>
-				</ul>
-			</details>
-			<details open>
-				<summary>
-					<h3>Particle Playground</h3>
-					<time>Aug 2015</time>
-					<p>Web experiment, capable of simulating two-dimensional particle physics with realistic gravity, including various orbits and n-body choreographies</p>
-				</summary>
-				<ul>
-					<li>Technologies: JavaScript (ES6), React, HTML5 Canvas</li>
-					<li>Familiarization with various approaches to n-body problems, quadtree optimization</li>
-					<li>Created a custom data-bound UI framework using React</li>
-				</ul>
-			</details>
-			<details open>
+			<!--<details open>
 				<summary>
 					<h3>Fractal Generator</h3>
 					<time>Oct 2013</time>
@@ -556,8 +368,8 @@
 					<li>Technologies: JavaScript/CoffeeScript, HTML5 Canvas</li>
 					<li>Created a parallel formal grammar rewriting system</li>
 				</ul>
-			</details>
-			<details open>
+			</details>-->
+			<!--<details open>
 				<summary>
 					<h3>dino.do</h3>
 					<time>Aug 2013</time>
@@ -568,7 +380,18 @@
 					<li>Familiarization with managing user accounts</li>
 					<li>Familiarization with storing user data securely in a database</li>
 				</ul>
-			</details>
+			</details>-->
+			<!--<details open>
+				<summary>
+					<h3>Particle Playground</h3>
+					<time>Aug 2013</time>
+					<p>Web experiment, capable of simulating two-dimensional particle physics with realistic gravity, including various orbits and n-body choreographies</p>
+				</summary>
+				<ul>
+					<li>Technologies: JavaScript (ES6), HTML5 Canvas</li>
+					<li>Familiarization with various approaches to n-body problems, quadtree optimization</li>
+				</ul>
+			</details>-->
 			<details open>
 				<summary>
 					<h3>QuickHAC</h3>
@@ -580,10 +403,10 @@
 					<li>Technologies: Ruby, HTML, CSS, JavaScript, TypeScript</li>
 					<!-- <li>Led design for iOS, Android, and Chrome platforms</li> -->
 					<!-- <li>Implemented the client-side logic and functionality</li> -->
-					<li>5,000 active weekly users at peak usage</li>
+					<li>5,000 users at peak usage</li>
 				</ul>
 			</details>
-			<details open>
+			<!--<details open>
 				<summary>
 					<h3>Chaotic Attractor</h3>
 					<time>Oct 2011</time>
@@ -592,12 +415,67 @@
 				<ul>
 					<li>Technologies: JavaScript, WebGL</li>
 				</ul>
-			</details>
+			</details>-->
 		</section>
-		</div>
+		<section>
+			<h2>Skills &amp; Abilities</h2>
+			<div class="columns">
+				<details open class="column">
+					<summary>
+						<h3>Programming Languages &amp; Libraries</h3>
+					</summary>
+					<!-- <p>Known programming languages, tools, and paradigms, in order of experience</p> -->
+					<ul>
+						<li>JavaScript: &gt; 28,000 lines of code written</li>
+						<li>CSS: &gt; 15,000 lines of code written</li>
+						<li>Java: &gt; 10,000 lines of code written</li>
+						<!-- <li>HTML: &gt; 4,800 lines of code written</li> -->
+						<li>C++: &gt; 6,400 lines of code written</li>
+						<li>Lua, C, Python, Swift, Fortran, Make, Bash, R</li>
+						<li>Graphics: OpenGL, WebGL, HTML5 Canvas</li>
+						<li>Web: Node.js, Express, Meteor, jQuery, Underscore, Backbone, Angular, React, Jekyll</li>
+					</ul>
+				</details>
+				<details open class="column">
+					<summary>Computer Software</summary>
+					<!-- <p>Extensive experience with:</p>
+					<ul>
+						<li>document processing such as Microsoft Word and LaTeX</li>
+						<li>slideshow programs such as Microsoft PowerPoint</li>
+						<li>spreadsheet programs such as Microsoft Excel</li>
+					</ul> -->
+					<!-- <p>Experience with:</p> -->
+					<ul>
+						<li>UNIX command line and compiling software</li>
+						<li>Git version control system</li>
+						<li>Writing documentation and specifications</li>
+						<li>LaTeX document typesetting</li>
+						<!-- <li>## contributions to open-source projects</li> -->
+						<!-- <li>REST APIs and SQL, Object-Store databases</li> -->
+						<li>Adobe Photoshop, Adobe Illustrator, Sketch</li>
+						<li>AutoDesk Inventor, Creo Parametric</li>
+						<li>MATLAB, Mathematica</li>
+					</ul>
+				</details>
+				<!-- <details open class="column">
+					<summary>Graphic Design</summary>
+					<ul>
+						<li>Matured sense of design in graphic arts</li>
+						<li>Experience with GUI and UX design</li>
+					</ul>
+				</details> -->
+				<!-- <details open class="column">
+					<summary>Electronics</summary>
+					<ul>
+						<li>Familiar with computer components and building computers</li>
+						<li>Familiar with breadboard prototyping, <abbr title="Field-Programmable Gate Array">FPGA</abbr>s, and soldering</li>
+						<li>Experience with digital logic circuit design and state machines</li>
+					</ul>
+				</details> -->
+			</div>
 		</section>
 		<footer>
-			<p>Updated 9 October 2017</p>
+			<p>Updated 17 April 2017</p>
 		</footer>
 	</body>
 </html>

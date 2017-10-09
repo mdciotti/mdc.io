@@ -1,28 +1,47 @@
+---
+title: Mdc.Io
+timezone: America/Chicago
+collections:
+  experiments:
+    title: Experiments
+    output: true
+    permalink: "/lab/:title/"
+  posts:
+    title: Posts
+    output: true
+  projects:
+    title: Projects
+    output: false
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: experiments
+  values:
+    layout: experiment
 name: Maxwell Ciotti
 markdown: kramdown
 kramdown:
   input: GFM
-
 highlighter: rouge
-description: "A central hub uniting my journal, portfolio, and lab"
-url: "http://mdc.io"
-permalink: /journal/:title/
-feed: /journal/feed/
-logo: /img/m-transparent.svg
+description: A central hub uniting my journal, portfolio, and lab
+url: http://mdc.io
+permalink: "/journal/:title/"
+feed: "/journal/feed/"
+logo: "/img/m-transparent.svg"
 trackingID: 5515d88dde2e261e74002ed7
 email: me@mdc.io
-role: "Student designer & web developer"
-timezone: America/Chicago
+role: Student designer & web developer
 encoding: utf-8
-collections:
-  projects:
-  experiments:
-    output: true
-    permalink: /lab/:title/
-defaults:
-  - scope:
-      path: ""
-      type: experiments
-    values:
-      layout: experiment
-exclude: [styles, vendor, misc, design, Gemfile, Gemfile.lock, serve.sh, readme.md, CNAME]
+exclude:
+- styles
+- vendor
+- misc
+- design
+- Gemfile
+- Gemfile.lock
+- serve.sh
+- readme.md
+- CNAME

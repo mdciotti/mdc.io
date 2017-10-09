@@ -1,16 +1,22 @@
 ---
+title: QR Code Forensics
+date: 2015-03-04 03:30:00 -06:00
+categories:
+- crypto
 layout: post
-title:  "QR Code Forensics"
-date:   2015-03-04 09:30:00
-categories: crypto
 math: true
 feature: true
-scripts: [qr.js]
+scripts:
+- qr.js
 background: "/img/journal/fire.jpg"
-photo_credit: "Public Domain Archives"
-photo_credit_url: "http://publicdomainarchive.com/public-domain-images-fire-wood-dark-night-black-orange-warm/"
-description: "An interactive exploration of how to extract the contents of an unscannable QR code"
-lede: "QR Codes are everywhere, from item tracking to product packaging to bitcoin addresses. They are **incredibly** resilient to damage and deformation, but what happens if no matter what you try, it still won't scan? It turns out we can still sometimes read the data by cracking it open manually."
+photo_credit: Public Domain Archives
+photo_credit_url: http://publicdomainarchive.com/public-domain-images-fire-wood-dark-night-black-orange-warm/
+description: An interactive exploration of how to extract the contents of an unscannable
+  QR code
+lede: QR Codes are everywhere, from item tracking to product packaging to bitcoin
+  addresses. They are **incredibly** resilient to damage and deformation, but what
+  happens if no matter what you try, it still won't scan? It turns out we can still
+  sometimes read the data by cracking it open manually.
 ---
 
 [![][fez-screen-preview]][fez-screen]{:class="pixelated"}

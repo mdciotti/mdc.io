@@ -1,6 +1,6 @@
 ---
-layout: page
 title: Work With Me
+layout: page
 ---
 
 # Work With Me

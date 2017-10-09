@@ -1,9 +1,9 @@
 ---
 title: REU Progress Wk. 5
-date: '2016-07-07 08:00:00'
+date: 2016-07-07 08:00:00 -05:00
 layout: post
-draft: true
 ---
+
 *This post is part of an ongoing series documenting my summer research under Dr. Guoning Chen at The University of Houston. See the [first post here](#).*
 
 This week was spent on three main aspects: improving the user interface of the 2D vector field analysis tool, streamline tapering, and continuous field discretization.

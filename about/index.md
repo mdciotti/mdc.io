@@ -1,6 +1,6 @@
 ---
-layout: page
 title: Maxwell Ciotti
+layout: page
 ---
 
 # Maxwell Ciotti

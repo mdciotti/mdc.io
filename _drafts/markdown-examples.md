@@ -1,10 +1,11 @@
 ---
+title: Markdown Examples
+date: 2015-02-14 12:00:00 -06:00
+categories:
+- test
 layout: post
-title:  "Markdown Examples"
-date:   2015-02-14 12:00:0
-categories: test
-subtitle: "This note demonstrates some of what Markdown is capable of doing."
-author: "Markdown Mark"
+subtitle: This note demonstrates some of what Markdown is capable of doing.
+author: Markdown Mark
 ---
 
 *Note: Feel free to play with this page. Unlike regular notes, this doesn't automatically save itself.*

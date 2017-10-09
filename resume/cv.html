@@ -121,6 +121,10 @@
 					margin-right: -0.15em;
 				}
 			}
+			::selection {
+				background: #333333;
+				color: #ffffff;
+			}
 			@media screen and (min-width: 5in), print {
 				section p {
 					text-align: justify;
@@ -299,17 +303,17 @@
 				</ul> -->
 				<dl class="small">
 					<dt>Fluent<!--  (&gt;25k LOC) --></dt>
-					<dd>JavaScript, CSS, C, C++</dd>
+					<dd>JavaScript, C, Python, Lua</dd>
 					<dt>Experienced<!--  (&gt;10k LOC) --></dt>
-					<dd>Java, Python, Lua</dd>
+					<dd>GLSL, C++, Java</dd>
 					<dt>Literate<!--  (&gt;1k LOC) --></dt>
-					<dd>GLSL, Swift, Fortran, Bash</dd>
+					<dd>Swift, Fortran, Bash</dd>
 					<dt>Others</dt>
 					<dd>Make, R, PHP, Ruby</dd>
 				</dl>
 			</details>
 			<details open>
-				<summary>Software &amp; APIs</summary>
+				<summary>Frameworks &amp; APIs</summary>
 				<!-- <p>Extensive experience with:</p>
 				<ul>
 					<li>document processing such as Microsoft Word and LaTeX</li>
@@ -319,14 +323,20 @@
 				<!-- <p>Experience with:</p> -->
 				<ul>
 					<li>OpenGL, WebGL, HTML5 Canvas</li>
+					<!-- <li>Writing tests &amp; documentation</li> -->
+					<!-- <li>## contributions to open-source projects</li> -->
+					<li>Node.js, Sinatra, Ruby on Rails</li>
+					<li>React, Angular, Ionic, CSS</li>
+				</ul>
+			</details>
+			<details open>
+				<summary>Software</summary>
+				<ul>
 					<li>Linux, macOS, Windows</li>
 					<li>UNIX command line</li>
 					<li>Git, SVN version control</li>
-					<li>Writing tests &amp; documentation</li>
 					<li><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> document typesetting</li>
-					<!-- <li>## contributions to open-source projects</li> -->
 					<li>MySQL, MongoDB</li>
-					<li>Node.js, Sinatra, Ruby on Rails</li>
 					<li>Photoshop, Illustrator, Sketch</li>
 					<li>AutoDesk Inventor, Creo</li>
 					<li>MATLAB, Mathematica</li>
@@ -359,11 +369,11 @@
 				<summary>
 					<h3>University of Houston</h3>
 					<time>Jun 2015&ndash;May 2018 (expected)</time>
+					<p>Bachelor of Science in computer science &amp; minor in mathematics</p>
 				</summary>
-				<p>Bachelor of Science in computer science &amp; minor in mathematics</p>
 				<ul>
 					<li>Coursework in digital image processing, artificial intelligence</li>
-					<li>Involvement in CougarCS, <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>, <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr>-<abbr title="Natural Science and Mathematics">NSM</abbr></li>
+					<li>Involvement in CougarCS, <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>@UH, <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr>-<abbr title="Natural Science and Mathematics">NSM</abbr></li>
 					<!-- <li>Cumulative GPA: 3.5</li> -->
 					<!-- //<li>Coursework in computer sciences, digital media, and mathematics</li> -->
 				</ul>
@@ -378,9 +388,11 @@
 				</ul>
 			</details>
 			<details open>
-				<summary>Florida Institute of Technology</summary>
-				<time>2013&ndash;2014</time>
-				<p>Aerospace Engineering</p>
+				<summary>
+					<h3>Florida Institute of Technology</h3>
+					<time>Aug 2013&ndash;May 2014</time>
+					<p>Aerospace Engineering</p>
+				</summary>
 				<ul>
 					<li>Coursework in engineering, mathematics, and space sciences</li>
 					<li>Involvement in <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>, Student Rocket Society, <abbr title="Association for Computing Machinery">ACM</abbr>, <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr> <abbr title="Aerospace and Electronic Systems Society">AESS</abbr></li>
@@ -398,10 +410,11 @@
 					<h3>Pathline Placement for Unsteady Flow</h3>
 					<time>Mar 2016&ndash;Nov 2016</time>
 					<p>Undergraduate research with Dr. Guoning Chen</p>
-					<ul>
-						<li>Developed a statistical approach to cleanly visualize time-variant vector fields</li>
-					</ul>
 				</summary>
+				<ul>
+					<li>Developed a statistical approach to cleanly visualize time-variant vector fields</li>
+					<li>Created a 2D vector mesh interpolator and visualization tool using WebGL</li>
+				</ul>
 			</details>
 		</section>
 		<section>
@@ -409,7 +422,7 @@
 			<details open>
 				<summary>
 					<h3>University of Houston: <abbr title="Data Analytics in Student Hands">DASH</abbr></h3>
-					<time>Aug 2015&ndash;</time>
+					<time>Aug 2015&ndash;present</time>
 					<p>Web application developer, data analyst, IT support</p>
 				</summary>
 				<ul>
@@ -523,6 +536,18 @@
 			</details>
 			<details open>
 				<summary>
+					<h3>Particle Playground</h3>
+					<time>Aug 2015</time>
+					<p>Web experiment, capable of simulating two-dimensional particle physics with realistic gravity, including various orbits and n-body choreographies</p>
+				</summary>
+				<ul>
+					<li>Technologies: JavaScript (ES6), React, HTML5 Canvas</li>
+					<li>Familiarization with various approaches to n-body problems, quadtree optimization</li>
+					<li>Created a custom data-bound UI framework using React</li>
+				</ul>
+			</details>
+			<details open>
+				<summary>
 					<h3>Fractal Generator</h3>
 					<time>Oct 2013</time>
 					<p>Web experiment, renders fractals using Lindenmayer Systems and turtle graphics</p>
@@ -542,17 +567,6 @@
 					<li>Languages: Ruby, JavaScript, HTML, CSS</li>
 					<li>Familiarization with managing user accounts</li>
 					<li>Familiarization with storing user data securely in a database</li>
-				</ul>
-			</details>
-			<details open>
-				<summary>
-					<h3>Particle Playground</h3>
-					<time>Aug 2013</time>
-					<p>Web experiment, capable of simulating two-dimensional particle physics with realistic gravity, including various orbits and n-body choreographies</p>
-				</summary>
-				<ul>
-					<li>Technologies: JavaScript (ES6), React, HTML5 Canvas</li>
-					<li>Familiarization with various approaches to n-body problems, quadtree optimization</li>
 				</ul>
 			</details>
 			<details open>

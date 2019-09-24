@@ -152,7 +152,7 @@
 					border-bottom: thin solid #00aced;
 				}
 				abbr {
-					border-bottom: thin dotted #222222;
+					/* border-bottom: thin dotted #222222; */
 					cursor: help;
 				}
 				h1, h2 {
@@ -205,31 +205,34 @@
 				a:link, a:visited {
 					color: inherit;
 				}
-				a[href^="http://"]::before {
+				/* a[href^="http://"]::before {
 					content: 'http://';
 				}
 				a[href^="https://"]::before {
 					content: 'https://';
+				} */
+				abbr {
+					text-decoration: none;
 				}
 				header h1 {
 					margin-top: 0;
 					margin-bottom: 0.5em;
 				}
 				header:not(:first-of-type) {
-					page-break-before: always;
+					break-before: always;
 				}
 				section h2 {
 					border-bottom-color: #000000;
 					margin-top: 1em;
 					margin-bottom: 0.25em;
-					page-break-after: avoid;
+					break-after: avoid;
 				}
 				section details summary ~ p, section details summary ~ ul {
 					margin-top: 0.25em;
 					margin-bottom: 0.5em;
 				}
 				section details {
-					/*page-break-inside: avoid;*/
+					break-inside: avoid;
 				}
 				section details summary::-webkit-details-marker {
 					display: none;
@@ -275,10 +278,10 @@
 					<dd><a href="https://github.com/mdciotti" rel="nofollow">@mdciotti</a></dd>
 					<dt>Twitter</dt>
 					<dd><a href="https://twitter.com/mdciotti">@mdciotti</a></dd>
-					<dt>Facebook</dt>
-					<dd><a href="https://www.facebook.com/mdciotti" rel="nofollow">mdciotti</a></dd>
-					<dt>500px</dt>
-					<dd><a href="https://500px.com/mdciotti" rel="nofollow">mdciotti</a></dd>
+					<!-- <dt>Facebook</dt>
+					<dd><a href="https://www.facebook.com/mdciotti" rel="nofollow">mdciotti</a></dd> -->
+					<!-- <dt>500px</dt>
+					<dd><a href="https://500px.com/mdciotti" rel="nofollow">mdciotti</a></dd> -->
 					<dt>Keybase</dt>
 					<dd><a href="https://keybase.io/mdciotti" rel="nofollow">mdciotti</a></dd>
 				</dl>
@@ -325,8 +328,9 @@
 					<li>OpenGL, WebGL, HTML5 Canvas</li>
 					<!-- <li>Writing tests &amp; documentation</li> -->
 					<!-- <li>## contributions to open-source projects</li> -->
-					<li>Node.js, Sinatra, Ruby on Rails</li>
-					<li>React, Angular, Ionic, CSS</li>
+					<li>Node.js, Meteor, Ruby on Rails</li>
+					<li>Vue, React, SCSS</li>
+					<li>Mapbox, deck.gl, Quill</li>
 				</ul>
 			</details>
 			<details open>
@@ -336,7 +340,7 @@
 					<li>UNIX command line</li>
 					<li>Git, SVN version control</li>
 					<li><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> document typesetting</li>
-					<li>MySQL, MongoDB</li>
+					<li>MongoDB, SQL</li>
 					<li>Photoshop, Illustrator, Sketch</li>
 					<li>AutoDesk Inventor, Creo</li>
 					<li>MATLAB, Mathematica</li>
@@ -368,7 +372,7 @@
 			<details open>
 				<summary>
 					<h3>University of Houston</h3>
-					<time>Jun 2015&ndash;May 2018 (expected)</time>
+					<time>Jun 2015&ndash;Aug 2018</time>
 					<p>Bachelor of Science in computer science &amp; minor in mathematics</p>
 				</summary>
 				<ul>
@@ -401,10 +405,11 @@
 		</section>
 		<section>
 			<h2>Research</h2>
-			<dl>
+			<p class="small"><small><b>Interests:</b> visualization, simulation, robotics, graphics, machine learning, analytics</small></p>
+			<!-- <dl>
 				<dt>Interests</dt>
 				<dd class="small">visualization, simulation, robotics, graphics, machine learning, analytics</dd>
-			</dl>
+			</dl> -->
 			<details open>
 				<summary>
 					<h3>Pathline Placement for Unsteady Flow</h3>
@@ -421,9 +426,36 @@
 			<h2>Work Experience</h2>
 			<details open>
 				<summary>
+					<h3>LZ Technology, Inc. (NASA/JSC)</h3>
+					<time>Nov 2018&ndash;present</time>
+					<p>Systems Engineer I; CD &ndash; Software Applications</p>
+				</summary>
+				<ul>
+					<li>Architected and developed from the ground up a suite of software tools for procedure management using an agile methodology</li>
+					<li>Took a leadership role in front-end application development</li>
+					<li>Improved code quality through modularization and modernization of outdated technologies</li>
+					<li>Streamlined the automated testing suite</li>
+					<li>Enhanced customer satisfaction with the product by designing a more natural and intuitive user interface</li>
+					<li>Technologies: ES6/ES2015+, Tomcat, Closure Compiler, QUnit, JUnit, Selenium</li>
+				</ul>
+			</details>
+			<details open>
+				<summary>
+					<h3>SGT Inc. (NASA/JSC)</h3>
+					<time>Feb 2018&ndash;Nov 2018</time>
+					<p>Intern, software engineering; CB &ndash; Astronaut Office</p>
+				</summary>
+				<ul>
+					<li>Architected and developed a progressive web app for CAPCOM mission logging including tracking of failures, action items, and lessons learned</li>
+					<li>Supported and maintained internal Boeing CST-100 and SpaceX wikis</li>
+					<li>Technologies: Vue, Express, MongoDB, Socket.io, Webpack, Jest, Wiki, Quill</li>
+				</ul>
+			</details>
+			<details open>
+				<summary>
 					<h3>University of Houston: <abbr title="Data Analytics in Student Hands">DASH</abbr></h3>
 					<time>Aug 2015&ndash;present</time>
-					<p>Web application developer, data analyst, IT support</p>
+					<p>Web application developer, data analyst, IT support; The Honors College</p>
 				</summary>
 				<ul>
 					<!-- <li>Honors program: Data Analytics in Student Hands</li> -->
@@ -523,7 +555,7 @@
 					<li>Created in less than 48 hours for the UH CodeRED Hackathon</li>
 				</ul>
 			</details>
-			<details open>
+			<!-- <details open>
 				<summary>
 					<h3>Turmites</h3>
 					<time>Sep 2015</time>
@@ -533,7 +565,7 @@
 				<ul>
 					<li>Technologies: JavaScript, HTML5 Canvas</li>
 				</ul>
-			</details>
+			</details> -->
 			<details open>
 				<summary>
 					<h3>Particle Playground</h3>
@@ -546,7 +578,7 @@
 					<li>Created a custom data-bound UI framework using React</li>
 				</ul>
 			</details>
-			<details open>
+			<!-- <details open>
 				<summary>
 					<h3>Fractal Generator</h3>
 					<time>Oct 2013</time>
@@ -556,8 +588,8 @@
 					<li>Technologies: JavaScript/CoffeeScript, HTML5 Canvas</li>
 					<li>Created a parallel formal grammar rewriting system</li>
 				</ul>
-			</details>
-			<details open>
+			</details> -->
+			<!-- <details open>
 				<summary>
 					<h3>dino.do</h3>
 					<time>Aug 2013</time>
@@ -568,7 +600,7 @@
 					<li>Familiarization with managing user accounts</li>
 					<li>Familiarization with storing user data securely in a database</li>
 				</ul>
-			</details>
+			</details> -->
 			<details open>
 				<summary>
 					<h3>QuickHAC</h3>
@@ -583,7 +615,7 @@
 					<li>5,000 active weekly users at peak usage</li>
 				</ul>
 			</details>
-			<details open>
+			<!-- <details open>
 				<summary>
 					<h3>Chaotic Attractor</h3>
 					<time>Oct 2011</time>
@@ -592,12 +624,12 @@
 				<ul>
 					<li>Technologies: JavaScript, WebGL</li>
 				</ul>
-			</details>
+			</details> -->
 		</section>
 		</div>
 		</section>
 		<footer>
-			<p>Updated 9 October 2017</p>
+			<p>Updated 23 September 2019</p>
 		</footer>
 	</body>
 </html>

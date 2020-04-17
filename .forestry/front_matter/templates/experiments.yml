@@ -1,0 +1,98 @@
+---
+label: Experiments
+hide_body: false
+fields:
+- name: title
+  default: JS3D
+  label: Title
+  type: text
+  hidden: false
+- name: date
+  default: '2011-01-10T15:00:00-06:00'
+  label: Date
+  type: datetime
+  hidden: false
+- name: preview_img_src
+  default: js3d.png
+  label: Preview img src
+  type: file
+  hidden: false
+- name: location
+  default: http://mdciotti.github.io/js3d/
+  label: Location
+  type: text
+  hidden: false
+- name: source
+  default: http://github.com/mdciotti/js3d/
+  label: Source
+  type: text
+  hidden: false
+- name: description
+  default: an extremely simple and limited Javascript 3D renderer in HTML5 canvas
+    I wrote as an early exploration of graphics pipelines
+  label: Description
+  type: textarea
+  hidden: false
+- name: tags
+  default:
+  - 3D
+  label: Tags
+  type: list
+  hidden: false
+- name: available
+  default: false
+  label: Available
+  type: boolean
+  hidden: false
+- name: complete
+  default: false
+  label: Complete
+  type: boolean
+  hidden: false
+- name: active
+  default: false
+  label: Active
+  type: boolean
+  hidden: false
+- name: attributes
+  default: 
+  label: Attributes
+  type: field_group
+  fields:
+  - name: technologies
+    default:
+    - JS
+    - HTML5 Canvas
+    label: Technologies
+    type: list
+    hidden: false
+  hidden: false
+- name: feature
+  default: true
+  label: Feature
+  type: boolean
+  hidden: false
+- name: hidden
+  default: true
+  label: Hidden
+  type: boolean
+  hidden: false
+- name: layout
+  default: experiment
+  label: Layout
+  type: text
+  hidden: false
+pages:
+- _experiments/attract.md
+- _experiments/calc.md
+- _experiments/fabric.md
+- _experiments/flock.md
+- _experiments/flora.md
+- _experiments/fractl.md
+- _experiments/js3d.md
+- _experiments/particle-playground.md
+- _experiments/plot-js.md
+- _experiments/polypass.md
+- _experiments/streamline.md
+- _experiments/tesselate.md
+- _experiments/turmites.md

@@ -3,15 +3,44 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
-		<title>Curriculum Vitae &ndash; Maxwell Ciotti</title>
+		<title>Curriculum Vitae &ndash; Max Ciotti</title>
 		<meta name="googlebot" content="noindex, nofollow">
 		<meta name="robots" content="noindex, nofollow">
-		<link href='//fonts.googleapis.com/css?family=Josefin+Sans:100,700|Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
 		<link rel="icon" type="image/png" href="/images/logo.png">
 		<style type="text/css">
+@font-face {
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/recursive/v38/8vJN7wMr0mhh-RQChyHEH06TlXhq_gukbYrFMk1QuAIcyEwG_X-dpEfaE5YaERmK-CImKsvxvU-MXGX2fSqasNfUvz2xbXfn1uEQadDck317tQtBCYCK6v8.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/josefinsans/v32/Qw3aZQNVED7rKGKxtqIqX5EUDXx4Vn8sig.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4C_k3HqU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 			@media all{
+				:root {
+					--headers: 'Josefin Sans', sans-serif;
+					--subhead: 'Space Grotesk';
+					--body: 'Recursive', Georgia, serif;
+				}
 				body {
-					font-family: 'Merriweather', Georgia, serif;
+					font-family: var(--body);
 					font-size: 12pt;
 					line-height: 1.5;
 					text-rendering: optimizeLegibility;
@@ -19,21 +48,18 @@
 				a:link, a:visited {
 					text-decoration: none;
 				}
-				header {
-					/* text-align: center; */
-				}
 				header h1 {
 					letter-spacing: 5pt;
 					font-size: 200%;
 				}
 				header address {
-					font-family: 'Josefin Sans', sans-serif;
+					font-family: var(--headers);
 					font-style: normal;
 					text-transform: uppercase;
 					letter-spacing: 1pt;
 				}
 				h1, h2 {
-					font-family: 'Josefin Sans', sans-serif;
+					font-family: var(--headers);
 					text-transform: uppercase;
 					letter-spacing: 1pt;
 				}
@@ -43,46 +69,41 @@
 					margin-top: 2rem;
 					font-size: 120%;
 				}
-				section p {
+				section > p {
 					font-style: italic;
 					-webkit-hyphens: auto;
 					-moz-hyphens: auto;
 					-ms-hyphens: auto;
 					hyphens: auto;
 				}
-				section details {
-					/* Necessary because not all browsers support this element yet */
-					/* *looking at YOU, Firefox* */
-					display: block;
-				}
 				section details summary {
-					/*font-size: 1.2rem;*/
+					font-family: var(--subhead);
 					display: block;
 					margin-top: 0.5rem;
+					margin-bottom: 0.5rem;
 				}
 				section details h3 {
-					font-weight: normal;
 					font-size: 100%;
 					display: inline;
 				}
 				section details time {
-					color: #888888;
 					display: block;
 				}
 				section details p {
-					font-style: italic;
+					font-weight: normal;
 					font-size: 80%;
 					margin: 0;
 				}
-				section details ul {
+				section details ul,
+				section details dl {
 					font-size: 80%;
-					/*list-style-position: outside;*/
-					padding-left: 20px;
 				}
-				section dl.small dt,
-				section dl.small dd,
-				section dl dd.small {
-					font-size: 80%;
+				section details dl.large {
+					font-size: 100%;
+				}
+				section details ul {
+					padding-left: 1rem;
+					margin-top: 0.5rem;
 				}
 				section dl.inline dt {
 					/* display: inline-block; */
@@ -93,8 +114,10 @@
 				section dl.inline dt::after {
 					content: ': ';
 				}
+				section dl dt {
+				  font-family: var(--subhead);
+				}
 				section dl dd {
-					font-style: italic;
 					margin-left: 20px;
 					margin-bottom: 4px;
 				}
@@ -122,13 +145,19 @@
 				}
 			}
 			::selection {
-				background: #333333;
-				color: #ffffff;
+				background: var(--hl-high);
+				color: var(--text);
 			}
-			@media screen and (min-width: 5in), print {
-				section p {
-					text-align: justify;
-				}
+			@media screen and (min-width: 4in) and (max-width: 6in) {
+			.mini-columns {
+			  display: flex;
+					gap: 1rem;
+			}
+			.mini-column {
+			  flex: 1;
+			}
+			}
+			@media screen and (min-width: 6in), print {
 				section details time {
 					float: right;
 					color: inherit;
@@ -139,50 +168,94 @@
 				.column-wide { flex: 7; margin-left: 40px; }
 				.column-narrow { flex: 3; }
 			}
+			@media screen and (prefers-color-scheme: light) {
+				:root {
+          --base: #faf4ed;
+          --surface: #fffaf3;
+          --overlay: #f2e9e1;
+          --muted: #9893a5;
+          --subtle: #797593;
+          --text: #575279;
+          --love: #b4637a;
+          --gold: #ea9d34;
+          --rose: #d7827e;
+          --pine: #286983;
+          --foam: #56949f;
+          --iris: #907aa9;
+          --hl-low: #f4ede8;
+          --hl-med: #dfdad9;
+          --hl-high: #cecacd;
+        }
+			}
+			@media screen and (prefers-color-scheme: dark) {
+				:root {
+          --base: #232136;
+          --surface: #2a273f;
+          --overlay: #393552;
+          --muted: #6e6a86;
+          --subtle: #908caa;
+          --text: #e0def4;
+          --love: #eb6f92;
+          --gold: #f6c177;
+          --rose: #ea9a97;
+          --pine: #3e8fb0;
+          --foam: #9ccfd8;
+          --iris: #c4a7e7;
+          --hl-low: #2a283e;
+          --hl-med: #44415a;
+          --hl-high: #56526e;
+        }
+			}
+			@media screen and (max-width: 8in) {
+				body {
+					/* padding: 0 1rem; */
+				}
+				section details time {
+					float: none;
+					font-size: 80%;
+				}
+			}
 			@media screen {
 				body {
-					background-color: #eeeeee;
-					color: #222222;
-					margin: 0 0 1in 0;
+					background-color: var(--base);
+					color: var(--text);
+					margin: 1rem;
 				}
 				a:link, a:visited {
-					color: #00aced;
+					color: var(--gold);
 				}
 				a:link:hover, a:visited:hover {
-					border-bottom: thin solid #00aced;
+					border-bottom: thin solid var(--gold);
 				}
 				abbr {
-					/* border-bottom: thin dotted #222222; */
 					cursor: help;
 				}
 				h1, h2 {
-					color: #444444;
+					color: var(--rose);
 				}
 				header, section, footer {
 					max-width: 8in;
-					/* padding: 0 0.25in; */
-					margin: 0 auto;
+					margin-left: auto;
+					margin-right: auto;
 				}
 				header {
 					margin-top: 1in;
 				}
-				header address {
-					font-weight: 600;
-					color: #888888;
-				}
 				section h2 {
-					border-bottom-color: #cccccc;
-				}
-				section details summary {
-					/*cursor: pointer;*/
+					border-bottom-color: var(--rose);
 				}
 				section details summary::-webkit-details-marker {
-					color: #888888;
+					color: var(--subtle);
 					display: none;
 				}
+				section details summary {
+					color: var(--iris);
+					pointer-events: none;
+				}
 				footer {
-					color: #888888;
-					border-top-color: #cccccc;
+					color: var(--muted);
+					border-top-color: var(--overlay);
+					margin-top: 1in;
 				}
 			}
 			@media print {
@@ -191,8 +264,8 @@
 					counter-increment: page;
 					@bottom-center {
 						/* Doesn't seem to be supported yet */
-						content: 'Maxwell Ciotti R\00E9sum\00E9 \2015 ' counter(page) ' of ' counter(pages);
-						font-family: 'Josefin Sans', sans-serif;
+						content: 'Max Ciotti R\00E9sum\00E9 \2015 ' counter(page) ' of ' counter(pages);
+						font-family: var(--subhead);
 						text-transform: uppercase;
 					}
 				}
@@ -246,10 +319,7 @@
 	</head>
 	<body>
 		<header>
-			<h1>Maxwell Ciotti</h1>
-			<!-- <address>
-				<a href="tel:5123640226" rel="nofollow">(512)&nbsp;364-0226</a> &middot; <a href="mailto:max@mdc.io" rel="nofollow">max@mdc.io</a>
-			</address> -->
+			<h1>Max Ciotti</h1>
 		</header>
 		<section class="columns">
 		<div class="column-narrow">
@@ -262,26 +332,17 @@
 			</address> -->
 			<details open>
 				<summary></summary>
-				<dl class="inline">
+				<dl class="inline large">
+					<dt>Pronouns</dt>
+					<dd>they/them</dd>
 					<dt>Phone</dt>
 					<dd><a href="tel:5123640226" rel="nofollow">(512)&nbsp;364-0226</a></dd>
 					<dt>Email</dt>
-					<dd><a href="mailto:max@mdc.io" rel="nofollow">max@mdc.io</a></dd>
-					<dt>Website</dt>
-					<dd><a href="https://www.mdc.io">www.mdc.io</a></dd>
-				</dl>
-			</details>
-			<details open>
-				<summary></summary>
-				<dl class="small inline">
+					<dd><a href="mailto:cv@mdc.io" rel="nofollow">cv@mdc.io</a></dd>
+					<!-- <dt>Website</dt>
+					<dd><a href="https://www.mdc.io">www.mdc.io</a></dd> -->
 					<dt>GitHub</dt>
 					<dd><a href="https://github.com/mdciotti" rel="nofollow">@mdciotti</a></dd>
-					<dt>Twitter</dt>
-					<dd><a href="https://twitter.com/mdciotti">@mdciotti</a></dd>
-					<!-- <dt>Facebook</dt>
-					<dd><a href="https://www.facebook.com/mdciotti" rel="nofollow">mdciotti</a></dd> -->
-					<!-- <dt>500px</dt>
-					<dd><a href="https://500px.com/mdciotti" rel="nofollow">mdciotti</a></dd> -->
 					<dt>Keybase</dt>
 					<dd><a href="https://keybase.io/mdciotti" rel="nofollow">mdciotti</a></dd>
 				</dl>
@@ -289,81 +350,70 @@
 		</section>
 		<section>
 			<h2>Skills</h2>
+			<div class="mini-columns">
+			<div class="mini-column">
 			<details open>
 				<summary>
 					<h3>Programming Languages</h3>
 				</summary>
-				<!-- <p>Known programming languages, tools, and paradigms, in order of experience</p> -->
-				<!-- <ul>
-					<li>JavaScript: 28k SLOC</li>
-					<li>CSS: 15k SLOC</li>
-					<li>Java: 10k SLOC</li>
-					<li>C++: 7k SLOC</li>
-					<li>C: 3k SLOC</li>
-					<li>Lua, Python, Swift, Fortran, Make, Bash, R</li>
-					<li>Graphics: OpenGL, WebGL, HTML5 Canvas</li>
-					<li>Web: Node.js, Express, Meteor, jQuery, Underscore, Backbone, Angular, React, Jekyll</li>
-				</ul> -->
-				<dl class="small">
+				<dl>
 					<dt>Fluent<!--  (&gt;25k LOC) --></dt>
-					<dd>JavaScript, C, Python, Lua</dd>
+					<dd>JavaScript, Python, Lua, C</dd>
 					<dt>Experienced<!--  (&gt;10k LOC) --></dt>
-					<dd>GLSL, C++, Java</dd>
+					<dd>Swift, Rust, WGSL, GLSL, C++, Java</dd>
 					<dt>Literate<!--  (&gt;1k LOC) --></dt>
-					<dd>Swift, Fortran, Bash</dd>
-					<dt>Others</dt>
-					<dd>Make, R, PHP, Ruby</dd>
+					<dd>Zig, Fortran, Bash, Make</dd>
 				</dl>
 			</details>
 			<details open>
-				<summary>Frameworks &amp; APIs</summary>
-				<!-- <p>Extensive experience with:</p>
+				<summary>
+					<h3>Frameworks &amp; APIs</h3>
+				</summary>
 				<ul>
-					<li>document processing such as Microsoft Word and LaTeX</li>
-					<li>slideshow programs such as Microsoft PowerPoint</li>
-					<li>spreadsheet programs such as Microsoft Excel</li>
-				</ul> -->
-				<!-- <p>Experience with:</p> -->
-				<ul>
-					<li>OpenGL, WebGL, HTML5 Canvas</li>
-					<!-- <li>Writing tests &amp; documentation</li> -->
-					<!-- <li>## contributions to open-source projects</li> -->
-					<li>Node.js, Meteor, Ruby on Rails</li>
-					<li>Vue, React, SCSS</li>
-					<li>Mapbox, deck.gl, Quill</li>
+					<li>OpenGL, WebGL, WebGPU</li>
+					<li>Node, React, Web Components</li>
+					<li>NumPy, OpenCV, SciKit</li>
 				</ul>
 			</details>
+			</div>
+			<div class="mini-column">
 			<details open>
-				<summary>Software</summary>
+				<summary>
+				 	<h3>Software</h3>
+				</summary>
 				<ul>
 					<li>Linux, macOS, Windows</li>
 					<li>UNIX command line</li>
-					<li>Git, SVN version control</li>
+					<li>Git, SVN, Ansible</li>
 					<li><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> document typesetting</li>
-					<li>MongoDB, SQL</li>
-					<li>Photoshop, Illustrator, Sketch</li>
-					<li>AutoDesk Inventor, Creo</li>
-					<li>MATLAB, Mathematica</li>
-				</ul>
-			</details>
-			<details open class="column">
-				<summary>Graphic Design</summary>
-				<ul>
-					<li>Matured sense of design</li>
-					<li>Experience with UI/UX design</li>
-					<li><abbr title="Digital single-lens reflex">DSLR</abbr> photography</li>
-					<!-- <li>Photoshop, Illustrator, Sketch</li> -->
+					<li>MongoDB, SQL, Redis, S3</li>
+					<li>Figma, Blender, Illustrator</li>
 				</ul>
 			</details>
 			<details open>
-				<summary>Electronics</summary>
+				<summary>
+					<h3>Hardware</h3>
+				</summary>
 				<ul>
-					<!-- <li>Familiar with computer components and building computers</li> -->
-					<li>Breadboard prototyping, <abbr title="Field-Programmable Gate Array">FPGA</abbr>s</li>
-					<li>Digital logic circuit design, state machines</li>
-					<li>Arduino, Raspberry Pi, Particle</li>
+					<li>Raspberry Pi, Arduino, Particle</li>
+					<li>NVIDIA Jetson NX, AGX</li>
+					<li>Bluetooth LE, LoRa, radar, GPS</li>
+					<li>ESP32, MIPI, RS-232</li>
+					<li>Digital logic circuit design</li>
+					<li>Breadboard prototyping</li>
 				</ul>
 			</details>
+			<!-- <details open>
+				<summary>
+					<h3>Graphic Design</h3>
+				</summary>
+				<ul>
+					<li>Matured sense of design</li>
+					<li>Experience with UI/UX design</li>
+				</ul>
+			</details> -->
+			</div>
+			</div>
 		</section>
 		</div>
 		<div class="column-wide">
@@ -373,43 +423,39 @@
 				<summary>
 					<h3>University of Houston</h3>
 					<time>Jun 2015&ndash;Aug 2018</time>
-					<p>Bachelor of Science in computer science &amp; minor in mathematics</p>
+					<p>B.S. in computer science &amp; minor in mathematics</p>
 				</summary>
 				<ul>
 					<li>Coursework in digital image processing, artificial intelligence</li>
-					<li>Involvement in CougarCS, <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>@UH, <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr>-<abbr title="Natural Science and Mathematics">NSM</abbr></li>
+					<li>Involvement in CougarCS, <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>@UH, <abbr title="Institute of Electrical and Electronics Engineers – Natural Science and Mathematics">IEEE-NSM</abbr></li>
 					<!-- <li>Cumulative GPA: 3.5</li> -->
 					<!-- //<li>Coursework in computer sciences, digital media, and mathematics</li> -->
 				</ul>
 			</details>
-			<details open>
+			<!-- <details open>
 				<summary>
 					<h3>Lone Star College</h3>
 					<time>Jun 2014&ndash;May 2015</time>
 				</summary>
 				<ul>
-					<li>Involvement in the Society of Math and Engineering and the Computer Science Club</li>
+					<li>Involvement in the Society of Math &amp; Engineering and the Computer Science Club</li>
 				</ul>
-			</details>
+			</details> -->
 			<details open>
 				<summary>
 					<h3>Florida Institute of Technology</h3>
 					<time>Aug 2013&ndash;May 2014</time>
-					<p>Aerospace Engineering</p>
+					<!-- <p>Aerospace Engineering</p> -->
 				</summary>
 				<ul>
-					<li>Coursework in engineering, mathematics, and space sciences</li>
-					<li>Involvement in <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>, Student Rocket Society, <abbr title="Association for Computing Machinery">ACM</abbr>, <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr> <abbr title="Aerospace and Electronic Systems Society">AESS</abbr></li>
+					<li>Coursework in aerospace engineering, mathematics, and space sciences</li>
+					<li>Involvement in <abbr title="The American Institute of Aeronautics and Astronautics">AIAA</abbr>, Student Rocket Society, <abbr title="Association for Computing Machinery">ACM</abbr>, <abbr title="Institute of Electrical and Electronics Engineers – Aerospace and Electronic Systems Society">IEEE-AESS</abbr></li>
 				</ul>
 			</details>
 		</section>
 		<section>
 			<h2>Research</h2>
-			<p class="small"><small><b>Interests:</b> visualization, simulation, robotics, graphics, machine learning, analytics</small></p>
-			<!-- <dl>
-				<dt>Interests</dt>
-				<dd class="small">visualization, simulation, robotics, graphics, machine learning, analytics</dd>
-			</dl> -->
+			<p><small><b>Interests:</b> computer vision, computational imaging, visualization, simulation, robotics, 3D rendering</small></p>
 			<details open>
 				<summary>
 					<h3>Pathline Placement for Unsteady Flow</h3>
@@ -417,7 +463,7 @@
 					<p>Undergraduate research with Dr. Guoning Chen</p>
 				</summary>
 				<ul>
-					<li>Developed a statistical approach to cleanly visualize time-variant vector fields</li>
+					<li>Developed a statistical visualization method for time-variant vector fields</li>
 					<li>Created a 2D vector mesh interpolator and visualization tool using WebGL</li>
 				</ul>
 			</details>
@@ -426,17 +472,42 @@
 			<h2>Work Experience</h2>
 			<details open>
 				<summary>
+					<h3>Synthetik Applied Technologies</h3>
+					<time>Jan 2020&ndash;Jul 2024</time>
+					<p>Senior Software Engineer</p>
+				</summary>
+				<p></p>
+				<ul>
+					<li>Developed real-time 500 Hz image acquisition and stitching library in C++</li>
+					<li>Led product evaluation and integration for camera and lens hardware</li>
+					<li>Created an ISO 18013-5 compliant framework for generating, distributing, and verifying mobile licenses on iOS via BLE and QR codes</li>
+					<li>Created a state machine to control image acquisition and processing</li>
+					<li>Created a CUDA-accelerated lens distortion correction plugin for GStreamer</li>
+					<li>Created interactive volumetric and voxel rendering and modification tool</li>
+					<li>Created streaming log system using Redis to monitor HPC jobs in AWS batch</li>
+					<li>Developed a radar-based vehicle presence detection algorithm, including noise reduction, temperature compensation, and drift compensation</li>
+					<li>Built a custom CLI workflow for IoT hardware mass provisioning</li>
+					<li>Set up Ansible workflows to remotely manage many IoT devices</li>
+					<li>Established an internal company-wide wiki (Outline), password management solution (Bitwarden), and VPN (ZeroTier)</li>
+				</ul>
+			</details>
+			<details open>
+				<summary>
 					<h3>LZ Technology, Inc. (NASA/JSC)</h3>
-					<time>Nov 2018&ndash;present</time>
+					<time>Nov 2018&ndash;Dec 2019</time>
 					<p>Systems Engineer I; CD &ndash; Software Applications</p>
 				</summary>
+				<p>At my first full-time job after graduating, I worked on an agile team to develop tools for procedure editing, viewing, and executing. I won high praise from our internal client for redesigning the frontend UI to be much more user-friendly.</p>
 				<ul>
-					<li>Architected and developed from the ground up a suite of software tools for procedure management using an agile methodology</li>
-					<li>Took a leadership role in front-end application development</li>
-					<li>Improved code quality through modularization and modernization of outdated technologies</li>
-					<li>Streamlined the automated testing suite</li>
-					<li>Enhanced customer satisfaction with the product by designing a more natural and intuitive user interface</li>
-					<li>Technologies: ES6/ES2015+, Tomcat, Closure Compiler, QUnit, JUnit, Selenium</li>
+					<!-- <li>Helped to architect and develop a suite of software tools for procedure management using an agile methodology</li> -->
+					<li>Modernized and modularized jQuery frontend to custom ES6 web components</li>
+					<!-- <li>Developed a JS-based XML procedure parser and renderer</li> -->
+					<li>Ensured <abbr title="Web Accessibility Initiative – Accessible Rich Internet Applications">WAI-ARIA</abbr> compliance for all interactive web components</li>
+					<li>Mentored peers in modern front-end application development</li>
+					<!-- <li>Streamlined the automated testing suite</li> -->
+					<!-- <li>Greatly improved customer satisfaction by designing a more intuitive UI</li> -->
+					<li>Presented an introduction to git for scientists</li>
+					<li>Technologies: ES6, Tomcat, Closure Compiler, QUnit, JUnit, Selenium</li>
 				</ul>
 			</details>
 			<details open>
@@ -447,6 +518,7 @@
 				</summary>
 				<ul>
 					<li>Architected and developed a progressive web app for CAPCOM mission logging including tracking of failures, action items, and lessons learned</li>
+					<li>Spearheaded use of Kubernetes at NASA Johnson Space Center</li>
 					<li>Supported and maintained internal Boeing CST-100 and SpaceX wikis</li>
 					<li>Technologies: Vue, Express, MongoDB, Socket.io, Webpack, Jest, Wiki, Quill</li>
 				</ul>
@@ -454,44 +526,40 @@
 			<details open>
 				<summary>
 					<h3>University of Houston: <abbr title="Data Analytics in Student Hands">DASH</abbr></h3>
-					<time>Aug 2015&ndash;present</time>
+					<time>Aug 2015&ndash;Feb 2018</time>
 					<p>Web application developer, data analyst, IT support; The Honors College</p>
 				</summary>
 				<ul>
-					<!-- <li>Honors program: Data Analytics in Student Hands</li> -->
-					<li>Created geographic data visualization for atmospheric data modeling</li>
-					<li>Created NAS backup verification shell script for over 30 computers</li>
-					<li>Created web application to view and modify a variety of environmental sensor data</li>
+					<li>Created interactive geographic data visualization for pollutant forecasting</li>
+					<li>Created NAS backup verification shell script for 30+ computers</li>
+					<li>Created web application to view and modify environmental sensor data</li>
 					<li>Improved atmospheric sensor data editing efficiency by roughly 3x</li>
-					<li>Maintained a form building application for a community health management system</li>
+					<li>Maintained a form building app for a community health management system</li>
 					<!-- <li>Helped create a system for automatic data validation and flagging</li> -->
 					<!-- <li>TODO: Metrics? Impact?</li> -->
-					<li>Technologies: Node.js, Meteor, MongoDB, React, MapBox, WebGL, Angular, Ionic</li>
+					<li>Technologies: Node, Meteor, MongoDB, React, MapBox, deck.gl, Angular, Ionic</li>
 				</ul>
 			</details>
-			<details open>
+			<!-- <details open>
 				<summary>
 					<h3>H-E-B</h3>
 					<time>Aug 2014&ndash;Dec 2014</time>
 					<p>Customer Service Partner</p>
 				</summary>
-			</details>
-			<details open>
+			</details> -->
+			<!-- <details open>
 				<summary>
 					<h3>Florida Institute of Technology <abbr title="Department of Environmental Regulation and Compliance">ERC</abbr></h3>
 					<time>Jan 2014&ndash;May 2014</time>
 					<p>Web application developer</p>
 				</summary>
 				<ul>
-					<!-- TODO: What impact did I make on the department? (metrics) -->
 					<li>Created and maintained a system to log <abbr title="Environmental Protection Agency">EPA</abbr> inspections</li>
 					<li>Developed a REST API and server-side utilities for managing and viewing reports</li>
-					<!-- <li>Developed a cross-platform touch-friendly logging application</li> -->
-					<!-- <li>Acted as office tech support</li> -->
 					<li>Technologies: Node.js, Keystone, MongoDB, Mongoose</li>
 				</ul>
-			</details>
-			<details open>
+			</details> -->
+			<!-- <details open>
 				<summary>
 					<h3>Austin First Mortgage</h3>
 					<time>Summer 2012</time>
@@ -502,8 +570,8 @@
 					<li>Developed the public website so that users can easily access loan information</li>
 					<li>Technologies: Sinatra, PostgreSQL, SASS</li>
 				</ul>
-			</details>
-			<details open>
+			</details> -->
+			<!-- <details open>
 				<summary>
 					<h3>VeritasU</h3>
 					<time>Summer 2012</time>
@@ -514,7 +582,7 @@
 					<li>Helped prototype a quiz-building application</li>
 					<li>Created a logo and designs for various pages within the application</li>
 				</ul>
-			</details>
+			</details> -->
 		</section>
 		<section>
 			<h2>Leadership &amp; Involvement</h2>
@@ -523,38 +591,35 @@
 					<summary>Responsibilities</summary>
 					<ul>
 						<!-- <li>Officer of IEEE NSM (historian)</li> -->
-						<li>Officer of CougarCS (designer), 2 years</li>
-						<li>Lead designer of CodeRED Hackathon</li>
+						<li>Officer of CougarCS (designer), 2yr</li>
+						<li>Lead designer of CodeRED Hackathon 2016-2017</li>
 					</ul>
 				</details>
 				<details open class="column">
 					<summary>Community Involvement</summary>
 					<ul>
-						<li>Metropolitan Volunteer Program</li>
-						<li>UH <abbr title="Cougar Assisted Relief Efforts">CARES</abbr></li>
+						<li>Leading outdoor climbing trips for LGBTQ+ and recovery communities</li>
+						<!-- <li>Metropolitan Volunteer Program</li> -->
+						<!-- <li>UH <abbr title="Cougar Assisted Relief Efforts">CARES</abbr></li> -->
 						<!-- <li>Non-Music Major Orchestra</li> -->
 					</ul>
 				</details>
 			</div>
 		</section>
-		<section>
-			<!-- <h2>Self-Motivated Programming &amp; Design Experience</h2> -->
-			<!-- <h2>Independent Programming &amp; Design Experience</h2> -->
-			<h2>Independent Projects</h2>
-			<p>See an index of my projects and experiments at <a href="https://www.mdc.io">www.mdc.io</a></p>
-			<!--<p>Complete list at <a href="http://www.mdc.io/portfolio">www.mdc.io/portfolio</a></p>-->
-			<details open>
+		<!-- <section> -->
+			<!-- <h2>Independent Projects</h2> -->
+			<!-- <p>See an index of my projects and experiments at <a href="https://www.mdc.io">www.mdc.io</a></p> -->
+			<!-- <details open>
 				<summary>
 					<h3>EvntQ</h3>
 					<time>Nov 2015</time>
-					<!-- <p><a href="http://www.evntq.com">www.evntq.com</a></p> -->
 					<p>Web application, allows guests to act as a collaborative DJ at an event</p>
 				</summary>
 				<ul>
 					<li>Technologies: Meteor, MongoDB, JavaScript, Spotify API</li>
 					<li>Created in less than 48 hours for the UH CodeRED Hackathon</li>
 				</ul>
-			</details>
+			</details> -->
 			<!-- <details open>
 				<summary>
 					<h3>Turmites</h3>
@@ -566,7 +631,7 @@
 					<li>Technologies: JavaScript, HTML5 Canvas</li>
 				</ul>
 			</details> -->
-			<details open>
+			<!-- <details open>
 				<summary>
 					<h3>Particle Playground</h3>
 					<time>Aug 2015</time>
@@ -577,7 +642,7 @@
 					<li>Familiarization with various approaches to n-body problems, quadtree optimization</li>
 					<li>Created a custom data-bound UI framework using React</li>
 				</ul>
-			</details>
+			</details> -->
 			<!-- <details open>
 				<summary>
 					<h3>Fractal Generator</h3>
@@ -601,35 +666,22 @@
 					<li>Familiarization with storing user data securely in a database</li>
 				</ul>
 			</details> -->
-			<details open>
+			<!-- <details open>
 				<summary>
 					<h3>QuickHAC</h3>
 					<time>Dec 2012</time>
-					<!-- <p><a href="http://quickhac.com/">www.quickhac.com</a></p> -->
 					<p>Chrome extension and iOS/Android application, automatically checks student grades and provides students with a more accessible interface to view their academic progress</p>
 				</summary>
 				<ul>
 					<li>Technologies: Ruby, HTML, CSS, JavaScript, TypeScript</li>
-					<!-- <li>Led design for iOS, Android, and Chrome platforms</li> -->
-					<!-- <li>Implemented the client-side logic and functionality</li> -->
 					<li>5,000 active weekly users at peak usage</li>
 				</ul>
-			</details>
-			<!-- <details open>
-				<summary>
-					<h3>Chaotic Attractor</h3>
-					<time>Oct 2011</time>
-					<p>Web experiment, generates strange attractors</p>
-				</summary>
-				<ul>
-					<li>Technologies: JavaScript, WebGL</li>
-				</ul>
 			</details> -->
-		</section>
+		<!-- </section> -->
 		</div>
 		</section>
 		<footer>
-			<p>Updated 23 September 2019</p>
+			<p>Updated 2024-07-16</p>
 		</footer>
 	</body>
 </html>
